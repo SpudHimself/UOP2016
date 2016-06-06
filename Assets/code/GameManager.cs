@@ -115,6 +115,11 @@ public class GameManager : MonoBehaviour
 		// Press escape or start to unpause or whatever...
 	}
 
+	/// <summary>
+	/// <para>Returns the player from the zero-oriented list of players.</para>
+	/// </summary>
+	/// <param name="index">The zero-oriented player number.</param>
+	/// <returns>The player from the zero-oriented list of players.</returns>
 	public Player GetPlayer( int index )
 	{
 		return mPlayers[index];
