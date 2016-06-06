@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 	private float mGameTimer;
 
 	private List<Player> mPlayers = new List<Player>();
+	private List<Transform> mSpawns = new List<Transform>();
 
 	// Singleton.
 	private static GameManager sSingleton;
@@ -28,7 +29,17 @@ public class GameManager : MonoBehaviour
 	void Awake()
 	{
 		sSingleton = this;
-		
+
+		mPlayers = new List<Player>();
+
+		// This is a really shit way of doing it but it's the only way in Unity I know how.
+		// Because we need the Transforms not the GameObjects.
+		GameObject[] spawnGameObjects = GameObject.FindGameObjectsWithTag( Tags.PLAYER_SPAWN );
+		foreach ( GameObject go in spawnGameObjects )
+		{
+			mSpawns.Add( go.transform );
+		}
+
 		// Keep this last.
 		SetState( eState.Countdown );
 	}
@@ -65,7 +76,7 @@ public class GameManager : MonoBehaviour
 		{
 			case eState.Countdown:
 				mGameTimer = GAME_TIME_COUNTDOWN;
-				print( "Get ready..." );
+				print( "Get ready!" );
 				break;
 
 			case eState.Playing:
@@ -106,7 +117,7 @@ public class GameManager : MonoBehaviour
 	{
 		if ( Input.GetKey( KeyCode.Return ) )
 		{
-			SetState( eState.Countdown );
+			Application.LoadLevel( Application.loadedLevelName );
 		}
 	}
 
@@ -116,12 +127,17 @@ public class GameManager : MonoBehaviour
 	}
 
 	/// <summary>
-	/// <para>Returns the player from the zero-oriented list of players.</para>
+	/// <para>Returns the player from the list of players.</para>
 	/// </summary>
 	/// <param name="index">The zero-oriented player number.</param>
-	/// <returns>The player from the zero-oriented list of players.</returns>
+	/// <returns>The player from the list of players.</returns>
 	public Player GetPlayer( int index )
 	{
-		return mPlayers[index];
+		return mPlayers[index - 1];
+	}
+
+	public Transform GetPlayerSpawn( int index )
+	{
+		return mSpawns[index - 1];
 	}
 }

@@ -44,6 +44,7 @@ public class ScoreItem : MonoBehaviour
 
             if (dist < absorbDistance)
             {
+				// Make 4.0f a suck power variable.
                 float s = (speed / dist) * 4.0f;
 
                 m_transform.position = Vector3.MoveTowards(m_transform.position, player.transform.position, s * Time.deltaTime);
