@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 	public const float GAME_TIME_PLAYING = 15f; // This will probably get tweaked all the time. 15 for testing. Maybe 45 for real thing?
 	public const float GAME_TIME_COUNTDOWN = 3f;
 	private float mGameTimer;
+
+	private List<Player> mPlayers = new List<Player>();
 
 	// Singleton.
 	private static GameManager sSingleton;
@@ -111,5 +113,10 @@ public class GameManager : MonoBehaviour
 	private void StatePaused()
 	{
 		// Press escape or start to unpause or whatever...
+	}
+
+	public Player GetPlayer( int index )
+	{
+		return mPlayers[index];
 	}
 }
