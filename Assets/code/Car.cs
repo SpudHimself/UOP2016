@@ -12,10 +12,18 @@ public class Car : MonoBehaviour
     public float mMaxMotorTorque;
     public float mMaxSteeringAngle;
 
+	void Awake()
+	{
+		tag = Tags.PLAYER;
+
+		GameManager.Singleton().AddPlayer( this );
+
+		gameObject.SetTagRecursively( Tags.PLAYER );
+	}
+
     // Use this for initialization
     void Start()
     {
-
     }
 
     //// Update is called once per frame

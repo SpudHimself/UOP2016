@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 	public const float GAME_TIME_COUNTDOWN = 3f;
 	private float mGameTimer;
 
-	private List<Player> mPlayers = new List<Player>();
+	private List<Car> mPlayers = new List<Car>();
 	private List<Transform> mSpawns = new List<Transform>();
 
 	// Singleton.
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 	{
 		sSingleton = this;
 
-		mPlayers = new List<Player>();
+		mPlayers = new List<Car>();
 
 		// This is a really shit way of doing it but it's the only way in Unity I know how.
 		// Because we need the Transforms not the GameObjects.
@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
 	private void StateCountdown()
 	{
 		mGameTimer = Mathf.Max( mGameTimer - Time.deltaTime, 0f );
-		print( mGameTimer );
+// 		print( mGameTimer );
 		if ( mGameTimer <= 0f )
 		{
 			SetState( eState.Playing );
@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour
 	private void StatePlaying()
 	{
 		mGameTimer = Mathf.Max( mGameTimer - Time.deltaTime, 0f );
-		print( mGameTimer );
+// 		print( mGameTimer );
 		if ( mGameTimer <= 0f )
 		{
 			SetState( eState.GameOver );
@@ -126,12 +126,22 @@ public class GameManager : MonoBehaviour
 		// Press escape or start to unpause or whatever...
 	}
 
+	public void AddPlayer( Car car )
+	{
+		mPlayers.Add( car );
+	}
+
+	public List<Car> GetPlayers()
+	{
+		return mPlayers;
+	}
+
 	/// <summary>
 	/// <para>Returns the player from the list of players.</para>
 	/// </summary>
 	/// <param name="index">The zero-oriented player number.</param>
 	/// <returns>The player from the list of players.</returns>
-	public Player GetPlayer( int index )
+	public Car GetPlayer( int index )
 	{
 		return mPlayers[index - 1];
 	}
