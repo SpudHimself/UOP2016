@@ -7,10 +7,9 @@ public class ScoreItem : MonoBehaviour
     #region Fields
     public int points;
     public float absorbDistance;
+    
 
     private Transform               m_transform;
-    private Rigidbody               m_rb;
-    private float                   m_suckSpeed;
     private Vector3                 m_suckDirection;
 
     private static List<GameObject> m_players = new List<GameObject>();
@@ -20,8 +19,6 @@ public class ScoreItem : MonoBehaviour
     private void Awake()
     {
         m_transform = this.transform;
-        m_rb = this.GetComponent<Rigidbody>();
-
         // Gets all of the players within the current scene.
         if (m_players.Count.Equals(0))
         {
@@ -38,20 +35,20 @@ public class ScoreItem : MonoBehaviour
 
     private void Update()
     {
+        float speed = 2.0f;
+
         foreach (GameObject player in m_players)
         {
             // Check the distance of each player from the item.
-            if (Vector3.Distance(m_transform.position, player.transform.position) < absorbDistance)
+            float dist = Vector3.Distance(m_transform.position, player.transform.position);
+
+            if (dist < absorbDistance)
             {
-                Debug.Log("In distance to suck.");
-                m_suckDirection = player.transform.position - m_transform.position; 
+                float s = (speed / dist) * 4.0f;
+
+                m_transform.position = Vector3.MoveTowards(m_transform.position, player.transform.position, s * Time.deltaTime);
             }
         }
-    }
-
-    private void FixedUpdate()
-    {
-        //m_rb.velocity = m_suckDirection;
     }
 
     private void OnCollisionEnter(Collision col)
