@@ -10,6 +10,7 @@ public class PowerUpItem : MonoBehaviour
 {
     #region Fields
     public ePowerUpType type;
+    public float modifier;
     #endregion
 
     #region Unity Methods
@@ -20,6 +21,7 @@ public class PowerUpItem : MonoBehaviour
             switch (type)
             {
                 case ePowerUpType.SPEED_BOOST:
+                    // TODO: Move player faster when collided with.
                     break;
             }
         }
