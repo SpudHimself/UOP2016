@@ -139,7 +139,7 @@ public class GameManager : MonoBehaviour
 	private void StateCountdown()
 	{
 		mGameTimer = Mathf.Max( mGameTimer - Time.deltaTime, 0f );
-// 		print( mGameTimer );
+		// 		print( mGameTimer );
 		if ( mGameTimer <= 0f )
 		{
 			SetState( eState.Playing );
@@ -149,7 +149,7 @@ public class GameManager : MonoBehaviour
 	private void StatePlaying()
 	{
 		mGameTimer = Mathf.Max( mGameTimer - Time.deltaTime, 0f );
-// 		print( mGameTimer );
+		// 		print( mGameTimer );
 		if ( mGameTimer <= 0f )
 		{
 			SetState( eState.GameOver );
@@ -214,5 +214,22 @@ public class GameManager : MonoBehaviour
 	public void AddNPC( NPC npc )
 	{
 		mNPCs.Add( npc );
+	}
+
+	public void TogglePause()
+	{
+		bool currentlyPaused = ( Time.timeScale == 0f );
+		if ( currentlyPaused )
+		{
+			Time.timeScale = 1f;
+
+			// Disable pause menu.
+		}
+		else
+		{
+			Time.timeScale = 0f;
+
+			// Enable pause menu.
+		}
 	}
 }

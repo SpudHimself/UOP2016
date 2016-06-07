@@ -45,11 +45,14 @@ public class Car : MonoBehaviour
 		mScoreManager = gameObject.AddComponent<ScoreManager>();
     }
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-
-    //}
+    // Update is called once per frame
+    void Update()
+    {
+		if ( Input.GetButtonDown( "Pause" ) )
+		{
+			GameManager.Singleton().TogglePause();
+		}
+    }
 
     public void FixedUpdate()
     {
