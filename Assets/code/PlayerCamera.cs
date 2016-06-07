@@ -23,12 +23,7 @@ public class PlayerCamera : MonoBehaviour
 
     private void LateUpdate()
     {
-        Vector3 destination = followPoint.position;
-        destination.z -= distance;
-
-        Debug.Log(player.forward);
-
-        m_transform.position = Vector3.Lerp(m_transform.position, destination, followSpeed * Time.deltaTime);
+        m_transform.position = Vector3.Lerp(m_transform.position, followPoint.position, followSpeed * Time.deltaTime);
         m_transform.LookAt(player.position);
     }
     #endregion
