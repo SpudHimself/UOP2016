@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 	private float mGameTimer;
 
 	private List<Car> mPlayers = new List<Car>();
+	private List<NPC> mNPCs = new List<NPC>();
 	private List<Transform> mSpawns = new List<Transform>();
 
 	// Singleton.
@@ -87,6 +88,11 @@ public class GameManager : MonoBehaviour
 					car.SetState( Car.eState.Countdown );
 				}
 
+				foreach ( NPC npc in mNPCs )
+				{
+					npc.SetState( NPC.eState.Waiting );
+				}
+
 				mGameTimer = GAME_TIME_COUNTDOWN;
 				break;
 
@@ -98,6 +104,11 @@ public class GameManager : MonoBehaviour
 					car.SetState( Car.eState.Playing );
 				}
 
+				foreach ( NPC npc in mNPCs )
+				{
+					npc.SetState( NPC.eState.Alive );
+				}
+
 				mGameTimer = GAME_TIME_PLAYING;
 				break;
 
@@ -106,6 +117,11 @@ public class GameManager : MonoBehaviour
 					foreach ( Car car in mPlayers )
 					{
 						car.SetState( Car.eState.GameOver );
+					}
+
+					foreach ( NPC npc in mNPCs )
+					{
+						npc.SetState( NPC.eState.Waiting );
 					}
 
 					// Determine winner.
@@ -193,5 +209,10 @@ public class GameManager : MonoBehaviour
 		}
 
 		return winning;
+	}
+
+	public void AddNPC( NPC npc )
+	{
+		mNPCs.Add( npc );
 	}
 }
