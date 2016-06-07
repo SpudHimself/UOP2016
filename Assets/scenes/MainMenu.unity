@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 657213288}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &593875727
@@ -647,6 +647,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: becef8eff22b76c4aae296619b8ccfbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startButton: {fileID: 657213290}
+  creditsButton: {fileID: 1247012663}
+  helpButton: {fileID: 572163311}
+  quitButton: {fileID: 352296544}
+  currentButton: {fileID: 657213290}
+  eventSystem: {fileID: 593875726}
 --- !u!1 &633463802
 GameObject:
   m_ObjectHideFlags: 0
