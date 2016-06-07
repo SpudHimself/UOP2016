@@ -12,11 +12,12 @@ public class GameManager : MonoBehaviour
 	}
 	private eState mState;
 
-	public const float GAME_TIME_PLAYING = 15f; // This will probably get tweaked all the time. 15 for testing. Maybe 45 for real thing?
+	public const float GAME_TIME_PLAYING = 45f; // This will probably get tweaked all the time. 15 for testing. Maybe 45 for real thing?
 	public const float GAME_TIME_COUNTDOWN = 3f;
 	private float mGameTimer;
 
 	private List<Car> mPlayers = new List<Car>();
+	private List<NPC> mNPCs = new List<NPC>();
 	private List<Transform> mSpawns = new List<Transform>();
 
 	// Singleton.
@@ -82,25 +83,51 @@ public class GameManager : MonoBehaviour
 			case eState.Countdown:
 				print( "Get ready!" );
 
-				foreach ( Car car in mPlayers ) {
+				foreach ( Car car in mPlayers )
+				{
 					car.SetState( Car.eState.Countdown );
+				}
+
+				foreach ( NPC npc in mNPCs )
+				{
+					npc.SetState( NPC.eState.Waiting );
 				}
 
 				mGameTimer = GAME_TIME_COUNTDOWN;
 				break;
 
 			case eState.Playing:
-				mGameTimer = GAME_TIME_PLAYING;
-				foreach ( Car car in mPlayers ) {
+				print( "GO!" );
+
+				foreach ( Car car in mPlayers )
+				{
 					car.SetState( Car.eState.Playing );
 				}
-				print( "GO!" );
+
+				foreach ( NPC npc in mNPCs )
+				{
+					npc.SetState( NPC.eState.Alive );
+				}
+
+				mGameTimer = GAME_TIME_PLAYING;
 				break;
 
 			case eState.GameOver:
-				print( "Game over! Press Enter (temporary) to restart game." );
-				foreach ( Car car in mPlayers ) {
-					car.SetState( Car.eState.GameOver );
+				{
+					foreach ( Car car in mPlayers )
+					{
+						car.SetState( Car.eState.GameOver );
+					}
+
+					foreach ( NPC npc in mNPCs )
+					{
+						npc.SetState( NPC.eState.Waiting );
+					}
+
+					// Determine winner.
+					Car winner = GetWinningPlayer();
+					print( "Player " + winner.GetPlayerNumber() + " wins!" );
+					print( "Game over! Press Enter (temporary) to restart game." );
 				}
 				break;
 
@@ -165,5 +192,27 @@ public class GameManager : MonoBehaviour
 	public Transform GetPlayerSpawn( int index )
 	{
 		return mSpawns[index - 1];
+	}
+
+	private Car GetWinningPlayer()
+	{
+		Car winning = null;
+		int highestScore = 0;
+		foreach ( Car car in mPlayers )
+		{
+			if ( car.GetScoreManager().Score > highestScore )
+			{
+				winning = car;
+				winning.GetScoreManager().Score = car.GetScoreManager().Score;
+				highestScore = car.GetScoreManager().Score;
+			}
+		}
+
+		return winning;
+	}
+
+	public void AddNPC( NPC npc )
+	{
+		mNPCs.Add( npc );
 	}
 }

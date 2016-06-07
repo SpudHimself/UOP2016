@@ -2,6 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
+public enum eItemState
+{
+    INACTIVE,
+    ACTIVE
+}
+
 public class ScoreItem : MonoBehaviour
 {
 	#region Fields
@@ -15,8 +21,12 @@ public class ScoreItem : MonoBehaviour
 	private float mSuckPower;
 	#endregion
 
-	#region Unity Methods
-	private void Start()
+    #region Properties
+    public eItemState State { get; set; }
+    #endregion
+
+    #region Unity Methods
+    private void Start()
 	{
 		mTransform = this.transform;
 		mSpeed = 2f;
@@ -25,17 +35,19 @@ public class ScoreItem : MonoBehaviour
 
 	private void Update()
 	{
-		foreach ( Car player in GameManager.Singleton().GetPlayers() )
-		{
-			// Check the distance of each player from the item.
-			float dist = Vector3.Distance( mTransform.position, player.transform.position );
+        switch (State)
+        {
+            case eItemState.INACTIVE:
+                // TODO: ...Only Cthulhu knows.
+                StateInactive();
+                break;
 
-			if ( dist < absorbDistance )
-			{
-				float suckSpeed = ( mSpeed / dist ) * mSuckPower;
-				mTransform.position = Vector3.MoveTowards( mTransform.position, player.transform.position, suckSpeed * Time.deltaTime );
-			}
-		}
+            case eItemState.ACTIVE:
+                StateActive();
+                break;
+        }
+
+        Debug.Log(State);
 	}
 
 	private void OnCollisionEnter( Collision col )
@@ -51,7 +63,7 @@ public class ScoreItem : MonoBehaviour
 // 				Debug.Log("Incrementing score to ScoreManager.");
 				sm.Increase( points );
 
-//              Debug.Log(sm.Score);
+				//Debug.Log(sm.Score);
 			}
 
 			// Temporary step for getting rid of it.
@@ -59,4 +71,29 @@ public class ScoreItem : MonoBehaviour
 		}
 	}
 	#endregion
+
+    #region Methods
+    private void StateInactive()
+    {
+        //TODO: ?
+    }
+
+    private void StateActive()
+    {
+        if (GameManager.Singleton().GetState() == GameManager.eState.Playing)
+        {
+            foreach (Car player in GameManager.Singleton().GetPlayers())
+            {
+                // Check the distance of each player from the item.
+                float dist = Vector3.Distance(mTransform.position, player.transform.position);
+
+                if (dist < absorbDistance)
+                {
+                    float suckSpeed = (mSpeed / dist) * mSuckPower;
+                    mTransform.position = Vector3.MoveTowards(mTransform.position, player.transform.position, suckSpeed * Time.deltaTime);
+                }
+            }
+        }
+    }
+    #endregion
 }
