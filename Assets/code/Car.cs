@@ -23,6 +23,8 @@ public class Car : MonoBehaviour
 
 	private ScoreManager mScoreManager;
 
+	private GameObject mScorePlumPrefab;
+
 	void Awake()
 	{
 		tag = Tags.PLAYER;
