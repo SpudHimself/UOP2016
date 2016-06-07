@@ -112,12 +112,7 @@ public class Car : MonoBehaviour
         //fuckery for testing, wont be needed end game
         if (mKeyboardUser)
         {
-<<<<<<< HEAD
-            //motor = mMaxMotorTorque * Input.GetAxis("Acceleration");
-			motor = mMaxMotorTorque * Input.GetAxis("Vertical");
-=======
             motor = mMaxMotorTorque * Input.GetAxis("Vertical");
->>>>>>> d2a4857cc248608b3af16e14d40423ea11d4749e
             steering = mMaxSteeringAngle * Input.GetAxis("Horizontal");
         }
         else
