@@ -16,7 +16,7 @@ public class ScorePlum : MonoBehaviour
     private void Awake()
     {
         mTransform = this.transform;
-        mText = this.GetComponent<TextMesh>();
+        mText = GetComponent<TextMesh>();
     }
 
     private void Update()
