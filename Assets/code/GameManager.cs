@@ -123,7 +123,7 @@ public class GameManager : MonoBehaviour
 	private void StateCountdown()
 	{
 		mGameTimer = Mathf.Max( mGameTimer - Time.deltaTime, 0f );
-		// 		print( mGameTimer );
+// 		print( mGameTimer );
 		if ( mGameTimer <= 0f )
 		{
 			SetState( eState.Playing );
@@ -133,7 +133,7 @@ public class GameManager : MonoBehaviour
 	private void StatePlaying()
 	{
 		mGameTimer = Mathf.Max( mGameTimer - Time.deltaTime, 0f );
-		// 		print( mGameTimer );
+// 		print( mGameTimer );
 		if ( mGameTimer <= 0f )
 		{
 			SetState( eState.GameOver );
