@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: e129792ceb5dc2141ae37856309817a5
 timeCreated: 1465306013
+=======
+guid: ce633d4b68b3eb847a2e22a5d1e688b6
+timeCreated: 1465304957
+>>>>>>> ben
 licenseType: Pro
 NativeFormatImporter:
   userData: 

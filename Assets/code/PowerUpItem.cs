@@ -6,6 +6,9 @@ public enum ePowerUpType
     SPEED_BOOST
 }
 
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Collider))]
+
 public class PowerUpItem : MonoBehaviour
 {
     #region Fields
@@ -30,7 +33,14 @@ public class PowerUpItem : MonoBehaviour
             }
             else
             {
+                switch (type)
+                {
+                    case ePowerUpType.SPEED_BOOST:
+                        mCar.mMaxMotorTorque /= modifier;
+                        break;
+                }
 
+                Destroy(this.gameObject);
             }
         }
     }
@@ -52,8 +62,5 @@ public class PowerUpItem : MonoBehaviour
             }
         }
     }
-    #endregion
-
-    #region Methods
     #endregion
 }

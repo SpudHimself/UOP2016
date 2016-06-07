@@ -14,13 +14,15 @@ public class NPC : MonoBehaviour
 	// These 2 will have to be changed.
 	private float mRoamRadius = 15f;
 	private float mMoveTimer;
+    private float mDeadTimer = 5.0f;
 
 	private NavMeshAgent mAgent;
-	private Collider mCollider;
+    private MeshRenderer mRenderer;
 
 	void Awake()
 	{
 		tag = Tags.NPC;
+        mRenderer = this.GetComponent<MeshRenderer>();
 	}
 
 	void Start()
@@ -32,8 +34,6 @@ public class NPC : MonoBehaviour
 		mAgent = gameObject.AddComponent<NavMeshAgent>();
 		mAgent.Resume();
 		mAgent.destination = transform.position;
-
-		mCollider = GetComponent<Collider>();
 	}
 
 	void Update()
@@ -53,6 +53,24 @@ public class NPC : MonoBehaviour
 		}
 	}
 
+    void OnCollisionEnter(Collision col)
+    {
+        float value = 50.0f;
+
+        if (col.gameObject.CompareTag(Tags.PLAYER))
+        {
+            Car car = col.gameObject.GetComponent<Car>();
+
+            Vector3 dir = col.contacts[0].point;
+            dir.y = 5.0f;
+
+            Debug.Log(dir);
+
+            SetState(eState.Dead);
+            this.GetComponent<Rigidbody>().AddForce(dir * (car.Motor / value));
+        }
+    }
+
 	public eState GetState()
 	{
 		return mState;
@@ -71,8 +89,7 @@ public class NPC : MonoBehaviour
 				break;
 
 			case eState.Dead:
-				mAgent.Stop();
-				mCollider.enabled = false;
+                Destroy(this.GetComponent<NavMeshAgent>());
 				break;
 		}
 	}
@@ -90,6 +107,23 @@ public class NPC : MonoBehaviour
 	private void StateDead()
 	{
 		// Fade out or something?
+        if (mDeadTimer >= 0.0f)
+        {
+            mDeadTimer -= Time.deltaTime;
+        }
+        else
+        {
+            Color color = mRenderer.material.color;
+
+            color.a -= Time.deltaTime;
+
+            mRenderer.material.color = color;
+
+            if (color.a <= 0.0f)
+            {
+                Destroy(this.gameObject);
+            }
+        }
 	}
 
 	// Find a random new position within mRoamRadius to move towards.
