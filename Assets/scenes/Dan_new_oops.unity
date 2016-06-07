@@ -641,7 +641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffbe27bb9e18064bb51f05ba1dfedec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 271822905}
+  player: {fileID: 271822904}
   followPoint: {fileID: 484184631}
   followSpeed: 2
   distance: 10
