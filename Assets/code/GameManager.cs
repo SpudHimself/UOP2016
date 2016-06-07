@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 	}
 	private eState mState;
 
-	public const float GAME_TIME_PLAYING = 15f; // This will probably get tweaked all the time. 15 for testing. Maybe 45 for real thing?
+	public const float GAME_TIME_PLAYING = 45f; // This will probably get tweaked all the time. 15 for testing. Maybe 45 for real thing?
 	public const float GAME_TIME_COUNTDOWN = 3f;
 	private float mGameTimer;
 

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PlayerSpawn
   - NPC
+  - Item
+  - ShelfSpawn
   layers:
   - Default
   - TransparentFX
