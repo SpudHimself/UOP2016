@@ -185,6 +185,7 @@ public class GameManager : MonoBehaviour
 			{
 				winning = car;
 				winning.GetScoreManager().Score = car.GetScoreManager().Score;
+				highestScore = car.GetScoreManager().Score;
 			}
 		}
 
