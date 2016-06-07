@@ -25,6 +25,7 @@ public class Car : MonoBehaviour
 
 	private GameObject mScorePlumPrefab;
 
+    public float Motor { get; set; }
 	void Awake()
 	{
 		tag = Tags.PLAYER;
@@ -105,19 +106,18 @@ public class Car : MonoBehaviour
 		//for multiple people
         //float motor = mMaxMotorTorque * Input.GetAxis("Vertical_" + mPlayerNumber);
         //float steering = mMaxSteeringAngle * Input.GetAxis("Horizontal_" + mPlayerNumber);
-        float motor;
         float steering;
 
 
         //fuckery for testing, wont be needed end game
         if (mKeyboardUser)
         {
-            motor = mMaxMotorTorque * Input.GetAxis("Vertical");
+            Motor = mMaxMotorTorque * Input.GetAxis("Vertical");
             steering = mMaxSteeringAngle * Input.GetAxis("Horizontal");
         }
         else
         {
-            motor = mMaxMotorTorque * Input.GetAxis("Acceleration_" + mPlayerNumber);
+            Motor = mMaxMotorTorque * Input.GetAxis("Acceleration_" + mPlayerNumber);
             steering = mMaxSteeringAngle * Input.GetAxis("Steering_" + mPlayerNumber);
         }
 
@@ -131,8 +131,8 @@ public class Car : MonoBehaviour
 
             if (axle.motor)
             {
-                axle.leftWheel.motorTorque = motor;
-                axle.rightWheel.motorTorque = motor;
+                axle.leftWheel.motorTorque = Motor;
+                axle.rightWheel.motorTorque = Motor;
 
                 //handbrake
                 if (Input.GetButton("Fire2"))
