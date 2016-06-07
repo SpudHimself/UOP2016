@@ -92,7 +92,7 @@ public class Car : MonoBehaviour
 
 	private void StateGameOver()
 	{
-		if ( Input.GetKeyDown( KeyCode.Return ) || Input.GetButtonDown("Start") )
+		if ( Input.GetKeyDown( KeyCode.Return ) || Input.GetButtonDown("Start_1") )
 		{
 			Application.LoadLevel( Application.loadedLevelName );
 		}
