@@ -51,7 +51,7 @@ public class ScoreItem : MonoBehaviour
 // 				Debug.Log("Incrementing score to ScoreManager.");
 				sm.Increase( points );
 
-//              Debug.Log(sm.Score);
+				//Debug.Log(sm.Score);
 			}
 
 			// Temporary step for getting rid of it.

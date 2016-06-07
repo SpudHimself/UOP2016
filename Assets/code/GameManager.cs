@@ -82,7 +82,8 @@ public class GameManager : MonoBehaviour
 			case eState.Countdown:
 				print( "Get ready!" );
 
-				foreach ( Car car in mPlayers ) {
+				foreach ( Car car in mPlayers )
+				{
 					car.SetState( Car.eState.Countdown );
 				}
 
@@ -92,7 +93,8 @@ public class GameManager : MonoBehaviour
 			case eState.Playing:
 				print( "GO!" );
 
-				foreach ( Car car in mPlayers ) {
+				foreach ( Car car in mPlayers )
+				{
 					car.SetState( Car.eState.Playing );
 				}
 
@@ -116,7 +118,7 @@ public class GameManager : MonoBehaviour
 	private void StateCountdown()
 	{
 		mGameTimer = Mathf.Max( mGameTimer - Time.deltaTime, 0f );
-// 		print( mGameTimer );
+		// 		print( mGameTimer );
 		if ( mGameTimer <= 0f )
 		{
 			SetState( eState.Playing );
@@ -126,7 +128,7 @@ public class GameManager : MonoBehaviour
 	private void StatePlaying()
 	{
 		mGameTimer = Mathf.Max( mGameTimer - Time.deltaTime, 0f );
-// 		print( mGameTimer );
+		// 		print( mGameTimer );
 		if ( mGameTimer <= 0f )
 		{
 			SetState( eState.GameOver );
@@ -175,10 +177,12 @@ public class GameManager : MonoBehaviour
 	{
 		Car winning = null;
 		int highestScore = 0;
-		foreach ( Car car in mPlayers ) {
+		foreach ( Car car in mPlayers )
+		{
 			car.SetState( Car.eState.GameOver );
 
-			if ( car.GetScoreManager().Score > highestScore ) {
+			if ( car.GetScoreManager().Score > highestScore )
+			{
 				winning = car;
 				winning.GetScoreManager().Score = car.GetScoreManager().Score;
 			}
