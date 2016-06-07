@@ -14,7 +14,7 @@ public class Car : MonoBehaviour
 
     [Range(1.0f, 4.0f)]
     public int mPlayerNumber;
-    public bool mSinglePlayer;
+    public bool mKeyboardUser;
 
     public List<AxleInfo> mAxleInfos;
     public float mMaxMotorTorque;
@@ -108,10 +108,10 @@ public class Car : MonoBehaviour
 
 
         //fuckery for testing, wont be needed end game
-        if(mSinglePlayer)
+        if (mKeyboardUser)
         {
-            motor = mMaxMotorTorque * Input.GetAxis("Acceleration_1");
-            steering = mMaxSteeringAngle * Input.GetAxis("Steering_1");
+            motor = mMaxMotorTorque * Input.GetAxis("Vertical");
+            steering = mMaxSteeringAngle * Input.GetAxis("Horizontal");
         }
         else
         {
