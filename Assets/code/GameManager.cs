@@ -66,6 +66,11 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
+	public eState GetState()
+	{
+		return mState;
+	}
+
 	public void SetState( eState state )
 	{
 		mState = state;
@@ -75,17 +80,28 @@ public class GameManager : MonoBehaviour
 		switch ( state )
 		{
 			case eState.Countdown:
-				mGameTimer = GAME_TIME_COUNTDOWN;
 				print( "Get ready!" );
+
+				foreach ( Car car in mPlayers ) {
+					car.SetState( Car.eState.Countdown );
+				}
+
+				mGameTimer = GAME_TIME_COUNTDOWN;
 				break;
 
 			case eState.Playing:
 				mGameTimer = GAME_TIME_PLAYING;
+				foreach ( Car car in mPlayers ) {
+					car.SetState( Car.eState.Playing );
+				}
 				print( "GO!" );
 				break;
 
 			case eState.GameOver:
 				print( "Game over! Press Enter (temporary) to restart game." );
+				foreach ( Car car in mPlayers ) {
+					car.SetState( Car.eState.GameOver );
+				}
 				break;
 
 			case eState.Paused:

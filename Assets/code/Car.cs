@@ -4,6 +4,14 @@ using System.Collections.Generic;
 
 public class Car : MonoBehaviour
 {
+	public enum eState
+	{
+		Countdown,
+		Playing,
+		GameOver
+	}
+	private eState mState;
+
     [Range(1.0f, 4.0f)]
     public int mPlayerNumber;
     public bool mSinglePlayer;
@@ -34,7 +42,56 @@ public class Car : MonoBehaviour
 
     public void FixedUpdate()
     {
-        //for multiple people
+        switch ( mState )
+		{
+			case eState.Countdown:
+				StateCountdown();
+				break;
+
+			case eState.Playing:
+				StatePlaying();
+				break;
+
+			case eState.GameOver:
+				StateGameOver();
+				break;
+		}
+    }
+
+    [System.Serializable]
+    public class AxleInfo
+    {
+        public WheelCollider leftWheel;
+        public WheelCollider rightWheel;
+        public bool motor;
+        public bool steering;
+    }
+
+	public void SetState( eState state )
+	{
+		mState = state;
+	}
+
+	private void StateCountdown()
+	{
+	}
+
+	private void StatePlaying()
+	{
+		UpdateCar();
+	}
+
+	private void StateGameOver()
+	{
+		if ( Input.GetKeyDown( KeyCode.Return ) )
+		{
+			Application.LoadLevel( Application.loadedLevelName );
+		}
+	}
+
+	private void UpdateCar()
+	{
+		//for multiple people
         //float motor = mMaxMotorTorque * Input.GetAxis("Vertical_" + mPlayerNumber);
         //float steering = mMaxSteeringAngle * Input.GetAxis("Horizontal_" + mPlayerNumber);
         float motor;
@@ -66,15 +123,5 @@ public class Car : MonoBehaviour
                 axle.rightWheel.motorTorque = motor;
             }
         }
-
-    }
-
-    [System.Serializable]
-    public class AxleInfo
-    {
-        public WheelCollider leftWheel;
-        public WheelCollider rightWheel;
-        public bool motor;
-        public bool steering;
-    }
+	}
 }
