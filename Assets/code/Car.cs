@@ -14,7 +14,7 @@ public class Car : MonoBehaviour
 
     [Range(1.0f, 4.0f)]
     public int mPlayerNumber;
-    public bool mSinglePlayer;
+    public bool mKeyboardUser;
 
     public List<AxleInfo> mAxleInfos;
     public float mMaxMotorTorque;
@@ -22,6 +22,8 @@ public class Car : MonoBehaviour
     public float mBrakeTorque;
 
 	private ScoreManager mScoreManager;
+
+	private GameObject mScorePlumPrefab;
 
 	void Awake()
 	{
@@ -43,11 +45,14 @@ public class Car : MonoBehaviour
 		mScoreManager = gameObject.AddComponent<ScoreManager>();
     }
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-
-    //}
+    // Update is called once per frame
+    void Update()
+    {
+		if ( Input.GetButtonDown( "Start_1" ) )
+		{
+			GameManager.Singleton().TogglePause();
+		}
+    }
 
     public void FixedUpdate()
     {
@@ -92,7 +97,7 @@ public class Car : MonoBehaviour
 
 	private void StateGameOver()
 	{
-		if ( Input.GetKeyDown( KeyCode.Return ) )
+		if ( Input.GetKeyDown( KeyCode.Return ) || Input.GetButtonDown("Start_1") )
 		{
 			Application.LoadLevel( Application.loadedLevelName );
 		}
@@ -108,15 +113,15 @@ public class Car : MonoBehaviour
 
 
         //fuckery for testing, wont be needed end game
-        if(mSinglePlayer)
+        if (mKeyboardUser)
         {
-            motor = mMaxMotorTorque * Input.GetAxis("Acceleration");
+            motor = mMaxMotorTorque * Input.GetAxis("Vertical");
             steering = mMaxSteeringAngle * Input.GetAxis("Horizontal");
         }
         else
         {
-            motor = mMaxMotorTorque * Input.GetAxis("Vertical_" + mPlayerNumber);
-            steering = mMaxSteeringAngle * Input.GetAxis("Horizontal_" + mPlayerNumber);
+            motor = mMaxMotorTorque * Input.GetAxis("Acceleration_" + mPlayerNumber);
+            steering = mMaxSteeringAngle * Input.GetAxis("Steering_" + mPlayerNumber);
         }
 
         foreach (AxleInfo axle in mAxleInfos)

@@ -10,4 +10,6 @@ public class Tags {
 	public const string NPC = "NPC";
 
     public const string ITEM = "Item";
+
+    public const string SHELF_SPAWN = "ShelfSpawn";
 }

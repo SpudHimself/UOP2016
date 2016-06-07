@@ -5,12 +5,15 @@ public class ScoreManager : MonoBehaviour
 {
     #region Properties
     public int Score { get; set; }
+	private GameObject mScorePlumPrefab;
     #endregion
 
     #region Unity Methods
     private void Start()
     {
         Score = 0;
+
+		mScorePlumPrefab = (GameObject) Resources.Load( "prefabs/ScorePlum" );
     }
     #endregion
 
@@ -18,6 +21,10 @@ public class ScoreManager : MonoBehaviour
     public void Increase(int amount)
     {
         Score += amount;
+
+		mScorePlumPrefab = (GameObject) Resources.Load( "prefabs/ScorePlum" );
+		GameObject clone = (GameObject) Instantiate( mScorePlumPrefab, transform.position, transform.rotation );
+		clone.GetComponent<TextMesh>().text = "" + amount;
     }
 
     public void Decrease(int amount)

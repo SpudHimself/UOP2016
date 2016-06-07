@@ -9,11 +9,32 @@ public enum ePowerUpType
 public class PowerUpItem : MonoBehaviour
 {
     #region Fields
+    [Header("Power-up basics")]
     public ePowerUpType type;
     public float modifier;
+
+    [Header("Effect")]
+    public float modifyTime;
+
+    private Car mCar;
     #endregion
 
     #region Unity Methods
+    private void Update()
+    {
+        if (mCar)
+        {
+            if (modifyTime > 0.0f)
+            {
+                modifier -= Time.deltaTime;
+            }
+            else
+            {
+
+            }
+        }
+    }
+
     private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag.Equals(Tags.PLAYER))
@@ -21,7 +42,12 @@ public class PowerUpItem : MonoBehaviour
             switch (type)
             {
                 case ePowerUpType.SPEED_BOOST:
-                    // TODO: Move player faster when collided with.
+                    mCar = col.gameObject.GetComponent<Car>();
+                    mCar.mMaxMotorTorque *= modifier;
+
+                    this.GetComponent<Renderer>().enabled = false;
+                    this.GetComponent<Collider>().enabled = false;
+
                     break;
             }
         }

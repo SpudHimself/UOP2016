@@ -6,22 +6,18 @@ using System.Collections.Generic;
 
 public class MainMenu : MonoBehaviour
 {
-    public Button startButton;
-    public Button creditsButton;
-    public Button helpButton;
-    public Button quitButton;
-    public Button currentButton;
     public EventSystem eventSystem;
+
+    public AudioSource audioClip;
 
     // Use this for initialization
     void Start()
-    {
+    {        
     }
 
     // Update is called once per frame
     void Update()
-    {
-        //CheckInput();
+    {       
     }
 
     public void LoadLevel(string filename)
