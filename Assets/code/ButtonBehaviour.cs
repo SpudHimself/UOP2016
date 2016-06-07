@@ -4,15 +4,21 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 
-public class ButtonBehaviour : MonoBehaviour, ISelectHandler
+public class ButtonBehaviour : MonoBehaviour, IDeselectHandler
 {
     private ColorBlock color;
     private Button currentButton;
+    public Button backButton;
+
+    public AudioSource m_audioSource;
+    public AudioClip m_audioClipScroll;
 
     // Use this for initialization
     void Start()
     {
         currentButton = GetComponent<Button>();
+
+        //DontDestroyOnLoad(m_audioSource);
     }
 
     // Update is called once per frame
@@ -23,8 +29,9 @@ public class ButtonBehaviour : MonoBehaviour, ISelectHandler
         currentButton.colors = color;
     }
 
-    public void OnSelect(BaseEventData eventData)
+    public void OnDeselect(BaseEventData eventData)
     {
-
+        if (!backButton)
+            m_audioSource.PlayOneShot(m_audioClipScroll, 1.0f);
     }
 }
