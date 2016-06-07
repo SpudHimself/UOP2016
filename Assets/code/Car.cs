@@ -110,7 +110,8 @@ public class Car : MonoBehaviour
         //fuckery for testing, wont be needed end game
         if(mSinglePlayer)
         {
-            motor = mMaxMotorTorque * Input.GetAxis("Acceleration");
+            //motor = mMaxMotorTorque * Input.GetAxis("Acceleration");
+			motor = mMaxMotorTorque * Input.GetAxis("Vertical");
             steering = mMaxSteeringAngle * Input.GetAxis("Horizontal");
         }
         else
