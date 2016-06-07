@@ -103,6 +103,11 @@ public class GameManager : MonoBehaviour
 
 			case eState.GameOver:
 				{
+					foreach ( Car car in mPlayers )
+					{
+						car.SetState( Car.eState.GameOver );
+					}
+
 					// Determine winner.
 					Car winner = GetWinningPlayer();
 					print( "Player " + winner.GetPlayerNumber() + " wins!" );
@@ -179,8 +184,6 @@ public class GameManager : MonoBehaviour
 		int highestScore = 0;
 		foreach ( Car car in mPlayers )
 		{
-			car.SetState( Car.eState.GameOver );
-
 			if ( car.GetScoreManager().Score > highestScore )
 			{
 				winning = car;
