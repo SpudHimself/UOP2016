@@ -20,6 +20,8 @@ public class Car : MonoBehaviour
     public float mMaxMotorTorque;
     public float mMaxSteeringAngle;
 
+	private ScoreManager mScoreManager;
+
 	void Awake()
 	{
 		tag = Tags.PLAYER;
@@ -37,6 +39,7 @@ public class Car : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+		mScoreManager = gameObject.AddComponent<ScoreManager>();
     }
 
     //// Update is called once per frame
@@ -128,5 +131,15 @@ public class Car : MonoBehaviour
                 axle.rightWheel.motorTorque = motor;
             }
         }
+	}
+
+	public ScoreManager GetScoreManager()
+	{
+		return mScoreManager;
+	}
+
+	public int GetPlayerNumber()
+	{
+		return mPlayerNumber;
 	}
 }
