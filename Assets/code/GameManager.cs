@@ -82,7 +82,8 @@ public class GameManager : MonoBehaviour
 			case eState.Countdown:
 				print( "Get ready!" );
 
-				foreach ( Car car in mPlayers ) {
+				foreach ( Car car in mPlayers )
+				{
 					car.SetState( Car.eState.Countdown );
 				}
 
@@ -90,17 +91,27 @@ public class GameManager : MonoBehaviour
 				break;
 
 			case eState.Playing:
-				mGameTimer = GAME_TIME_PLAYING;
-				foreach ( Car car in mPlayers ) {
+				print( "GO!" );
+
+				foreach ( Car car in mPlayers )
+				{
 					car.SetState( Car.eState.Playing );
 				}
-				print( "GO!" );
+
+				mGameTimer = GAME_TIME_PLAYING;
 				break;
 
 			case eState.GameOver:
-				print( "Game over! Press Enter (temporary) to restart game." );
-				foreach ( Car car in mPlayers ) {
-					car.SetState( Car.eState.GameOver );
+				{
+					foreach ( Car car in mPlayers )
+					{
+						car.SetState( Car.eState.GameOver );
+					}
+
+					// Determine winner.
+					Car winner = GetWinningPlayer();
+					print( "Player " + winner.GetPlayerNumber() + " wins!" );
+					print( "Game over! Press Enter (temporary) to restart game." );
 				}
 				break;
 
@@ -165,5 +176,22 @@ public class GameManager : MonoBehaviour
 	public Transform GetPlayerSpawn( int index )
 	{
 		return mSpawns[index - 1];
+	}
+
+	private Car GetWinningPlayer()
+	{
+		Car winning = null;
+		int highestScore = 0;
+		foreach ( Car car in mPlayers )
+		{
+			if ( car.GetScoreManager().Score > highestScore )
+			{
+				winning = car;
+				winning.GetScoreManager().Score = car.GetScoreManager().Score;
+				highestScore = car.GetScoreManager().Score;
+			}
+		}
+
+		return winning;
 	}
 }
