@@ -19,6 +19,7 @@ public class Car : MonoBehaviour
     public List<AxleInfo> mAxleInfos;
     public float mMaxMotorTorque;
     public float mMaxSteeringAngle;
+    public float mBrakeTorque;
 
 	private ScoreManager mScoreManager;
 
@@ -105,10 +106,11 @@ public class Car : MonoBehaviour
         float motor;
         float steering;
 
+
         //fuckery for testing, wont be needed end game
         if(mSinglePlayer)
         {
-            motor = mMaxMotorTorque * Input.GetAxis("Vertical");
+            motor = mMaxMotorTorque * Input.GetAxis("Acceleration");
             steering = mMaxSteeringAngle * Input.GetAxis("Horizontal");
         }
         else
@@ -129,6 +131,19 @@ public class Car : MonoBehaviour
             {
                 axle.leftWheel.motorTorque = motor;
                 axle.rightWheel.motorTorque = motor;
+
+                //handbrake
+                if (Input.GetButton("Fire2"))
+                {
+                    Debug.Log("Brake applied");
+                    axle.leftWheel.brakeTorque = mBrakeTorque;
+                    axle.rightWheel.brakeTorque = mBrakeTorque;
+                }
+                else
+                {
+                    axle.leftWheel.brakeTorque = 0.0f;
+                    axle.rightWheel.brakeTorque = 0.0f;
+                }
             }
         }
 	}
