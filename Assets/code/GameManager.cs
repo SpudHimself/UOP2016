@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
 	{
 		sSingleton = this;
 
+		gameObject.AddComponent<PostProcessor>();
+
 		mPlayers = new List<Car>();
 		mNPCs = new List<NPC>();
 

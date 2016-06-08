@@ -27,6 +27,7 @@ public class NPC : MonoBehaviour
 
 	void Start()
 	{
+		// Leave this first.
 		GameManager.Singleton().GetNPCs().Add( this );
 
 		mMoveTimer = 0f;
