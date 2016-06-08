@@ -77,13 +77,13 @@ public class Car : MonoBehaviour
             //firePowerup()
         }
 
-        if (Input.GetButtonDown("Start_" + mPlayerNumber))
+        if (Input.GetButtonDown("Start_" + mPlayerNumber) || Input.GetKeyDown( KeyCode.Escape ))
         {
             Debug.Log("Player " + mPlayerNumber + ": Start pressed");
             GameManager.Singleton().TogglePause();
         }
 
-        if (Input.GetButtonDown("Reset_" + mPlayerNumber) && isGrounded())
+        if (Input.GetButtonDown("Reset_" + mPlayerNumber) )
         {
             Debug.Log("Player " + mPlayerNumber + ": Reset pressed");
             ResetPosition();
@@ -140,14 +140,14 @@ public class Car : MonoBehaviour
 		}
 	}
 
+	private float mVerticalAxis;
+
 	private void UpdateCar()
 	{
 		//for multiple people
         //float motor = mMaxMotorTorque * Input.GetAxis("Vertical_" + mPlayerNumber);
         //float steering = mMaxSteeringAngle * Input.GetAxis("Horizontal_" + mPlayerNumber);
         float steering;
-		
-		float vertical = 0f;
 
         //fuckery for testing, wont be needed end game
         if (mKeyboardUser)
@@ -155,7 +155,7 @@ public class Car : MonoBehaviour
             Motor = mMaxMotorTorque * Input.GetAxis("Vertical");
             steering = mMaxSteeringAngle * Input.GetAxis("Horizontal");
 
-			vertical = Input.GetAxis( "Vertical" );
+			mVerticalAxis = Input.GetAxis( "Vertical" );
 
 			//SoundManager.Singleton().SetPitch( "motor_fatman", Input.GetAxis("Vertical") );			
         }
@@ -164,7 +164,7 @@ public class Car : MonoBehaviour
             Motor = mMaxMotorTorque * Input.GetAxis("Acceleration_" + mPlayerNumber);
             steering = mMaxSteeringAngle * Input.GetAxis("Steering_" + mPlayerNumber);
 
-			vertical = Input.GetAxis("Acceleration_" + mPlayerNumber);
+			mVerticalAxis = Input.GetAxis("Acceleration_" + mPlayerNumber);
 
 			//SoundManager.Singleton().SetPitch( "motor_fatman", Input.GetAxis("Acceleration_" + mPlayerNumber) );
 			//SoundManager.Singleton().PlaySound( "motor_fatman" );
@@ -231,19 +231,14 @@ public class Car : MonoBehaviour
         this.transform.position = currentPosition;
     }
 
-    bool isGrounded()
-    {
-        return Physics.Raycast(this.transform.position, -this.transform.up, mDistToGround + 0.1f);
-    }
-
-	public bool IsGrounded()
-	{
-		return Physics.Raycast( transform.position, Vector3.down );
-	}
+//     bool isGrounded()
+//     {
+//         return Physics.Raycast(this.transform.position, -this.transform.up, mDistToGround + 0.1f);
+//     }
 
 	private void UpdateCarNoise()
 	{
-		float vol = Input.GetAxis( "Vertical" ) * Time.deltaTime;
+		float vol = mVerticalAxis * Time.deltaTime;
 		mAudioSource.volume = Mathf.Clamp( vol, 0f, 0.5f );
 	}
 }

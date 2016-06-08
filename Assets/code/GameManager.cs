@@ -62,12 +62,12 @@ public class GameManager : MonoBehaviour
 		//	SpawnNPC();
 		//}
 
+		mPauseMenu = GameObject.FindGameObjectWithTag( "PauseMenu" ).GetComponentInChildren<Canvas>();
+		mPauseMenu.enabled = false;
+		Debug.Log( mPauseMenu.enabled );
+
 		// Keep this last.
 		SetState( eState.Countdown );
-
-        mPauseMenu = GameObject.FindGameObjectWithTag("PauseMenu").GetComponentInChildren<Canvas>();
-        mPauseMenu.enabled = false;
-        Debug.Log(mPauseMenu.enabled);
 	}
 
 	void Update()
