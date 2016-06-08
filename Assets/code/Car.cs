@@ -138,9 +138,9 @@ public class Car : MonoBehaviour
                 axle.rightWheel.motorTorque = motor;
 
                 //handbrake
-                if (Input.GetButton("Fire2"))
+                if (Input.GetButton("Handbrake_" + mPlayerNumber))
                 {
-                    Debug.Log("Brake applied");
+                    Debug.Log("Player " + mPlayerNumber + ": Brake applied");
                     axle.leftWheel.brakeTorque = mBrakeTorque;
                     axle.rightWheel.brakeTorque = mBrakeTorque;
                 }
