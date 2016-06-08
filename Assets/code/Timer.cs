@@ -17,11 +17,9 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.Singleton().GetState() == GameManager.eState.Playing)
-        {
-            timer = GameManager.Singleton().GetGameTime();
-            text.text = "Time Remaining: " + timer.ToString("F2");
-        }
+		GameManager.eState state = GameManager.Singleton().GetState();
 
+		timer = GameManager.Singleton().GetGameTime();
+		text.text = state == GameManager.eState.Playing ? "Time Remaining: " + timer.ToString( "F2" ) : timer.ToString( "F0" );
     }
 }
