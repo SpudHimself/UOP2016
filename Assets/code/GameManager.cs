@@ -55,9 +55,9 @@ public class GameManager : MonoBehaviour
 			mNPCSpawns.Add( go.transform );
 		}
 
-		for ( int i = 0; i < 3; i++ ) {
-			SpawnNPC();
-		}
+		//for ( int i = 0; i < 3; i++ ) {
+		//	SpawnNPC();
+		//}
 
 		// Keep this last.
 		SetState( eState.Countdown );
@@ -157,7 +157,9 @@ public class GameManager : MonoBehaviour
 	private void StateCountdown()
 	{
 		mGameTimer = Mathf.Max( mGameTimer - Time.deltaTime, 0f );
-		// 		print( mGameTimer );
+		PostProcessor.Singleton().SetGreyScale( 1f );
+
+// 		print( mGameTimer );
 		if ( mGameTimer <= 0f )
 		{
 			SetState( eState.Playing );

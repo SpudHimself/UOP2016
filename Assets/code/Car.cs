@@ -25,7 +25,11 @@ public class Car : MonoBehaviour
 
 	private GameObject mScorePlumPrefab;
 
+	public AudioClip mMotor;
+	public AudioSource mAudioSource;
+
     public float Motor { get; set; }
+
 	void Awake()
 	{
 		tag = Tags.PLAYER;
@@ -45,6 +49,11 @@ public class Car : MonoBehaviour
 		GameManager.Singleton().GetPlayers().Add(this);
 
 		mScoreManager = gameObject.AddComponent<ScoreManager>();
+
+		mAudioSource.playOnAwake = false;
+		mAudioSource.loop = true;
+		mAudioSource.clip = mMotor;
+		mAudioSource.Play();
     }
 
     // Update is called once per frame
@@ -109,6 +118,7 @@ public class Car : MonoBehaviour
 
 	private void StateCountdown()
 	{
+		UpdateCarNoise();
 	}
 
 	private void StatePlaying()
@@ -130,19 +140,31 @@ public class Car : MonoBehaviour
         //float motor = mMaxMotorTorque * Input.GetAxis("Vertical_" + mPlayerNumber);
         //float steering = mMaxSteeringAngle * Input.GetAxis("Horizontal_" + mPlayerNumber);
         float steering;
-
+		
+		float vertical = 0f;
 
         //fuckery for testing, wont be needed end game
         if (mKeyboardUser)
         {
             Motor = mMaxMotorTorque * Input.GetAxis("Vertical");
             steering = mMaxSteeringAngle * Input.GetAxis("Horizontal");
+
+			vertical = Input.GetAxis( "Vertical" );
+
+			//SoundManager.Singleton().SetPitch( "motor_fatman", Input.GetAxis("Vertical") );			
         }
         else
         {
             Motor = mMaxMotorTorque * Input.GetAxis("Acceleration_" + mPlayerNumber);
             steering = mMaxSteeringAngle * Input.GetAxis("Steering_" + mPlayerNumber);
+
+			vertical = Input.GetAxis("Acceleration_" + mPlayerNumber);
+
+			//SoundManager.Singleton().SetPitch( "motor_fatman", Input.GetAxis("Acceleration_" + mPlayerNumber) );
+			//SoundManager.Singleton().PlaySound( "motor_fatman" );
         }
+
+		UpdateCarNoise();
 
         foreach (AxleInfo axle in mAxleInfos)
         {
@@ -203,4 +225,15 @@ public class Car : MonoBehaviour
         this.transform.position = currentPosition;
 
     }
+
+	public bool IsGrounded()
+	{
+		return Physics.Raycast( transform.position, Vector3.down );
+	}
+
+	private void UpdateCarNoise()
+	{
+		float vol = Input.GetAxis( "Vertical" ) * Time.deltaTime;
+		mAudioSource.volume = Mathf.Clamp( vol, 0f, 0.5f );
+	}
 }

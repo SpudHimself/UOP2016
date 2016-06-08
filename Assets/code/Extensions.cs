@@ -13,4 +13,14 @@ public static class Extensions
 
 		gameObject.tag = tag;
 	}
+
+	public static Transform FindRecursive( this Transform transform, string name )
+	{
+		for ( int i = 0; i < transform.childCount; i++ )
+		{
+			transform.GetChild( i ).FindRecursive( name );
+		}
+
+		return transform.Find( name );
+	}
 }

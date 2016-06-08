@@ -1,24 +1,46 @@
 ﻿Shader "Custom/PostProcess" {
 	Properties {
+		_MainTex ( "Base (RGB)", 2D ) = "white" {}
 		_FadePhase ( "Fade Amount", Range( 0, 1 ) ) = 0.0
 	}
 	SubShader {
 		Pass {
-			Tags { "RenderType"="Opaque" }
-			LOD 200
-		
+			ZTest Always
+
 			CGPROGRAM
 			#pragma vertex vert_img
 			#pragma fragment frag
 
 			#include "UnityCG.cginc"
 
+			uniform sampler2D _MainTex;
 			uniform float _FadePhase;
 
-			float4 frag( appdata_full i ) : COLOR {
-				float grey = ( i.color.r + i.color.g + i.color.b ) / 3;
-				float4 greyScale = float4( grey, grey, grey, 1.0 );
-				return greyScale * i.texcoord.rgba;
+			//struct v2f {
+			//	float4 position : SV_POSITION;
+			//	float4 color : COLOR;
+			//	float2 texcoord : TEXCOORD0;
+			//};
+
+			//v2f vert( appdata_full i ) {
+			//	v2f o;
+			//
+			//	o.position = mul( i.vertex, UNITY_MATRIX_MVP );
+			//	//o.color = i.color;
+			//	o.texcoord = i.texcoord;
+			//
+			//	return o;
+			//}
+
+			float4 frag( v2f_img i ) : COLOR {
+				float4 texel = tex2D( _MainTex, i.uv );
+
+				float grey = ( texel.r + texel.g + texel.b ) * 0.3;
+				float3 greyScale = float3( grey, grey, grey );
+
+				float4 lum = texel;
+				lum.rgb = lerp( texel.rgb, greyScale, _FadePhase );
+				return lum;
 			}
 
 			ENDCG
