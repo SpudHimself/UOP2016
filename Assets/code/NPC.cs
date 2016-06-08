@@ -14,20 +14,20 @@ public class NPC : MonoBehaviour
 	// These 2 will have to be changed.
 	private float mRoamRadius = 15f;
 	private float mMoveTimer;
-    private float mDeadTimer = 5.0f;
+	private float mDeadTimer = 5.0f;
 
 	private NavMeshAgent mAgent;
-    private MeshRenderer mRenderer;
+	private MeshRenderer mRenderer;
 
 	void Awake()
 	{
 		tag = Tags.NPC;
-        mRenderer = this.GetComponent<MeshRenderer>();
+		mRenderer = this.GetComponent<MeshRenderer>();
 	}
 
 	void Start()
 	{
-		GameManager.Singleton().AddNPC( this );
+		GameManager.Singleton().GetNPCs().Add( this );
 
 		mMoveTimer = 0f;
 
@@ -53,23 +53,28 @@ public class NPC : MonoBehaviour
 		}
 	}
 
-    void OnCollisionEnter(Collision col)
-    {
-        float value = 50.0f;
+	void OnCollisionEnter( Collision col )
+	{
+		float value = 50.0f;
 
-        if (col.gameObject.CompareTag(Tags.PLAYER))
-        {
-            Car car = col.gameObject.GetComponent<Car>();
+		if ( col.gameObject.CompareTag( Tags.PLAYER ) )
+		{
+			Car car = col.gameObject.GetComponent<Car>();
 
-            Vector3 dir = col.contacts[0].point;
-            dir.y = 5.0f;
+			Vector3 dir = col.contacts[0].point;
+			dir.y = 5.0f;
 
-            Debug.Log(dir);
+			Debug.Log( dir );
 
-            SetState(eState.Dead);
-            this.GetComponent<Rigidbody>().AddForce(dir * (car.Motor / value));
-        }
-    }
+			SetState( eState.Dead );
+			this.GetComponent<Rigidbody>().AddForce( dir * ( car.Motor / value ) );
+		}
+	}
+
+	void OnDestroy()
+	{
+		GameManager.Singleton().GetNPCs().Remove( this );
+	}
 
 	public eState GetState()
 	{
@@ -89,7 +94,7 @@ public class NPC : MonoBehaviour
 				break;
 
 			case eState.Dead:
-                Destroy(this.GetComponent<NavMeshAgent>());
+				Destroy( this.GetComponent<NavMeshAgent>() );
 				break;
 		}
 	}
@@ -106,24 +111,25 @@ public class NPC : MonoBehaviour
 
 	private void StateDead()
 	{
-		// Fade out or something?
-        if (mDeadTimer >= 0.0f)
-        {
-            mDeadTimer -= Time.deltaTime;
-        }
-        else
-        {
-            Color color = mRenderer.material.color;
+		if ( mDeadTimer >= 0.0f )
+		{
+			mDeadTimer -= Time.deltaTime;
+		}
+		else
+		{
+			Color color = mRenderer.material.color;
 
-            color.a -= Time.deltaTime;
+			color.a -= Time.deltaTime;
 
-            mRenderer.material.color = color;
+			mRenderer.material.color = color;
 
-            if (color.a <= 0.0f)
-            {
-                Destroy(this.gameObject);
-            }
-        }
+			if ( color.a <= 0.0f )
+			{
+				Destroy( this.gameObject );
+			}
+
+			GameManager.Singleton().SpawnNPC();
+		}
 	}
 
 	// Find a random new position within mRoamRadius to move towards.

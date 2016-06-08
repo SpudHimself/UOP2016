@@ -8,6 +8,7 @@ public class Tags {
 	public const string PLAYER_SPAWN = "PlayerSpawn";
 
 	public const string NPC = "NPC";
+	public const string NPC_SPAWN = "NPCSpawn";
 
     public const string ITEM = "Item";
 

@@ -30,14 +30,14 @@ public class Car : MonoBehaviour
 	{
 		tag = Tags.PLAYER;
 
-        GameManager.Singleton().AddPlayer(this);
+        GameManager.Singleton().GetPlayers().Add(this);
 
 		gameObject.SetTagRecursively( Tags.PLAYER );
 	}
 
     void OnLevelWasLoaded()
     {
-        GameManager.Singleton().AddPlayer(this);
+        GameManager.Singleton().GetPlayers().Add(this);
     }
 
     // Use this for initialization

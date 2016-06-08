@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SplashScreen : MonoBehaviour {
+public class SplashScreen : MonoBehaviour
+{
 	private GUITexture mTexture;
 
 	private float mAlpha = 0f;
@@ -9,42 +10,52 @@ public class SplashScreen : MonoBehaviour {
 
 	private Color color;
 
-	void Start() {
+	void Start()
+	{
 		mTexture = GetComponent<GUITexture>();
 	}
 
-	void Update() {
+	void Update()
+	{
 		FadeInAndOut();
 	}
 
-	private void FadeInAndOut() {
-		if ( mFadingIn ) {
+	private void FadeInAndOut()
+	{
+		if ( mFadingIn )
+		{
 			UpdateAlpha( 0.02f );
 		}
 
-		if ( mTexture.color.a >= 1f ) {
+		if ( mTexture.color.a >= 1f )
+		{
 			mFadingIn = false;
 			mAlpha = 1f;
 			StartCoroutine( FadeOut() );
 		}
 
-		if ( Input.anyKeyDown ) {
+		if ( Input.anyKeyDown )
+		{
 			Application.LoadLevel( "Main" );
 		}
 	}
 
-	public void UpdateAlpha( float a ) {
+	public void UpdateAlpha( float a )
+	{
 		mAlpha += a;
 		mTexture.color = new Color( mTexture.color.r, mTexture.color.g, mTexture.color.b, mAlpha );
 	}
 
-	public IEnumerator FadeOut() {
+	public IEnumerator FadeOut()
+	{
 		yield return new WaitForSeconds( 2 );
 
-		if ( mAlpha >= 0f ) {
+		if ( mAlpha >= 0f )
+		{
 			UpdateAlpha( -0.02f );
 
-			if ( mAlpha <= 0 ) {
+			if ( mAlpha <= 0 )
+			{
 				mAlpha = 0;
 				Application.LoadLevel( "Main" );
 			}
