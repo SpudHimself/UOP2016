@@ -266,4 +266,9 @@ public class GameManager : MonoBehaviour
 			// Enable pause menu.
 		}
 	}
+
+    public float GetGameTime()
+    {
+        return mGameTimer;
+    }
 }
