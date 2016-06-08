@@ -19,7 +19,10 @@ public class GameManager : MonoBehaviour
 
 	private List<Car> mPlayers = new List<Car>();
 	private List<NPC> mNPCs = new List<NPC>();
-	private List<Transform> mSpawns = new List<Transform>();
+	private List<Transform> mPlayerSpawns = new List<Transform>();
+	private List<Transform> mNPCSpawns = new List<Transform>();
+
+	private GameObject mNPCPrefab;
 
     public Canvas mPauseMenu;
 
@@ -35,13 +38,26 @@ public class GameManager : MonoBehaviour
 		sSingleton = this;
 
 		mPlayers = new List<Car>();
+		mNPCs = new List<NPC>();
 
 		// This is a really shit way of doing it but it's the only way in Unity I know how.
 		// Because we need the Transforms not the GameObjects.
 		GameObject[] spawnGameObjects = GameObject.FindGameObjectsWithTag( Tags.PLAYER_SPAWN );
 		foreach ( GameObject go in spawnGameObjects )
 		{
-			mSpawns.Add( go.transform );
+			mPlayerSpawns.Add( go.transform );
+		}
+
+		spawnGameObjects = GameObject.FindGameObjectsWithTag( Tags.NPC_SPAWN );
+		foreach ( GameObject go in spawnGameObjects )
+		{
+			mNPCSpawns.Add( go.transform );
+		}
+
+		mNPCPrefab = (GameObject) Resources.Load( "prefabs/NPC" );
+
+		for ( int i = 0; i < 3; i++ ) {
+			SpawnNPC();
 		}
 
 		// Keep this last.
@@ -178,11 +194,6 @@ public class GameManager : MonoBehaviour
 		// Press escape or start to unpause or whatever...
 	}
 
-	public void AddPlayer( Car car )
-	{
-		mPlayers.Add( car );
-	}
-
 	public List<Car> GetPlayers()
 	{
 		return mPlayers;
@@ -200,7 +211,7 @@ public class GameManager : MonoBehaviour
 
 	public Transform GetPlayerSpawn( int index )
 	{
-		return mSpawns[index - 1];
+		return mPlayerSpawns[index - 1];
 	}
 
 	private Car GetWinningPlayer()
@@ -220,9 +231,32 @@ public class GameManager : MonoBehaviour
 		return winning;
 	}
 
-	public void AddNPC( NPC npc )
+	public List<NPC> GetNPCs()
 	{
-		mNPCs.Add( npc );
+		return mNPCs;
+	}
+
+	public void SpawnNPC()
+	{
+		// Old impl.
+		//Transform npcSpawn = GetRandomNPCSpawn();
+		//GameObject npc = (GameObject) Instantiate( mNPCPrefab, npcSpawn.position, npcSpawn.rotation );
+
+		// New impl.
+		float radius = 15f;
+		Vector2 unitCircle = Random.insideUnitCircle;
+		Vector3 circle = new Vector3( unitCircle.x, 0f, unitCircle.y ) * radius;
+
+		NavMeshHit hit;
+		NavMesh.SamplePosition( circle, out hit, radius, 1 );
+		Vector3 euler = new Vector3( 0f, Random.Range( -180f, 180f ), 0f );
+
+		GameObject npc = (GameObject) Instantiate( mNPCPrefab, hit.position, Quaternion.Euler( euler ) );
+	}
+
+	private Transform GetRandomNPCSpawn()
+	{
+		return mNPCSpawns[Random.Range( 0, mNPCSpawns.Count )];
 	}
 
 	public void TogglePause()
