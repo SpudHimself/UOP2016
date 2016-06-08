@@ -52,6 +52,8 @@ public class Car : MonoBehaviour
 		{
 			GameManager.Singleton().TogglePause();
 		}
+
+        //get a function called inputUpdate, call it here.
     }
 
     public void FixedUpdate()
@@ -149,6 +151,17 @@ public class Car : MonoBehaviour
                     axle.leftWheel.brakeTorque = 0.0f;
                     axle.rightWheel.brakeTorque = 0.0f;
                 }
+            }
+
+            //input testing
+            if (Input.GetButton("Powerup_" + mPlayerNumber))
+            {
+                Debug.Log("Player " + mPlayerNumber + ": Powerup pressed");
+            }
+
+            if (Input.GetButton("Start_" + mPlayerNumber))
+            {
+                Debug.Log("Player " + mPlayerNumber + ": Start pressed");
             }
         }
 	}
