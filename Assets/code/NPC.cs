@@ -27,6 +27,7 @@ public class NPC : MonoBehaviour
 
 	void Start()
 	{
+		// Leave this first.
 		GameManager.Singleton().GetNPCs().Add( this );
 
 		mMoveTimer = 0f;
@@ -126,9 +127,8 @@ public class NPC : MonoBehaviour
 			if ( color.a <= 0.0f )
 			{
 				Destroy( this.gameObject );
+				GameManager.Singleton().SpawnNPC();
 			}
-
-			GameManager.Singleton().SpawnNPC();
 		}
 	}
 
