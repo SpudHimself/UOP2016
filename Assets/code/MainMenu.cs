@@ -64,4 +64,13 @@ public class MainMenu : MonoBehaviour
 
         mQuitting = true;
     }
+
+    public void Resume()
+    {
+        if (GameManager.Singleton().GetPauseState() == 0.0f)
+        {
+            GameManager.Singleton().SetPauseMenu(false);
+            Time.timeScale = 1.0f;
+        }
+    }
 }

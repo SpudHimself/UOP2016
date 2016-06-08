@@ -36,7 +36,7 @@ public class SplashScreen : MonoBehaviour
 
 		if ( Input.anyKeyDown )
 		{
-			Application.LoadLevel( "Main" );
+			Application.LoadLevel( "MainMenu" );
 		}
 	}
 
@@ -57,7 +57,7 @@ public class SplashScreen : MonoBehaviour
 			if ( mAlpha <= 0 )
 			{
 				mAlpha = 0;
-				Application.LoadLevel( "Main" );
+				Application.LoadLevel( "MainMenu" );
 			}
 		}
 	}
