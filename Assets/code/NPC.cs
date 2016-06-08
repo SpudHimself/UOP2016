@@ -126,9 +126,8 @@ public class NPC : MonoBehaviour
 			if ( color.a <= 0.0f )
 			{
 				Destroy( this.gameObject );
+				GameManager.Singleton().SpawnNPC();
 			}
-
-			GameManager.Singleton().SpawnNPC();
 		}
 	}
 
