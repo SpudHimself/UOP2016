@@ -8,6 +8,9 @@ public enum eItemState
     ACTIVE
 }
 
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Collider))]
+
 public class ScoreItem : MonoBehaviour
 {
 	#region Fields

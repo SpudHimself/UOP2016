@@ -86,7 +86,7 @@ NavMeshSettings:
     minRegionArea: 2
     cellSize: .166666672
     manualCellSize: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 36d53c781265f8a4598b51641888b4a0, type: 2}
 --- !u!1001 &72308392
 Prefab:
   m_ObjectHideFlags: 0
@@ -255,10 +255,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffbe27bb9e18064bb51f05ba1dfedec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1845550379}
+  player: {fileID: 1512082074}
   followPoint: {fileID: 208197584}
   followSpeed: 2
   distance: 10
+--- !u!1 &632614318 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 132992, guid: b3cd59be50e44a94d94d1313f8459fee, type: 2}
+  m_PrefabInternal: {fileID: 72308392}
 --- !u!1 &721439287
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +279,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!23 &721439288
 MeshRenderer:
@@ -392,6 +396,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &1512082074 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 132992, guid: b3cd59be50e44a94d94d1313f8459fee, type: 2}
+  m_PrefabInternal: {fileID: 1737650585}
 --- !u!1001 &1737650585
 Prefab:
   m_ObjectHideFlags: 0
@@ -447,14 +455,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3cd59be50e44a94d94d1313f8459fee, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1845550379 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 469490, guid: b3cd59be50e44a94d94d1313f8459fee, type: 2}
-  m_PrefabInternal: {fileID: 1737650585}
---- !u!4 &1862830317 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 469490, guid: b3cd59be50e44a94d94d1313f8459fee, type: 2}
-  m_PrefabInternal: {fileID: 72308392}
 --- !u!1 &1874758446
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffbe27bb9e18064bb51f05ba1dfedec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1862830317}
+  player: {fileID: 632614318}
   followPoint: {fileID: 294413924}
   followSpeed: 2
   distance: 10

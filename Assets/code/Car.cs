@@ -25,18 +25,19 @@ public class Car : MonoBehaviour
 
 	private GameObject mScorePlumPrefab;
 
+    public float Motor { get; set; }
 	void Awake()
 	{
 		tag = Tags.PLAYER;
 
-        GameManager.Singleton().AddPlayer(this);
+        GameManager.Singleton().GetPlayers().Add(this);
 
 		gameObject.SetTagRecursively( Tags.PLAYER );
 	}
 
     void OnLevelWasLoaded()
     {
-        GameManager.Singleton().AddPlayer(this);
+        GameManager.Singleton().GetPlayers().Add(this);
     }
 
     // Use this for initialization
@@ -48,12 +49,30 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if ( Input.GetButtonDown( "Start_1" ) )
-		{
-			GameManager.Singleton().TogglePause();
-		}
+        //if ( Input.GetButtonDown( "Start_1" ) )
+        //{
+        //    GameManager.Singleton().TogglePause();
+        //}
 
-        //get a function called inputUpdate, call it here.
+        //input testing
+        if (Input.GetButtonDown("Powerup_" + mPlayerNumber))
+        {
+            Debug.Log("Player " + mPlayerNumber + ": Powerup pressed");
+            //firePowerup()
+        }
+
+        if (Input.GetButtonDown("Start_" + mPlayerNumber))
+        {
+            Debug.Log("Player " + mPlayerNumber + ": Start pressed");
+            GameManager.Singleton().TogglePause();
+        }
+
+        if (Input.GetButtonDown("Reset_" + mPlayerNumber))
+        {
+            Debug.Log("Player " + mPlayerNumber + ": Reset pressed");
+            ResetPosition();
+        }
+        
     }
 
     public void FixedUpdate()
@@ -110,19 +129,18 @@ public class Car : MonoBehaviour
 		//for multiple people
         //float motor = mMaxMotorTorque * Input.GetAxis("Vertical_" + mPlayerNumber);
         //float steering = mMaxSteeringAngle * Input.GetAxis("Horizontal_" + mPlayerNumber);
-        float motor;
         float steering;
 
 
         //fuckery for testing, wont be needed end game
         if (mKeyboardUser)
         {
-            motor = mMaxMotorTorque * Input.GetAxis("Vertical");
+            Motor = mMaxMotorTorque * Input.GetAxis("Vertical");
             steering = mMaxSteeringAngle * Input.GetAxis("Horizontal");
         }
         else
         {
-            motor = mMaxMotorTorque * Input.GetAxis("Acceleration_" + mPlayerNumber);
+            Motor = mMaxMotorTorque * Input.GetAxis("Acceleration_" + mPlayerNumber);
             steering = mMaxSteeringAngle * Input.GetAxis("Steering_" + mPlayerNumber);
         }
 
@@ -136,8 +154,8 @@ public class Car : MonoBehaviour
 
             if (axle.motor)
             {
-                axle.leftWheel.motorTorque = motor;
-                axle.rightWheel.motorTorque = motor;
+                axle.leftWheel.motorTorque = Motor;
+                axle.rightWheel.motorTorque = Motor;
 
                 //handbrake
                 if (Input.GetButton("Handbrake_" + mPlayerNumber))
@@ -152,17 +170,6 @@ public class Car : MonoBehaviour
                     axle.rightWheel.brakeTorque = 0.0f;
                 }
             }
-
-            //input testing
-            if (Input.GetButton("Powerup_" + mPlayerNumber))
-            {
-                Debug.Log("Player " + mPlayerNumber + ": Powerup pressed");
-            }
-
-            if (Input.GetButton("Start_" + mPlayerNumber))
-            {
-                Debug.Log("Player " + mPlayerNumber + ": Start pressed");
-            }
         }
 	}
 
@@ -175,4 +182,25 @@ public class Car : MonoBehaviour
 	{
 		return mPlayerNumber;
 	}
+
+    void FirePowerup()
+    {
+        //fire the powerup yo
+    }
+
+    //wouldnt mind cleaning this one up
+    void ResetPosition()
+    {
+        Vector3 currentPosition = this.transform.position;
+        Quaternion currentRotation = this.transform.rotation;
+
+        //set y pos to +2
+        //set z rot to 0
+        currentRotation = new Quaternion(currentRotation.x, currentRotation.y, 0.0f, 1.0f);
+        currentPosition.y += 2.0f;
+
+        this.transform.rotation = currentRotation;
+        this.transform.position = currentPosition;
+
+    }
 }

@@ -1,25 +1,67 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using System.Collections;
+using System.Collections.Generic;
 
-public class MainMenu : MonoBehaviour {
+public class MainMenu : MonoBehaviour
+{
+    public EventSystem eventSystem;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public AudioSource mAudioSource;
+    public AudioClip mAudioClipClick;
+
+    private float waitTime;
+    private bool mPlaying;
+    private bool mQuitting;
+    private string mFilename;
+
+    // Use this for initialization
+    void Start()
+    {
+        mPlaying = false;
+        mQuitting = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (mPlaying)
+        {
+            Debug.Log(mAudioSource.isPlaying);
+
+            if (!mAudioSource.isPlaying)
+            {
+                Application.LoadLevel(mFilename);
+            }
+        }
+
+        if (mQuitting)
+        {
+            if (!mAudioSource.isPlaying)
+            {
+                Application.Quit();
+            }
+        }
+    }
 
     public void LoadLevel(string filename)
     {
-        Application.LoadLevel(filename);
+        //mAudioSource.PlayOneShot(mAudioClipClick, 1.0f);
+        mAudioSource.clip = mAudioClipClick;
+        mAudioSource.Play();
+
+        mPlaying = true;
+
+        mFilename = filename;
     }
 
     public void Quit()
     {
-        Application.Quit();
+        //mAudioSource.PlayOneShot(mAudioClipClick, 1.0f);
+        mAudioSource.clip = mAudioClipClick;
+        mAudioSource.Play();
+
+        mQuitting = true;
     }
 }
