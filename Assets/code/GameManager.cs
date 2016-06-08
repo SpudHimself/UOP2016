@@ -34,8 +34,12 @@ public class GameManager : MonoBehaviour
 	{
 		sSingleton = this;
 
+		gameObject.AddComponent<PostProcessor>();
+
 		mPlayers = new List<Car>();
 		mNPCs = new List<NPC>();
+
+		mNPCPrefab = (GameObject) Resources.Load( "prefabs/NPC" );
 
 		// This is a really shit way of doing it but it's the only way in Unity I know how.
 		// Because we need the Transforms not the GameObjects.
@@ -50,8 +54,6 @@ public class GameManager : MonoBehaviour
 		{
 			mNPCSpawns.Add( go.transform );
 		}
-
-		mNPCPrefab = (GameObject) Resources.Load( "prefabs/NPC" );
 
 		for ( int i = 0; i < 3; i++ ) {
 			SpawnNPC();
@@ -234,7 +236,7 @@ public class GameManager : MonoBehaviour
 		//GameObject npc = (GameObject) Instantiate( mNPCPrefab, npcSpawn.position, npcSpawn.rotation );
 
 		// New impl.
-		float radius = 15f;
+		float radius = 15f; // ARBITRARY!
 		Vector2 unitCircle = Random.insideUnitCircle;
 		Vector3 circle = new Vector3( unitCircle.x, 0f, unitCircle.y ) * radius;
 
@@ -242,7 +244,7 @@ public class GameManager : MonoBehaviour
 		NavMesh.SamplePosition( circle, out hit, radius, 1 );
 		Vector3 euler = new Vector3( 0f, Random.Range( -180f, 180f ), 0f );
 
-		GameObject npc = (GameObject) Instantiate( mNPCPrefab, hit.position, Quaternion.Euler( euler ) );
+		Instantiate( mNPCPrefab, hit.position, Quaternion.Euler( euler ) );
 	}
 
 	private Transform GetRandomNPCSpawn()
@@ -266,4 +268,9 @@ public class GameManager : MonoBehaviour
 			// Enable pause menu.
 		}
 	}
+
+    public float GetGameTime()
+    {
+        return mGameTimer;
+    }
 }

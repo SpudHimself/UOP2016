@@ -30,8 +30,6 @@ public class Car : MonoBehaviour
 	{
 		tag = Tags.PLAYER;
 
-        GameManager.Singleton().GetPlayers().Add(this);
-
 		gameObject.SetTagRecursively( Tags.PLAYER );
 	}
 
@@ -43,6 +41,9 @@ public class Car : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+		// Leave this first.
+		GameManager.Singleton().GetPlayers().Add(this);
+
 		mScoreManager = gameObject.AddComponent<ScoreManager>();
     }
 
@@ -72,7 +73,6 @@ public class Car : MonoBehaviour
             Debug.Log("Player " + mPlayerNumber + ": Reset pressed");
             ResetPosition();
         }
-        
     }
 
     public void FixedUpdate()
