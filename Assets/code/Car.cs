@@ -26,6 +26,7 @@ public class Car : MonoBehaviour
 	private GameObject mScorePlumPrefab;
 
     public float Motor { get; set; }
+
 	void Awake()
 	{
 		tag = Tags.PLAYER;
