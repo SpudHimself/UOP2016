@@ -4,11 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - PauseMenu
   - PlayerSpawn
-  - NPC
-  - Item
-  - ShelfSpawn
   - NPCSpawn
+  - NPC
   layers:
   - Default
   - TransparentFX

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour
 	private List<Transform> mNPCSpawns = new List<Transform>();
 
 	private GameObject mNPCPrefab;
+
+    public Canvas mPauseMenu;
 
 	// Singleton.
 	private static GameManager sSingleton;
@@ -61,6 +64,10 @@ public class GameManager : MonoBehaviour
 
 		// Keep this last.
 		SetState( eState.Countdown );
+
+        mPauseMenu = GameObject.FindGameObjectWithTag("PauseMenu").GetComponentInChildren<Canvas>();
+        mPauseMenu.enabled = false;
+        Debug.Log(mPauseMenu.enabled);
 	}
 
 	void Update()
@@ -83,6 +90,9 @@ public class GameManager : MonoBehaviour
 				StatePaused();
 				break;
 		}
+
+        if (Input.GetButtonDown("Start_1"))
+            TogglePause();
 	}
 
 	public eState GetState()
@@ -256,23 +266,39 @@ public class GameManager : MonoBehaviour
 
 	public void TogglePause()
 	{
-		bool currentlyPaused = ( Time.timeScale == 0f );
-		if ( currentlyPaused )
-		{
-			Time.timeScale = 1f;
+		bool currentlyPaused = (Time.timeScale == 0f);
+        if (currentlyPaused)
+        {
+            // Disable pause menu.
+            mPauseMenu.enabled = false;
 
-			// Disable pause menu.
-		}
-		else
-		{
-			Time.timeScale = 0f;
+            Debug.Log(mPauseMenu.enabled);
 
-			// Enable pause menu.
-		}
+            Time.timeScale = 1f;         
+        }
+        else
+        {
+            // Enable pause menu.
+            mPauseMenu.enabled = true;
+
+            Debug.Log(mPauseMenu.enabled);
+
+            Time.timeScale = 0f;      
+        }
 	}
 
     public float GetGameTime()
     {
         return mGameTimer;
+    }
+
+    public float GetPauseState()
+    {
+        return Time.timeScale;
+    }
+
+    public void SetPauseMenu(bool set)
+    {
+        mPauseMenu.enabled = set;
     }
 }

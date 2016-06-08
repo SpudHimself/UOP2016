@@ -6,14 +6,16 @@ public class UIBehaviour : MonoBehaviour
 {
     public static int score;        // The player's score.
 
+    public ScoreManager sm;
 
     Text text;                      // Reference to the Text component.
 
 
-    void Awake()
+    void Start()
     {
         // Set up the reference.
         text = GetComponent<Text>();
+        sm = gameObject.AddComponent<ScoreManager>();
 
         // Reset the score.
         score = 0;
@@ -22,7 +24,8 @@ public class UIBehaviour : MonoBehaviour
 
     void Update()
     {
-        score++;
+        score = sm.Score;
+        //score++;
         // Set the displayed text to be the word "Score" followed by the score value.
         text.text = "Score: " + score;
     }

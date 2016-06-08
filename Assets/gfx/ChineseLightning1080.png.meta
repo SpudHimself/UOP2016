@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 107025464768ceb4f9d78d2d7004a1aa
 timeCreated: 1465396860
+=======
+guid: 1c5d7062a3c71c047884cfc720b5b8d5
+timeCreated: 1465397870
+>>>>>>> claire
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName: {}
