@@ -386,22 +386,22 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11432758, guid: ff699c62f9814ae4ab4bc5ba458804e3, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 641444554}
-    - target: {fileID: 11423654, guid: ff699c62f9814ae4ab4bc5ba458804e3, type: 2}
-      propertyPath: m_audioSource
-      value: 
-      objectReference: {fileID: 1960747320}
-    - target: {fileID: 11401940, guid: ff699c62f9814ae4ab4bc5ba458804e3, type: 2}
-      propertyPath: m_audioSource
-      value: 
-      objectReference: {fileID: 1960747320}
     - target: {fileID: 22319438, guid: ff699c62f9814ae4ab4bc5ba458804e3, type: 2}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1362907439}
+    - target: {fileID: 11401940, guid: ff699c62f9814ae4ab4bc5ba458804e3, type: 2}
+      propertyPath: m_audioSource
+      value: 
+      objectReference: {fileID: 1960747320}
+    - target: {fileID: 11423654, guid: ff699c62f9814ae4ab4bc5ba458804e3, type: 2}
+      propertyPath: m_audioSource
+      value: 
+      objectReference: {fileID: 1960747320}
+    - target: {fileID: 11432758, guid: ff699c62f9814ae4ab4bc5ba458804e3, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 641444554}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff699c62f9814ae4ab4bc5ba458804e3, type: 2}
   m_IsPrefabParent: 0

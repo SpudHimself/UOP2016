@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
@@ -19,6 +20,8 @@ public class GameManager : MonoBehaviour
 	private List<Car> mPlayers = new List<Car>();
 	private List<NPC> mNPCs = new List<NPC>();
 	private List<Transform> mSpawns = new List<Transform>();
+
+    public Canvas mPauseMenu;
 
 	// Singleton.
 	private static GameManager sSingleton;
@@ -42,8 +45,11 @@ public class GameManager : MonoBehaviour
 		}
 
 		// Keep this last.
-		SetState( eState.Countdown );
-	}
+        SetState(eState.Countdown);
+
+        mPauseMenu = GameObject.FindGameObjectWithTag("PauseMenu").GetComponent<Canvas>();
+        mPauseMenu.enabled = false;   
+      }
 
 	void Update()
 	{
@@ -65,6 +71,9 @@ public class GameManager : MonoBehaviour
 				StatePaused();
 				break;
 		}
+
+        if (Input.GetButtonDown("Start_1"))
+            TogglePause();
 	}
 
 	public eState GetState()
@@ -224,12 +233,14 @@ public class GameManager : MonoBehaviour
 			Time.timeScale = 1f;
 
 			// Disable pause menu.
+            mPauseMenu.enabled = false;
 		}
 		else
 		{
 			Time.timeScale = 0f;
 
 			// Enable pause menu.
+            mPauseMenu.enabled = true;
 		}
 	}
 
