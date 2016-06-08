@@ -256,7 +256,8 @@ public class GameManager : MonoBehaviour
 		NavMesh.SamplePosition( circle, out hit, radius, 1 );
 		Vector3 euler = new Vector3( 0f, Random.Range( -180f, 180f ), 0f );
 
-		Instantiate( mNPCPrefab, hit.position, Quaternion.Euler( euler ) );
+		GameObject npc = Instantiate( mNPCPrefab, hit.position, Quaternion.Euler( euler ) ) as GameObject;
+        npc.GetComponent<NPC>().SetState(NPC.eState.Alive);
 	}
 
 	private Transform GetRandomNPCSpawn()

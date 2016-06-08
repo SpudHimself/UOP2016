@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: fa150aa9190f30c46beb9e9727d029c8
+timeCreated: 1465397586
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: ankle.l
+    100002: ankle.r
+    100004: chest
+    100006: fingers.l
+    100008: fingers.r
+    100010: fingertips.l
+    100012: fingertips.r
+    100014: foot.l
+    100016: foot.r
+    100018: hand.l
+    100020: hand.r
+    100022: head
+    100024: left_elbow
+    100026: left_foot
+    100028: left_hand
+    100030: lower_arm.l
+    100032: lower_arm.r
+    100034: neck
+    100036: //RootNode
+    100038: padestrian_body
+    100040: padestrian_head
+    100042: padestrian_skeleton
+    100044: pelvis
+    100046: pelvis.l
+    100048: pelvis.r
+    100050: race_guy_totalcontroller
+    100052: right_elbow
+    100054: right_foot
+    100056: right_hand
+    100058: shin.l
+    100060: shin.r
+    100062: shoulder.l
+    100064: shoulder.r
+    100066: thigh.l
+    100068: thigh.r
+    100070: thumb.l
+    100072: thumb.r
+    100074: thumb_tip.l
+    100076: thumb_tip.r
+    100078: upper_arm.l
+    100080: upper_arm.r
+    100082: waist
+    100084: wrist.l
+    100086: wrist.r
+    400000: ankle.l
+    400002: ankle.r
+    400004: chest
+    400006: fingers.l
+    400008: fingers.r
+    400010: fingertips.l
+    400012: fingertips.r
+    400014: foot.l
+    400016: foot.r
+    400018: hand.l
+    400020: hand.r
+    400022: head
+    400024: left_elbow
+    400026: left_foot
+    400028: left_hand
+    400030: lower_arm.l
+    400032: lower_arm.r
+    400034: neck
+    400036: //RootNode
+    400038: padestrian_body
+    400040: padestrian_head
+    400042: padestrian_skeleton
+    400044: pelvis
+    400046: pelvis.l
+    400048: pelvis.r
+    400050: race_guy_totalcontroller
+    400052: right_elbow
+    400054: right_foot
+    400056: right_hand
+    400058: shin.l
+    400060: shin.r
+    400062: shoulder.l
+    400064: shoulder.r
+    400066: thigh.l
+    400068: thigh.r
+    400070: thumb.l
+    400072: thumb.r
+    400074: thumb_tip.l
+    400076: thumb_tip.r
+    400078: upper_arm.l
+    400080: upper_arm.r
+    400082: waist
+    400084: wrist.l
+    400086: wrist.r
+    2300000: race_guy_totalcontroller
+    3300000: race_guy_totalcontroller
+    4300000: race_guy_totalcontroller
+    4300002: padestrian_body
+    4300004: padestrian_head
+    9500000: //RootNode
+    13700000: padestrian_body
+    13700002: padestrian_head
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: race_guy_totalcontroller
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

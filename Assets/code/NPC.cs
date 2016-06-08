@@ -16,29 +16,46 @@ public class NPC : MonoBehaviour
 	private float mMoveTimer;
 	private float mDeadTimer = 5.0f;
 
-	private NavMeshAgent mAgent;
-	private MeshRenderer mRenderer;
+	private SkinnedMeshRenderer[] mRenderers;
+    private Rigidbody[]  mRigidbodies;
+    private Animator mAnimator;
+
+    public NavMeshAgent Agent { get; private set; }
 
 	void Awake()
 	{
 		tag = Tags.NPC;
-		mRenderer = this.GetComponent<MeshRenderer>();
+
+        Agent = this.GetComponent<NavMeshAgent>();
+		mRenderers = this.GetComponentsInChildren<SkinnedMeshRenderer>();
+        mRigidbodies = this.GetComponentsInChildren<Rigidbody>();
+        
+        mAnimator = this.GetComponent<Animator>();
 	}
 
 	void Start()
 	{
+		// This is just debug so it's fine to be first.
+		Debug.Log("Start called.");
+
 		// Leave this first.
 		GameManager.Singleton().GetNPCs().Add( this );
 
 		mMoveTimer = 0f;
 
-		mAgent = gameObject.AddComponent<NavMeshAgent>();
-		mAgent.Resume();
-		mAgent.destination = transform.position;
+        Agent.Resume();
+        Agent.destination = transform.position;
+
+        //SetState(eState.Alive);
+
+        DisableRagdoll();
 	}
 
 	void Update()
 	{
+        // Debug.Log(mState);
+        mAnimator.SetBool("IsMoving", Agent.velocity != Vector3.zero);
+
 		switch ( mState )
 		{
 			case eState.Waiting:
@@ -60,6 +77,8 @@ public class NPC : MonoBehaviour
 
 		if ( col.gameObject.CompareTag( Tags.PLAYER ) )
 		{
+            SetState(eState.Dead);
+
 			Car car = col.gameObject.GetComponent<Car>();
 
 			Vector3 dir = col.contacts[0].point;
@@ -67,8 +86,9 @@ public class NPC : MonoBehaviour
 
 			Debug.Log( dir );
 
-			SetState( eState.Dead );
-			this.GetComponent<Rigidbody>().AddForce( dir * ( car.Motor / value ) );
+            EnableRagdoll();
+
+			//this.GetComponent<Rigidbody>().AddForce( dir * ( car.Motor / value ) );
 		}
 	}
 
@@ -89,13 +109,16 @@ public class NPC : MonoBehaviour
 		switch ( mState )
 		{
 			case eState.Waiting:
+                mAnimator.enabled = true;
 				break;
 
 			case eState.Alive:
+                mAnimator.enabled = true;
 				break;
 
 			case eState.Dead:
-				Destroy( this.GetComponent<NavMeshAgent>() );
+                mAnimator.enabled = false;
+                Agent.Stop();
 				break;
 		}
 	}
@@ -103,7 +126,7 @@ public class NPC : MonoBehaviour
 	private void StateAlive()
 	{
 		mMoveTimer = Mathf.Max( mMoveTimer - Time.deltaTime, 0f );
-		if ( mMoveTimer <= 0f && mAgent.remainingDistance < 0.25f )
+        if (mMoveTimer <= 0f && Agent.remainingDistance < 0.25f)
 		{
 			mMoveTimer = Random.Range( 3f, 5f );
 			MakeNewMovement();
@@ -118,17 +141,20 @@ public class NPC : MonoBehaviour
 		}
 		else
 		{
-			Color color = mRenderer.material.color;
+            foreach (SkinnedMeshRenderer smr in mRenderers)
+            {
+                Color color = smr.material.color;
 
-			color.a -= Time.deltaTime;
+                color.a -= Time.deltaTime;
 
-			mRenderer.material.color = color;
+                smr.material.color = color;
 
-			if ( color.a <= 0.0f )
-			{
-				Destroy( this.gameObject );
-				GameManager.Singleton().SpawnNPC();
-			}
+                if (color.a <= 0.0f)
+                {
+                    Destroy(this.gameObject);
+                    GameManager.Singleton().SpawnNPC();
+                }
+            }
 		}
 	}
 
@@ -148,8 +174,29 @@ public class NPC : MonoBehaviour
 			return;
 		}
 
-		mAgent.destination = hit.position;
+        Agent.destination = hit.position;
 
 		//print( "NPC is moving: " + mAgent.destination );
 	}
+
+    private void EnableRagdoll()
+    {
+        foreach (Rigidbody rb in mRigidbodies)
+        {
+            rb.detectCollisions = true;
+            rb.isKinematic = false;
+        }
+    }
+
+    private void DisableRagdoll()
+    {
+        foreach (Rigidbody rb in mRigidbodies)
+        {
+            rb.detectCollisions = false;
+            rb.isKinematic = true;
+        }
+
+        // This is pure filth...
+        mRigidbodies[0].detectCollisions = true;
+    }
 }
