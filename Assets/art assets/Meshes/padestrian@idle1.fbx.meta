@@ -1,0 +1,370 @@
+fileFormatVersion: 2
+guid: 71f48245b96664d4fbb1126b79ba8ac4
+timeCreated: 1465397704
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: ankle.l
+    100002: ankle.r
+    100004: chest
+    100006: fingers.l
+    100008: fingers.r
+    100010: fingertips.l
+    100012: fingertips.r
+    100014: foot.l
+    100016: foot.r
+    100018: hand.l
+    100020: hand.r
+    100022: head
+    100024: left_elbow
+    100026: left_foot
+    100028: left_hand
+    100030: lower_arm.l
+    100032: lower_arm.r
+    100034: neck
+    100036: //RootNode
+    100038: padestrian_body
+    100040: padestrian_head
+    100042: padestrian_skeleton
+    100044: pelvis
+    100046: pelvis.l
+    100048: pelvis.r
+    100050: race_guy_totalcontroller
+    100052: right_elbow
+    100054: right_foot
+    100056: right_hand
+    100058: shin.l
+    100060: shin.r
+    100062: shoulder.l
+    100064: shoulder.r
+    100066: thigh.l
+    100068: thigh.r
+    100070: thumb.l
+    100072: thumb.r
+    100074: thumb_tip.l
+    100076: thumb_tip.r
+    100078: upper_arm.l
+    100080: upper_arm.r
+    100082: waist
+    100084: wrist.l
+    100086: wrist.r
+    400000: ankle.l
+    400002: ankle.r
+    400004: chest
+    400006: fingers.l
+    400008: fingers.r
+    400010: fingertips.l
+    400012: fingertips.r
+    400014: foot.l
+    400016: foot.r
+    400018: hand.l
+    400020: hand.r
+    400022: head
+    400024: left_elbow
+    400026: left_foot
+    400028: left_hand
+    400030: lower_arm.l
+    400032: lower_arm.r
+    400034: neck
+    400036: //RootNode
+    400038: padestrian_body
+    400040: padestrian_head
+    400042: padestrian_skeleton
+    400044: pelvis
+    400046: pelvis.l
+    400048: pelvis.r
+    400050: race_guy_totalcontroller
+    400052: right_elbow
+    400054: right_foot
+    400056: right_hand
+    400058: shin.l
+    400060: shin.r
+    400062: shoulder.l
+    400064: shoulder.r
+    400066: thigh.l
+    400068: thigh.r
+    400070: thumb.l
+    400072: thumb.r
+    400074: thumb_tip.l
+    400076: thumb_tip.r
+    400078: upper_arm.l
+    400080: upper_arm.r
+    400082: waist
+    400084: wrist.l
+    400086: wrist.r
+    2300000: race_guy_totalcontroller
+    3300000: race_guy_totalcontroller
+    4300000: race_guy_totalcontroller
+    4300002: padestrian_body
+    4300004: padestrian_head
+    7400000: idle1
+    7400002: race_guy_totalcontroller|left_footAction.001
+    7400004: race_guy_totalcontroller|left_handAction.001
+    7400006: race_guy_totalcontroller|padestrian_bodyAction.001
+    7400008: race_guy_totalcontroller|padestrian_headAction.001
+    7400010: race_guy_totalcontroller|race_guy_totalcontrollerAction.001
+    7400012: race_guy_totalcontroller|right_elbowAction.001
+    7400014: race_guy_totalcontroller|right_footAction.001
+    7400016: race_guy_totalcontroller|right_handAction.001
+    7400018: right_foot|left_elbowAction.001
+    7400020: right_foot|left_footAction.001
+    7400022: right_foot|left_handAction.001
+    7400024: right_foot|padestrian_bodyAction.001
+    7400026: right_foot|padestrian_headAction.001
+    7400028: right_foot|race_guy_totalcontrollerAction.001
+    7400030: right_foot|right_elbowAction.001
+    7400032: right_foot|right_footAction.001
+    7400034: right_foot|right_handAction.001
+    7400036: left_foot|left_elbowAction.001
+    7400038: left_foot|left_footAction.001
+    7400040: left_foot|left_handAction.001
+    7400042: left_foot|padestrian_bodyAction.001
+    7400044: left_foot|padestrian_headAction.001
+    7400046: left_foot|race_guy_totalcontrollerAction.001
+    7400048: left_foot|right_elbowAction.001
+    7400050: left_foot|right_footAction.001
+    7400052: left_foot|right_handAction.001
+    7400054: left_elbow|left_elbowAction.001
+    7400056: left_elbow|left_footAction.001
+    7400058: left_elbow|left_handAction.001
+    7400060: left_elbow|padestrian_bodyAction.001
+    7400062: left_elbow|padestrian_headAction.001
+    7400064: left_elbow|race_guy_totalcontrollerAction.001
+    7400066: left_elbow|right_elbowAction.001
+    7400068: left_elbow|right_footAction.001
+    7400070: left_elbow|right_handAction.001
+    7400072: right_elbow|left_elbowAction.001
+    7400074: right_elbow|left_footAction.001
+    7400076: right_elbow|left_handAction.001
+    7400078: right_elbow|padestrian_bodyAction.001
+    7400080: right_elbow|padestrian_headAction.001
+    7400082: right_elbow|race_guy_totalcontrollerAction.001
+    7400084: right_elbow|right_elbowAction.001
+    7400086: right_elbow|right_footAction.001
+    7400088: right_elbow|right_handAction.001
+    7400090: right_hand|left_elbowAction.001
+    7400092: right_hand|left_footAction.001
+    7400094: right_hand|left_handAction.001
+    7400096: right_hand|padestrian_bodyAction.001
+    7400098: right_hand|padestrian_headAction.001
+    7400100: right_hand|race_guy_totalcontrollerAction.001
+    7400102: right_hand|right_elbowAction.001
+    7400104: right_hand|right_footAction.001
+    7400106: right_hand|right_handAction.001
+    7400108: left_hand|left_elbowAction.001
+    7400110: left_hand|left_footAction.001
+    7400112: left_hand|left_handAction.001
+    7400114: left_hand|padestrian_bodyAction.001
+    7400116: left_hand|padestrian_headAction.001
+    7400118: left_hand|race_guy_totalcontrollerAction.001
+    7400120: left_hand|right_elbowAction.001
+    7400122: left_hand|right_footAction.001
+    7400124: left_hand|right_handAction.001
+    7400126: padestrian_skeleton|left_elbowAction.001
+    7400128: padestrian_skeleton|left_footAction.001
+    7400130: padestrian_skeleton|left_handAction.001
+    7400132: padestrian_skeleton|padestrian_bodyAction.001
+    7400134: padestrian_skeleton|padestrian_headAction.001
+    7400136: Pedestrian Idle
+    7400138: padestrian_skeleton|race_guy_totalcontrollerAction.001
+    7400140: padestrian_skeleton|right_elbowAction.001
+    7400142: padestrian_skeleton|right_footAction.001
+    7400144: padestrian_skeleton|right_handAction.001
+    7400146: padestrian_body|left_elbowAction.001
+    7400148: padestrian_body|left_footAction.001
+    7400150: padestrian_body|left_handAction.001
+    7400152: padestrian_body|padestrian_bodyAction.001
+    7400154: padestrian_body|padestrian_headAction.001
+    7400156: padestrian_body|race_guy_totalcontrollerAction.001
+    7400158: padestrian_body|right_elbowAction.001
+    7400160: padestrian_body|right_footAction.001
+    7400162: padestrian_body|right_handAction.001
+    7400164: padestrian_head|left_elbowAction.001
+    7400166: padestrian_head|left_footAction.001
+    7400168: padestrian_head|left_handAction.001
+    7400170: padestrian_head|padestrian_bodyAction.001
+    7400172: padestrian_head|padestrian_headAction.001
+    7400174: padestrian_head|race_guy_totalcontrollerAction.001
+    7400176: padestrian_head|right_elbowAction.001
+    7400178: padestrian_head|right_footAction.001
+    7400180: padestrian_head|right_handAction.001
+    9500000: //RootNode
+    13700000: padestrian_body
+    13700002: padestrian_head
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Pedestrian Idle
+      takeName: padestrian_skeleton|padestrian_skeletonAction.001
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: padestrian_body
+        weight: 1
+      - path: padestrian_head
+        weight: 1
+      - path: race_guy_totalcontroller
+        weight: 1
+      - path: race_guy_totalcontroller/left_elbow
+        weight: 1
+      - path: race_guy_totalcontroller/left_foot
+        weight: 1
+      - path: race_guy_totalcontroller/left_hand
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/pelvis.l
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/pelvis.l/thigh.l
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/pelvis.l/thigh.l/shin.l
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/pelvis.l/thigh.l/shin.l/ankle.l
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/pelvis.l/thigh.l/shin.l/ankle.l/foot.l
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/pelvis.r
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/pelvis.r/thigh.r
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/pelvis.r/thigh.r/shin.r
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/pelvis.r/thigh.r/shin.r/ankle.r
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/pelvis.r/thigh.r/shin.r/ankle.r/foot.r
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/neck
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/neck/head
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.l
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l/hand.l
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l/hand.l/fingers.r
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l/hand.l/fingers.r/fingertips.r
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l/hand.l/thumb.r
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l/hand.l/thumb.r/thumb_tip.r
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.r
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r/hand.r
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r/hand.r/fingers.l
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r/hand.r/fingers.l/fingertips.l
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r/hand.r/thumb.l
+        weight: 1
+      - path: race_guy_totalcontroller/padestrian_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r/hand.r/thumb.l/thumb_tip.l
+        weight: 1
+      - path: race_guy_totalcontroller/right_elbow
+        weight: 1
+      - path: race_guy_totalcontroller/right_foot
+        weight: 1
+      - path: race_guy_totalcontroller/right_hand
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: race_guy_totalcontroller
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
