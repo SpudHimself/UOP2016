@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour
 	private void StateCountdown()
 	{
 		mGameTimer = Mathf.Max( mGameTimer - Time.deltaTime, 0f );
-		PostProcessor.Singleton().SetGreyScale( 1f );
+		PostProcessor.Singleton().SetGreyScale( mGameTimer / 3f );
 
 // 		print( mGameTimer );
 		if ( mGameTimer <= 0f )
