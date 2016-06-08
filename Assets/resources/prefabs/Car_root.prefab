@@ -284,7 +284,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168732}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c75b3fd6862129543acae019b9bd9b4c, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mPlayerNumber: 1
-  mSinglePlayer: 1
+  mKeyboardUser: 0
   mAxleInfos:
   - leftWheel: {fileID: 14640094}
     rightWheel: {fileID: 14659848}
@@ -312,7 +312,7 @@ MonoBehaviour:
     rightWheel: {fileID: 14622560}
     motor: 0
     steering: 0
-  mMaxMotorTorque: 800
+  mMaxMotorTorque: 1600
   mMaxSteeringAngle: 30
   mBrakeTorque: 1000
 --- !u!146 &14622560

@@ -28,6 +28,8 @@ public class Car : MonoBehaviour
 	public AudioClip mMotor;
 	public AudioSource mAudioSource;
 
+    private float mDistToGround;
+
     public float Motor { get; set; }
 
 	void Awake()
@@ -64,6 +66,10 @@ public class Car : MonoBehaviour
         //    GameManager.Singleton().TogglePause();
         //}
 
+        mDistToGround = GetComponentInChildren<BoxCollider>().bounds.extents.y;
+        Debug.DrawLine(this.transform.position, -this.transform.up, Color.black);
+        Debug.Log(mDistToGround);
+
         //input testing
         if (Input.GetButtonDown("Powerup_" + mPlayerNumber))
         {
@@ -77,7 +83,7 @@ public class Car : MonoBehaviour
             GameManager.Singleton().TogglePause();
         }
 
-        if (Input.GetButtonDown("Reset_" + mPlayerNumber))
+        if (Input.GetButtonDown("Reset_" + mPlayerNumber) && isGrounded())
         {
             Debug.Log("Player " + mPlayerNumber + ": Reset pressed");
             ResetPosition();
@@ -223,7 +229,11 @@ public class Car : MonoBehaviour
 
         this.transform.rotation = currentRotation;
         this.transform.position = currentPosition;
+    }
 
+    bool isGrounded()
+    {
+        return Physics.Raycast(this.transform.position, -this.transform.up, mDistToGround + 0.1f);
     }
 
 	public bool IsGrounded()
