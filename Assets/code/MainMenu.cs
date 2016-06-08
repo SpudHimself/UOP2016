@@ -13,11 +13,14 @@ public class MainMenu : MonoBehaviour
 
     private float waitTime;
     private bool mPlaying;
+    private bool mQuitting;
     private string mFilename;
+
     // Use this for initialization
     void Start()
     {
         mPlaying = false;
+        mQuitting = false;
     }
 
     // Update is called once per frame
@@ -30,6 +33,14 @@ public class MainMenu : MonoBehaviour
             if (!mAudioSource.isPlaying)
             {
                 Application.LoadLevel(mFilename);
+            }
+        }
+
+        if (mQuitting)
+        {
+            if (!mAudioSource.isPlaying)
+            {
+                Application.Quit();
             }
         }
     }
@@ -47,7 +58,10 @@ public class MainMenu : MonoBehaviour
 
     public void Quit()
     {
-        mAudioSource.PlayOneShot(mAudioClipClick, 1.0f);
-        Application.Quit();
+        //mAudioSource.PlayOneShot(mAudioClipClick, 1.0f);
+        mAudioSource.clip = mAudioClipClick;
+        mAudioSource.Play();
+
+        mQuitting = true;
     }
 }

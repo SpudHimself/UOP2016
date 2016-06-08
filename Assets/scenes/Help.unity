@@ -180,9 +180,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentButton: {fileID: 1599354175}
   eventSystem: {fileID: 143720629}
-  m_audioSource: {fileID: 1161671509}
-  m_audioClipScroll: {fileID: 8300000, guid: fb266dc20f3beb940b9a18aa3ecae356, type: 3}
-  m_audioClipClick: {fileID: 8300000, guid: f2513c6e1cfd0bf4eb64e800ef22f84f, type: 3}
+  mAudioSource: {fileID: 1161671509}
+  mAudioClipClick: {fileID: 8300000, guid: f2513c6e1cfd0bf4eb64e800ef22f84f, type: 3}
 --- !u!114 &143720627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,9 +718,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentButton: {fileID: 1599354175}
   eventSystem: {fileID: 143720629}
-  m_audioSource: {fileID: 1161671509}
-  m_audioClipScroll: {fileID: 8300000, guid: fb266dc20f3beb940b9a18aa3ecae356, type: 3}
-  m_audioClipClick: {fileID: 8300000, guid: f2513c6e1cfd0bf4eb64e800ef22f84f, type: 3}
+  mAudioSource: {fileID: 0}
+  mAudioClipClick: {fileID: 0}
 --- !u!1 &1599354173
 GameObject:
   m_ObjectHideFlags: 0
