@@ -50,11 +50,29 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		// Only disabled until Spud fixes his input manager.
-		//if ( Input.GetButtonDown( "Start_1" ) )
-		//{
-		//	GameManager.Singleton().TogglePause();
-		//}
+        //if ( Input.GetButtonDown( "Start_1" ) )
+        //{
+        //    GameManager.Singleton().TogglePause();
+        //}
+
+        //input testing
+        if (Input.GetButtonDown("Powerup_" + mPlayerNumber))
+        {
+            Debug.Log("Player " + mPlayerNumber + ": Powerup pressed");
+            //firePowerup()
+        }
+
+        if (Input.GetButtonDown("Start_" + mPlayerNumber))
+        {
+            Debug.Log("Player " + mPlayerNumber + ": Start pressed");
+            GameManager.Singleton().TogglePause();
+        }
+
+        if (Input.GetButtonDown("Reset_" + mPlayerNumber))
+        {
+            Debug.Log("Player " + mPlayerNumber + ": Reset pressed");
+            ResetPosition();
+        }
     }
 
     public void FixedUpdate()
@@ -140,9 +158,9 @@ public class Car : MonoBehaviour
                 axle.rightWheel.motorTorque = Motor;
 
                 //handbrake
-                if (Input.GetButton("Fire2"))
+                if (Input.GetButton("Handbrake_" + mPlayerNumber))
                 {
-                    Debug.Log("Brake applied");
+                    Debug.Log("Player " + mPlayerNumber + ": Brake applied");
                     axle.leftWheel.brakeTorque = mBrakeTorque;
                     axle.rightWheel.brakeTorque = mBrakeTorque;
                 }
@@ -164,4 +182,25 @@ public class Car : MonoBehaviour
 	{
 		return mPlayerNumber;
 	}
+
+    void FirePowerup()
+    {
+        //fire the powerup yo
+    }
+
+    //wouldnt mind cleaning this one up
+    void ResetPosition()
+    {
+        Vector3 currentPosition = this.transform.position;
+        Quaternion currentRotation = this.transform.rotation;
+
+        //set y pos to +2
+        //set z rot to 0
+        currentRotation = new Quaternion(currentRotation.x, currentRotation.y, 0.0f, 1.0f);
+        currentPosition.y += 2.0f;
+
+        this.transform.rotation = currentRotation;
+        this.transform.position = currentPosition;
+
+    }
 }

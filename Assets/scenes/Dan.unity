@@ -1032,6 +1032,14 @@ Prefab:
       propertyPath: m_Time
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9677410, guid: 2ae1eacd7ff367c49bf8185bce0b8227, type: 2}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9677410, guid: 2ae1eacd7ff367c49bf8185bce0b8227, type: 2}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ae1eacd7ff367c49bf8185bce0b8227, type: 2}
   m_IsPrefabParent: 0
