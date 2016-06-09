@@ -135,7 +135,7 @@ GameObject:
   - 146: {fileID: 14621248}
   m_Layer: 0
   m_Name: FrontLeft
-  m_TagString: Untagged
+  m_TagString: PlayerWheel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -533,7 +533,7 @@ GameObject:
   - 146: {fileID: 14618114}
   m_Layer: 0
   m_Name: BackRight
-  m_TagString: Untagged
+  m_TagString: PlayerWheel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -763,7 +763,7 @@ GameObject:
   - 146: {fileID: 14653654}
   m_Layer: 0
   m_Name: BackLeft
-  m_TagString: Untagged
+  m_TagString: PlayerWheel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -901,7 +901,7 @@ GameObject:
   - 146: {fileID: 14671606}
   m_Layer: 0
   m_Name: FrontRight
-  m_TagString: Untagged
+  m_TagString: PlayerWheel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1142,8 +1142,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 23.2173939, y: -1.1604634e-06, z: -12.2653294}
+  m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 499334}
   m_Father: {fileID: 0}
@@ -1180,7 +1180,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: .550000012, z: 1}
+  m_LocalPosition: {x: -.5, y: .270000011, z: .5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 493706}
@@ -1205,7 +1205,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: .550000012, z: 1}
+  m_LocalPosition: {x: .5, y: .270000011, z: .5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 493706}
@@ -1229,7 +1229,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: .550000012, z: -1.33000004}
+  m_LocalPosition: {x: .5, y: .270000011, z: -.670000017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 493706}
@@ -1478,7 +1478,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: .550000012, z: -1.33000004}
+  m_LocalPosition: {x: -.5, y: .270000011, z: -.670000017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 493706}
@@ -1852,7 +1852,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.79999995, y: 5, z: 4.5}
+  m_Size: {x: 2.0999999, y: 5, z: 4.5}
   m_Center: {x: 0, y: 2.71000004, z: 0}
 --- !u!82 &8271842
 AudioSource:
@@ -1969,6 +1969,7 @@ MonoBehaviour:
   mMotor: {fileID: 8300000, guid: 4a636645b672b0c4cac37b8dc1d6adea, type: 3}
   mAudioSource: {fileID: 8271842}
   mBoxCollider: {fileID: 6520788}
+  mWheels: {fileID: 104538}
 --- !u!137 &13741770
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

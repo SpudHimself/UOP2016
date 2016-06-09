@@ -30,7 +30,7 @@ public class Shelf : MonoBehaviour
         switch ( col.gameObject.tag )
 		{
 			case Tags.PLAYER:
-			case Tags.SHELF:
+			case Tags.ITEM:
 				{
 					mRigidbody.constraints = RigidbodyConstraints.None;
 

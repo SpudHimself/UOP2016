@@ -154,7 +154,7 @@ public class GameManager : MonoBehaviour
 
 					// Determine winner.
 					Car winner = GetWinningPlayer();
-					print( "Player " + winner.GetPlayerNumber() + " wins!" );
+					print( winner.name + " wins!" );
 					print( "Game over! Press Enter (temporary) to restart game." );
 				}
 				break;

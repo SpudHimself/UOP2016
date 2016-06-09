@@ -44,12 +44,14 @@ public class Car : MonoBehaviour
 	private GameObject mItemPrefab;
 
 	private GameObject mCameraPosition;
+	public GameObject mWheels;
 
 	void Awake()
 	{
 		tag = Tags.PLAYER;
 
 		gameObject.SetTagRecursively( Tags.PLAYER );
+		mWheels.SetTagRecursively( Tags.PLAYER_WHEEL );
 
 		mItemPrefab = (GameObject) Resources.Load( "prefabs/Item" );
 
@@ -83,7 +85,7 @@ public class Car : MonoBehaviour
 		newCoM.y -= 1.5f;
 		mRigidBody.centerOfMass = newCoM;
 
-		mScoreManager = gameObject.AddComponent<ScoreManager>();
+// 		mScoreManager = gameObject.AddComponent<ScoreManager>();
 
         mAudioSource.playOnAwake = false;
         mAudioSource.loop = true;
