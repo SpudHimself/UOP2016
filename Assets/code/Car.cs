@@ -210,7 +210,7 @@ public class Car : MonoBehaviour
         //set y pos to +2
         //set z rot to 0
         currentRotation = new Quaternion(0.0f, currentRotation.y, 0.0f, 1.0f);
-        currentPosition.y += 1.0f;
+        currentPosition.y += 0.5f;
 
         this.transform.rotation = currentRotation;
         this.transform.position = currentPosition;
