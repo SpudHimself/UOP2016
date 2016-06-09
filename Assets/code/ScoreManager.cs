@@ -6,11 +6,14 @@ public class ScoreManager : MonoBehaviour
     #region Properties
     public int Score { get; set; }
 	private GameObject mScorePlumPrefab;
+	private Car mCar;
     #endregion
 
     #region Unity Methods
     private void Start()
     {
+		mCar = GetComponent<Car>();
+
         Score = 0;
 
 		mScorePlumPrefab = (GameObject) Resources.Load( "prefabs/ScorePlum" );
@@ -24,7 +27,7 @@ public class ScoreManager : MonoBehaviour
 
 		mScorePlumPrefab = (GameObject) Resources.Load( "prefabs/ScorePlum" );
 
-		Quaternion rotation = Quaternion.LookRotation( transform.position - Camera.main.transform.position, Vector3.up );
+		Quaternion rotation = Quaternion.LookRotation( transform.position - mCar.GetCameraPosition().transform.position, Vector3.up );
 		GameObject clone = (GameObject) Instantiate( mScorePlumPrefab, transform.position, rotation );
 		clone.transform.parent = transform;
 		clone.GetComponent<TextMesh>().text = "" + amount;

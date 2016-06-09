@@ -3039,6 +3039,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dc5e074396e2b9841aca704d96b44dea, type: 2}
+    - target: {fileID: 6400000, guid: 9a182e0e2e5797947b9f7127db79454d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a182e0e2e5797947b9f7127db79454d, type: 3}
   m_IsPrefabParent: 0
@@ -3061,6 +3065,21 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: .00300000003, y: -.0360000022, z: .205000013}
   m_TimeToStationary: .5
+--- !u!54 &333172718
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 333172716}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &335211680
 Prefab:
   m_ObjectHideFlags: 0
@@ -5165,7 +5184,7 @@ GameObject:
   - 114: {fileID: 537980461}
   m_Layer: 0
   m_Name: Main Camera (1)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6418,6 +6437,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dc5e074396e2b9841aca704d96b44dea, type: 2}
+    - target: {fileID: 6400000, guid: 9a182e0e2e5797947b9f7127db79454d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a182e0e2e5797947b9f7127db79454d, type: 3}
   m_IsPrefabParent: 0
@@ -6440,6 +6463,21 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: .00300000003, y: -.0360000022, z: .205000013}
   m_TimeToStationary: .5
+--- !u!54 &609873148
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 609873142}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &610777006
 Prefab:
   m_ObjectHideFlags: 0
@@ -7868,6 +7906,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dc5e074396e2b9841aca704d96b44dea, type: 2}
+    - target: {fileID: 6400000, guid: 9a182e0e2e5797947b9f7127db79454d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a182e0e2e5797947b9f7127db79454d, type: 3}
   m_IsPrefabParent: 0
@@ -7890,6 +7932,21 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: .00300000003, y: -.0360000022, z: .205000013}
   m_TimeToStationary: .5
+--- !u!54 &710842265
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 710842259}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &716070269
 Prefab:
   m_ObjectHideFlags: 0
@@ -12196,6 +12253,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dc5e074396e2b9841aca704d96b44dea, type: 2}
+    - target: {fileID: 6400000, guid: 9a182e0e2e5797947b9f7127db79454d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a182e0e2e5797947b9f7127db79454d, type: 3}
   m_IsPrefabParent: 0
@@ -12218,6 +12279,21 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: .00300000003, y: -.0360000022, z: .205000013}
   m_TimeToStationary: .5
+--- !u!54 &1186495961
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1186495955}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1198530892
 Prefab:
   m_ObjectHideFlags: 0
@@ -16949,6 +17025,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dc5e074396e2b9841aca704d96b44dea, type: 2}
+    - target: {fileID: 6400000, guid: 9a182e0e2e5797947b9f7127db79454d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a182e0e2e5797947b9f7127db79454d, type: 3}
   m_IsPrefabParent: 0
@@ -16971,6 +17051,21 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: .00300000003, y: -.0360000022, z: .205000013}
   m_TimeToStationary: .5
+--- !u!54 &1659115123
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1659115117}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1664984730
 Prefab:
   m_ObjectHideFlags: 0
@@ -17030,6 +17125,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dc5e074396e2b9841aca704d96b44dea, type: 2}
+    - target: {fileID: 6400000, guid: 9a182e0e2e5797947b9f7127db79454d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a182e0e2e5797947b9f7127db79454d, type: 3}
   m_IsPrefabParent: 0
@@ -17052,6 +17151,21 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: .00300000003, y: -.0360000022, z: .205000013}
   m_TimeToStationary: .5
+--- !u!54 &1664984737
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1664984731}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1667016563
 Prefab:
   m_ObjectHideFlags: 0
@@ -17635,6 +17749,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dc5e074396e2b9841aca704d96b44dea, type: 2}
+    - target: {fileID: 6400000, guid: 9a182e0e2e5797947b9f7127db79454d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a182e0e2e5797947b9f7127db79454d, type: 3}
   m_IsPrefabParent: 0
@@ -17661,6 +17779,21 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: .00300000003, y: -.0360000022, z: .205000013}
   m_TimeToStationary: .5
+--- !u!54 &1740087721
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1740087719}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1763387490
 Prefab:
   m_ObjectHideFlags: 0

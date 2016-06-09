@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
 
 		mPauseMenu = GameObject.FindGameObjectWithTag( "PauseMenu" ).GetComponentInChildren<Canvas>();
 		mPauseMenu.enabled = false;
-		Debug.Log( mPauseMenu.enabled );
+// 		Debug.Log( mPauseMenu.enabled );
 
 		// Keep this last.
 		SetState( eState.Countdown );

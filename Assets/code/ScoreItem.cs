@@ -110,11 +110,17 @@ public class ScoreItem : MonoBehaviour
 
 		switch ( state ) {
 			case eItemState.INACTIVE:
-				mRigidbody.isKinematic = true;
+				if ( mRigidbody )
+				{
+					mRigidbody.isKinematic = true;
+				}
 				break;
 
 			case eItemState.ACTIVE:
-				mRigidbody.isKinematic = false;
+				if ( mRigidbody )
+				{
+					mRigidbody.isKinematic = false;
+				}
 				break;
 		}
 	}

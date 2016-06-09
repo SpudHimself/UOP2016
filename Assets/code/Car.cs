@@ -43,6 +43,8 @@ public class Car : MonoBehaviour
 
 	private GameObject mItemPrefab;
 
+	private GameObject mCameraPosition;
+
 	void Awake()
 	{
 		tag = Tags.PLAYER;
@@ -52,6 +54,13 @@ public class Car : MonoBehaviour
 		mItemPrefab = (GameObject) Resources.Load( "prefabs/Item" );
 
 		mScoreManager = gameObject.AddComponent<ScoreManager>();
+
+		mCameraPosition = transform.GetChild( 0 ).Find( "CameraPos" ).gameObject;
+	}
+
+	public GameObject GetCameraPosition()
+	{
+		return mCameraPosition;
 	}
 
     void OnLevelWasLoaded()
