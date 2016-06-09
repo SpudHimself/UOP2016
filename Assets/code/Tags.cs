@@ -18,4 +18,5 @@ public class Tags {
     public const string CART = "Cart";
     public const string PLANT = "Plant";
     public const string BOX = "Box";
+    public const string WALL = "Wall";
 }

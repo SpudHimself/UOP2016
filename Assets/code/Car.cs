@@ -25,6 +25,8 @@ public class Car : MonoBehaviour
 
 	private GameObject mScorePlumPrefab;
 
+   // private AudioClip mCurrent;
+  //  public AudioClip mAccelerate;
 	public AudioClip mMotor;
 	public AudioSource mAudioSource;
 
@@ -52,10 +54,10 @@ public class Car : MonoBehaviour
 
 		mScoreManager = gameObject.AddComponent<ScoreManager>();
 
-		mAudioSource.playOnAwake = false;
-		mAudioSource.loop = true;
-		mAudioSource.clip = mMotor;
-		mAudioSource.Play();
+        mAudioSource.playOnAwake = false;
+        mAudioSource.loop = true;
+        mAudioSource.clip = mMotor;
+        mAudioSource.Play();        
     }
 
     // Update is called once per frame
@@ -238,8 +240,28 @@ public class Car : MonoBehaviour
 
 	private void UpdateCarNoise()
 	{
-        float vol = mVerticalAxis * (Time.deltaTime * 2.5f);
+        float vol = mVerticalAxis * (Time.deltaTime * 7f);
         mAudioSource.volume = Mathf.Lerp(0f, 1f, vol);
+
+
+        //FIX THIS IF THERE IS TIME!!!
+        /*if (mVerticalAxis < 1 && mVerticalAxis != 0)
+        {
+            mAudioSource.clip = mAccelerate;
+            mAudioSource.Play();
+            mAudioSource.volume = Mathf.Lerp(0f, 1f, vol);
+        }
+
+        if (mVerticalAxis >= 1)
+        {
+            if (!mAudioSource.isPlaying)
+            {
+                mAudioSource.loop = true;
+                mAudioSource.clip = mMotor;
+                mAudioSource.Play();
+                mAudioSource.volume = Mathf.Lerp(0f, 1f, vol);
+            }
+        }*/
 
         //AudioListener.volume = Mathf.Lerp(0f, 1f, Time.deltaTime);
 	}
