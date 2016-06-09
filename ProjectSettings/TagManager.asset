@@ -8,10 +8,14 @@ TagManager:
   - PlayerSpawn
   - NPCSpawn
   - NPC
+<<<<<<< HEAD
   - Plant
   - Shelf
   - Cart
   - Box
+=======
+  - ShelfSpawn
+>>>>>>> db14397d4b3c09ed791bb47074b4e487da1aac5e
   layers:
   - Default
   - TransparentFX
