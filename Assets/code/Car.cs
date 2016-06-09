@@ -29,6 +29,9 @@ public class Car : MonoBehaviour
 	public AudioSource mAudioSource;
 
     private float mDistToGround;
+    public BoxCollider mBoxCollider;
+    private Rigidbody mRigidBody;
+    private List<WheelCollider> mWheelsColliders;
 
     public float Motor { get; set; }
 
@@ -56,6 +59,12 @@ public class Car : MonoBehaviour
 		mAudioSource.loop = true;
 		mAudioSource.clip = mMotor;
 		mAudioSource.Play();
+
+        mBoxCollider = this.GetComponent<BoxCollider>();
+        mDistToGround = mBoxCollider.bounds.extents.y;
+        //Debug.Log(mDistToGround);
+
+        mRigidBody = this.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -69,6 +78,7 @@ public class Car : MonoBehaviour
         mDistToGround = GetComponentInChildren<BoxCollider>().bounds.extents.y;
         Debug.DrawLine(this.transform.position, -this.transform.up, Color.black);
         //Debug.Log(mDistToGround);
+        Debug.Log("player " + mPlayerNumber + " grounded is " + isGrounded());
 
         //input testing
         if (Input.GetButtonDown("Powerup_" + mPlayerNumber))
@@ -83,7 +93,7 @@ public class Car : MonoBehaviour
             GameManager.Singleton().TogglePause();
         }
 
-        if (Input.GetButtonDown("Reset_" + mPlayerNumber) )
+        if (Input.GetButtonDown("Reset_" + mPlayerNumber) && !this.isGrounded())
         {
             Debug.Log("Player " + mPlayerNumber + ": Reset pressed");
             ResetPosition();
@@ -224,21 +234,26 @@ public class Car : MonoBehaviour
 
         //set y pos to +2
         //set z rot to 0
-        currentRotation = new Quaternion(currentRotation.x, currentRotation.y, 0.0f, 1.0f);
-        currentPosition.y += 2.0f;
+        currentRotation = new Quaternion(0.0f, currentRotation.y, 0.0f, 1.0f);
+        currentPosition.y += 0.5f;
 
         this.transform.rotation = currentRotation;
         this.transform.position = currentPosition;
-    }
 
-//     bool isGrounded()
-//     {
-//         return Physics.Raycast(this.transform.position, -this.transform.up, mDistToGround + 0.1f);
-//     }
+        mRigidBody.velocity = Vector3.zero;
+    }
 
 	private void UpdateCarNoise()
 	{
 		float vol = mVerticalAxis * Time.deltaTime;
 		mAudioSource.volume = Mathf.Clamp( vol, 0f, 0.5f );
 	}
+
+    bool isGrounded()
+    {
+        Debug.DrawRay(transform.position, -Vector3.up, Color.red);
+        Ray ray = new Ray(transform.position, -Vector3.up);
+
+        return Physics.Raycast(ray, 1.0f);
+    }
 }
