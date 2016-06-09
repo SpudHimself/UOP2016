@@ -13,4 +13,9 @@ public class Tags {
     public const string ITEM = "Item";
 
     public const string SHELF_SPAWN = "ShelfSpawn";
+
+    public const string SHELF = "Shelf";
+    public const string CART = "Cart";
+    public const string PLANT = "Plant";
+    public const string BOX = "Box";
 }

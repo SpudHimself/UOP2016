@@ -10,45 +10,64 @@ public class CollisionSounds : MonoBehaviour
     public AudioClip cartCollision;
     public AudioClip boxCollision;
 
+    private bool hasCollided;
+
+    public float timer;
+
     // Use this for initialization
     void Start()
     {
-       
+        timer = 0.0f;
+
+        hasCollided = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        timer += Time.deltaTime;
     }
 
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter(Collider col)
     {
-        if (col.relativeVelocity.magnitude > 2)
+        if (!hasCollided)
         {
-            if (col.collider.tag == "Plant")
+            if (col.tag == Tags.PLANT)
             {
-                audioSource.clip = bushCollision;
-                audioSource.Play();
+                ///audioSource.clip = bushCollision;
+                audioSource.PlayOneShot(bushCollision);
+                hasCollided = true;
             }
 
-            if (col.collider.tag == "Shelf")
+            if (col.tag == Tags.SHELF)
             {
-                audioSource.clip = shelfCollision;
-                audioSource.Play();
+                //audioSource.clip = shelfCollision;
+                audioSource.PlayOneShot(shelfCollision);
+                hasCollided = true;
             }
 
-            if (col.collider.tag == "Cart")
+            if (col.tag == Tags.CART)
             {
                 audioSource.clip = cartCollision;
                 audioSource.Play();
+                hasCollided = true;
             }
 
-            if (col.collider.tag == "Box")
+            if (col.tag == Tags.BOX)
             {
                 audioSource.clip = boxCollision;
                 audioSource.Play();
+                hasCollided = true;
             }
+        }
+    }
+
+    void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject && timer > 1.0f)
+        {
+            hasCollided = false;
+            timer = 0.0f;
         }
     }
 }
