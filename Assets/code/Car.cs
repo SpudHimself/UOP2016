@@ -21,6 +21,8 @@ public class Car : MonoBehaviour
     public float mMaxSteeringAngle;
     public float mBrakeTorque;
 
+    public Animator animator;
+
 	private ScoreManager mScoreManager;
 
 	private GameObject mScorePlumPrefab;
@@ -164,6 +166,7 @@ public class Car : MonoBehaviour
         //float steering = mMaxSteeringAngle * Input.GetAxis("Horizontal_" + mPlayerNumber);
         float steering;
 
+        
         //fuckery for testing, wont be needed end game
         if (mKeyboardUser)
         {
@@ -184,6 +187,8 @@ public class Car : MonoBehaviour
 			//SoundManager.Singleton().SetPitch( "motor_fatman", Input.GetAxis("Acceleration_" + mPlayerNumber) );
 			//SoundManager.Singleton().PlaySound( "motor_fatman" );
         }
+
+        animator.SetFloat("Steering", steering);
 
 		UpdateCarNoise();
 
@@ -299,7 +304,9 @@ public class Car : MonoBehaviour
 					}
 					else if ( thisVel.magnitude < otherVel.magnitude )
 					{
+                        animator.SetBool("Collided", true);
 						DropItems();
+                        animator.SetBool("Collider", false);
 					}
 				}
 				break;

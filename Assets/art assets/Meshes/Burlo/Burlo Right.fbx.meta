@@ -1,0 +1,284 @@
+fileFormatVersion: 2
+guid: 70e0307bc6347f445a689244a1347c35
+timeCreated: 1465478954
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: ankle.l
+    100002: ankle.r
+    100004: //RootNode
+    100006: burlo_body
+    100008: burlo_head
+    100010: burlo_skeleton
+    100012: chest
+    100014: fingers.l
+    100016: fingers.r
+    100018: fingertips.l
+    100020: fingertips.r
+    100022: foot.l
+    100024: foot.r
+    100026: hand.l
+    100028: hand.r
+    100030: head
+    100032: left_elbow
+    100034: left_foot
+    100036: left_hand
+    100038: left_knee
+    100040: lower_arm.l
+    100042: lower_arm.r
+    100044: neck
+    100046: pelvis
+    100048: pelvis.l
+    100050: pelvis.r
+    100052: right_elbow
+    100054: right_foot
+    100056: right_hand
+    100058: right_knee
+    100060: shin.l
+    100062: shin.r
+    100064: shoulder.l
+    100066: shoulder.r
+    100068: thigh.l
+    100070: thigh.r
+    100072: thumb.l
+    100074: thumb.r
+    100076: thumb_tip.l
+    100078: thumb_tip.r
+    100080: upper_arm.l
+    100082: upper_arm.r
+    100084: waist
+    100086: wrist.l
+    100088: wrist.r
+    400000: ankle.l
+    400002: ankle.r
+    400004: //RootNode
+    400006: burlo_body
+    400008: burlo_head
+    400010: burlo_skeleton
+    400012: chest
+    400014: fingers.l
+    400016: fingers.r
+    400018: fingertips.l
+    400020: fingertips.r
+    400022: foot.l
+    400024: foot.r
+    400026: hand.l
+    400028: hand.r
+    400030: head
+    400032: left_elbow
+    400034: left_foot
+    400036: left_hand
+    400038: left_knee
+    400040: lower_arm.l
+    400042: lower_arm.r
+    400044: neck
+    400046: pelvis
+    400048: pelvis.l
+    400050: pelvis.r
+    400052: right_elbow
+    400054: right_foot
+    400056: right_hand
+    400058: right_knee
+    400060: shin.l
+    400062: shin.r
+    400064: shoulder.l
+    400066: shoulder.r
+    400068: thigh.l
+    400070: thigh.r
+    400072: thumb.l
+    400074: thumb.r
+    400076: thumb_tip.l
+    400078: thumb_tip.r
+    400080: upper_arm.l
+    400082: upper_arm.r
+    400084: waist
+    400086: wrist.l
+    400088: wrist.r
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: BezierCircle
+    4300002: burlo_head
+    4300004: burlo_body
+    7400000: Turn Right
+    9500000: //RootNode
+    13700000: burlo_body
+    13700002: burlo_head
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Turn Right
+      takeName: Scene
+      firstFrame: 1
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: burlo_body
+        weight: 1
+      - path: burlo_head
+        weight: 1
+      - path: burlo_skeleton
+        weight: 1
+      - path: burlo_skeleton/pelvis
+        weight: 1
+      - path: burlo_skeleton/pelvis/pelvis.l
+        weight: 1
+      - path: burlo_skeleton/pelvis/pelvis.l/thigh.l
+        weight: 1
+      - path: burlo_skeleton/pelvis/pelvis.l/thigh.l/shin.l
+        weight: 1
+      - path: burlo_skeleton/pelvis/pelvis.l/thigh.l/shin.l/ankle.l
+        weight: 1
+      - path: burlo_skeleton/pelvis/pelvis.l/thigh.l/shin.l/ankle.l/foot.l
+        weight: 1
+      - path: burlo_skeleton/pelvis/pelvis.r
+        weight: 1
+      - path: burlo_skeleton/pelvis/pelvis.r/thigh.r
+        weight: 1
+      - path: burlo_skeleton/pelvis/pelvis.r/thigh.r/shin.r
+        weight: 1
+      - path: burlo_skeleton/pelvis/pelvis.r/thigh.r/shin.r/ankle.r
+        weight: 1
+      - path: burlo_skeleton/pelvis/pelvis.r/thigh.r/shin.r/ankle.r/foot.r
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/neck
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/neck/head
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.l
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l/hand.l
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l/hand.l/fingers.r
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l/hand.l/fingers.r/fingertips.r
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l/hand.l/thumb.r
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l/hand.l/thumb.r/thumb_tip.r
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.r
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r/hand.r
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r/hand.r/fingers.l
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r/hand.r/fingers.l/fingertips.l
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r/hand.r/thumb.l
+        weight: 1
+      - path: burlo_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r/hand.r/thumb.l/thumb_tip.l
+        weight: 1
+      - path: left_elbow
+        weight: 1
+      - path: left_foot
+        weight: 1
+      - path: left_hand
+        weight: 1
+      - path: left_knee
+        weight: 1
+      - path: right_elbow
+        weight: 1
+      - path: right_foot
+        weight: 1
+      - path: right_hand
+        weight: 1
+      - path: right_knee
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

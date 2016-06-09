@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class NPC : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class NPC : MonoBehaviour
 	}
 	private eState mState;
 
+    public List<AudioClip> clips;
+    // PURE FILTH CODE.
+    public List<Material> materials;
+
+    public GameObject bloodEffect;
+
 	// These 2 will have to be changed.
 	private float mRoamRadius = 15f;
 	private float mMoveTimer;
@@ -19,6 +26,7 @@ public class NPC : MonoBehaviour
 	private SkinnedMeshRenderer[] mRenderers;
     private Rigidbody[]  mRigidbodies;
     private Animator mAnimator;
+    private AudioSource mAudioSource;
 
     public NavMeshAgent Agent { get; private set; }
 
@@ -29,8 +37,9 @@ public class NPC : MonoBehaviour
         Agent = this.GetComponent<NavMeshAgent>();
 		mRenderers = this.GetComponentsInChildren<SkinnedMeshRenderer>();
         mRigidbodies = this.GetComponentsInChildren<Rigidbody>();
-        
+
         mAnimator = this.GetComponent<Animator>();
+        mAudioSource = this.GetComponent<AudioSource>();
 	}
 
 	void Start()
@@ -40,6 +49,11 @@ public class NPC : MonoBehaviour
 
 		// Leave this first.
 		GameManager.Singleton().GetNPCs().Add( this );
+
+        foreach (SkinnedMeshRenderer renderer in mRenderers)
+        {
+            renderer.material = materials[Random.Range(0, materials.Count)];
+        }
 
 		mMoveTimer = 0f;
 
@@ -71,25 +85,33 @@ public class NPC : MonoBehaviour
 		}
 	}
 
-	void OnCollisionEnter( Collision col )
+	void OnTriggerEnter ( Collider col )
 	{
-		float value = 50.0f;
-
-		if ( col.gameObject.CompareTag( Tags.PLAYER ) )
-		{
+        if ( mState != eState.Dead && col.gameObject.CompareTag( Tags.PLAYER ) )
+        {
             SetState(eState.Dead);
 
-			Car car = col.gameObject.GetComponent<Car>();
+            Collider c = this.GetComponent<Collider>();
+            Vector2 spawnPoint = transform.position;
 
-			Vector3 dir = col.contacts[0].point;
-			dir.y = 5.0f;
+            mAudioSource.clip = clips[Random.Range(0, clips.Count)];
+            mAudioSource.Play();
 
-			Debug.Log( dir );
+            spawnPoint.y += 2.0f;
+
+            Instantiate(bloodEffect, transform.position, transform.rotation);
 
             EnableRagdoll();
 
-			//this.GetComponent<Rigidbody>().AddForce( dir * ( car.Motor / value ) );
-		}
+            RaycastHit hit;
+
+            if (Physics.Raycast(transform.position, transform.forward, out hit))
+            {
+                Debug.Log("Point: " + hit.point);
+            }
+
+            this.GetComponent<Collider>().enabled = false;
+        }
 	}
 
 	void OnDestroy()
@@ -117,7 +139,6 @@ public class NPC : MonoBehaviour
 				break;
 
 			case eState.Dead:
-                mAnimator.enabled = false;
                 Agent.Stop();
 				break;
 		}
@@ -181,6 +202,8 @@ public class NPC : MonoBehaviour
 
     private void EnableRagdoll()
     {
+        mAnimator.enabled = false;
+
         foreach (Rigidbody rb in mRigidbodies)
         {
             rb.detectCollisions = true;
@@ -195,8 +218,5 @@ public class NPC : MonoBehaviour
             rb.detectCollisions = false;
             rb.isKinematic = true;
         }
-
-        // This is pure filth...
-        mRigidbodies[0].detectCollisions = true;
     }
 }
