@@ -93,8 +93,14 @@ GameObject:
   - 4: {fileID: 469490}
   - 54: {fileID: 5407496}
   - 114: {fileID: 11463322}
+<<<<<<< HEAD
   - 65: {fileID: 6550696}
   m_Layer: 2
+=======
+  - 65: {fileID: 6580570}
+  - 114: {fileID: 11406712}
+  m_Layer: 0
+>>>>>>> 3a3dcddb5b2ff296e3eb9ff9ea8c0820189dc472
   m_Name: Car_root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +355,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 9.32999992, y: 1, z: 0}
+=======
+  m_LocalPosition: {x: -.819999993, y: .819999993, z: -9.56999969}
+>>>>>>> 3a3dcddb5b2ff296e3eb9ff9ea8c0820189dc472
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 404274}
@@ -433,24 +443,33 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168732}
-  m_Material: {fileID: 13400000, guid: c75b3fd6862129543acae019b9bd9b4c, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!65 &6550696
+=======
+--- !u!65 &6580570
+>>>>>>> 3a3dcddb5b2ff296e3eb9ff9ea8c0820189dc472
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132992}
   m_Material: {fileID: 0}
+<<<<<<< HEAD
   m_IsTrigger: 0
+=======
+  m_IsTrigger: 1
+>>>>>>> 3a3dcddb5b2ff296e3eb9ff9ea8c0820189dc472
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.0999999, y: 1, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!96 &9633844
 TrailRenderer:
   m_ObjectHideFlags: 1
@@ -542,10 +561,14 @@ TrailRenderer:
   m_MinVertexDistance: .100000001
   m_Autodestruct: 0
 --- !u!114 &11415948
+=======
+--- !u!114 &11406712
+>>>>>>> 3a3dcddb5b2ff296e3eb9ff9ea8c0820189dc472
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 156938}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -569,6 +592,29 @@ MonoBehaviour:
   mCorrespondingCollider: {fileID: 14693510}
   mSkidmarkTrailRenderer: {fileID: 111796}
   mSmokeParticles: {fileID: 132642}
+=======
+  m_GameObject: {fileID: 132992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c8f5ea822caca48a7bc5838d3cc359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  bushCollision: {fileID: 8300000, guid: e0147c00b52743448be0b34e67f8c452, type: 3}
+  bushCollision1: {fileID: 8300000, guid: 7f0e2d2ed50541f49926c6239b1f2d0e, type: 3}
+  bushCollision2: {fileID: 8300000, guid: 70ab498586d560049ad02abd3f26d4c3, type: 3}
+  shelfCollision: {fileID: 8300000, guid: 9104962d0aad0d144a28936faac4dd47, type: 3}
+  shelfCollision1: {fileID: 8300000, guid: 8018c6829cea61f4e9e4fbafc8f6b43c, type: 3}
+  shelfCollision2: {fileID: 8300000, guid: 8c6fd19d6186b8e49858918e702cf04d, type: 3}
+  cartCollision: {fileID: 8300000, guid: 74216e785571b1b41b6a2fa9f3954830, type: 3}
+  cartCollision1: {fileID: 8300000, guid: c1c5aed1a32a2b542a18acdf9a69979f, type: 3}
+  cartCollision2: {fileID: 8300000, guid: 931b54fdee270ad41a0c84fa00752ee3, type: 3}
+  boxCollision: {fileID: 8300000, guid: cf8bf90bc0ddc71498ef6924a4b71ecb, type: 3}
+  wallCollision: {fileID: 8300000, guid: cac5013ab776ced448f310efa733963b, type: 3}
+  wallCollision1: {fileID: 8300000, guid: 757ff3c3d7815404282a843b8ee70e16, type: 3}
+  wallCollision2: {fileID: 8300000, guid: effe2c894f2642c4392205c9fa570b87, type: 3}
+  timer: 0
+>>>>>>> 3a3dcddb5b2ff296e3eb9ff9ea8c0820189dc472
 --- !u!114 &11463322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -581,7 +627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mPlayerNumber: 1
-  mKeyboardUser: 0
+  mKeyboardUser: 1
   mAxleInfos:
   - leftWheel: {fileID: 14640094}
     rightWheel: {fileID: 14659848}
@@ -594,7 +640,12 @@ MonoBehaviour:
   mMaxMotorTorque: 1600
   mMaxSteeringAngle: 30
   mBrakeTorque: 1000
+<<<<<<< HEAD
   mBoxCollider: {fileID: 0}
+=======
+  mMotor: {fileID: 8300000, guid: 6bd9b0356b76ff04aad060e1b697e39f, type: 3}
+  mAudioSource: {fileID: 0}
+>>>>>>> 3a3dcddb5b2ff296e3eb9ff9ea8c0820189dc472
 --- !u!146 &14622560
 WheelCollider:
   m_ObjectHideFlags: 1

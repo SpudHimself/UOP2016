@@ -13,6 +13,8 @@ TagManager:
   - Cart
   - Box
   - Plant
+  - Wall
+  - Till
   layers:
   - Default
   - TransparentFX

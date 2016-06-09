@@ -6,9 +6,20 @@ public class CollisionSounds : MonoBehaviour
     private GameObject bush;
     public AudioSource audioSource;
     public AudioClip bushCollision;
+    public AudioClip bushCollision1;
+    public AudioClip bushCollision2;
     public AudioClip shelfCollision;
+    public AudioClip shelfCollision1;
+    public AudioClip shelfCollision2;
     public AudioClip cartCollision;
+    public AudioClip cartCollision1;
+    public AudioClip cartCollision2;
     public AudioClip boxCollision;
+    public AudioClip wallCollision;
+    public AudioClip wallCollision1;
+    public AudioClip wallCollision2;
+	public AudioClip tillCollision;
+    public AudioClip tillCollision1;
 
     private bool hasCollided;
 
@@ -30,26 +41,46 @@ public class CollisionSounds : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
+        float random = Random.Range(1, 3);
+
         if (!hasCollided)
         {
             if (col.tag == Tags.PLANT)
             {
-                ///audioSource.clip = bushCollision;
-                audioSource.PlayOneShot(bushCollision);
+                if (random == 1)
+                    audioSource.PlayOneShot(bushCollision);
+
+                else if (random == 2)
+                    audioSource.PlayOneShot(bushCollision1);
+
+                else
+                    audioSource.PlayOneShot(bushCollision2);
                 hasCollided = true;
             }
 
             if (col.tag == Tags.SHELF)
             {
-                //audioSource.clip = shelfCollision;
-                audioSource.PlayOneShot(shelfCollision);
+                if (random == 1)
+                    audioSource.PlayOneShot(shelfCollision);
+
+                else if (random == 2)
+                    audioSource.PlayOneShot(shelfCollision1);
+
+                else
+                    audioSource.PlayOneShot(shelfCollision2);
                 hasCollided = true;
             }
 
             if (col.tag == Tags.CART)
             {
-                audioSource.clip = cartCollision;
-                audioSource.Play();
+                if (random == 1)
+                    audioSource.PlayOneShot(cartCollision);
+
+                else if (random == 2)
+                    audioSource.PlayOneShot(cartCollision1);
+
+                else
+                    audioSource.PlayOneShot(cartCollision2);
                 hasCollided = true;
             }
 
@@ -57,6 +88,29 @@ public class CollisionSounds : MonoBehaviour
             {
                 audioSource.clip = boxCollision;
                 audioSource.Play();
+                hasCollided = true;
+            }
+
+            if (col.tag == Tags.WALL)
+            {
+                if (random == 1)
+                    audioSource.PlayOneShot(wallCollision);
+
+                else if (random == 2)
+                    audioSource.PlayOneShot(wallCollision1);
+
+                else
+                    audioSource.PlayOneShot(wallCollision2);
+                hasCollided = true;
+            }
+
+			if (col.tag == Tags.TILL)
+            {
+                if (random == 1)
+                    audioSource.PlayOneShot(wallCollision);
+
+                else
+                    audioSource.PlayOneShot(wallCollision1);
                 hasCollided = true;
             }
         }
