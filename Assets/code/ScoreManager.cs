@@ -23,7 +23,10 @@ public class ScoreManager : MonoBehaviour
         Score += amount;
 
 		mScorePlumPrefab = (GameObject) Resources.Load( "prefabs/ScorePlum" );
-		GameObject clone = (GameObject) Instantiate( mScorePlumPrefab, transform.position, transform.rotation );
+
+		Quaternion rotation = Quaternion.LookRotation( transform.position - Camera.main.transform.position, Vector3.up );
+		GameObject clone = (GameObject) Instantiate( mScorePlumPrefab, transform.position, rotation );
+		clone.transform.parent = transform;
 		clone.GetComponent<TextMesh>().text = "" + amount;
     }
 
