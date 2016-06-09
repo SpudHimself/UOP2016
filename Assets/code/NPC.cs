@@ -11,6 +11,7 @@ public class NPC : MonoBehaviour
 	}
 	private eState mState;
 
+    public GameObject bloodEffect;
 	// These 2 will have to be changed.
 	private float mRoamRadius = 15f;
 	private float mMoveTimer;
@@ -73,9 +74,16 @@ public class NPC : MonoBehaviour
 
 	void OnTriggerEnter ( Collider col )
 	{
-        if ( col.gameObject.CompareTag( Tags.PLAYER ) )
+        if ( mState != eState.Dead && col.gameObject.CompareTag( Tags.PLAYER ) )
         {
             SetState(eState.Dead);
+
+            Collider c = this.GetComponent<Collider>();
+            Vector2 spawnPoint = transform.position;
+
+            spawnPoint.y += 2.0f;
+
+            Instantiate(bloodEffect, transform.position, transform.rotation);
 
             EnableRagdoll();
 

@@ -9,7 +9,7 @@
 	{
 		Tags 
 		{
-			"RenderType" = "Opaque"
+			"RenderType" = "Fade"
 		}
 		LOD 200
 
@@ -42,12 +42,12 @@
 
 		struct Input 
 		{
-			float2 texCoords;
+			float2 uv_MainTex;
 		};
 
 		void surf(Input input, inout SurfaceOutput output) 
 		{
-			fixed4 color = tex2D(_MainTex, input.texCoords) * _Color;
+			fixed4 color = tex2D(_MainTex, input.uv_MainTex) * _Color;
 
 			output.Albedo = color.rgb;
 			output.Alpha  = color.a;

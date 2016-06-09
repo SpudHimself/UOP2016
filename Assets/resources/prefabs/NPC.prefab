@@ -1519,6 +1519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb9f426796026847a5ee67e69f4a29b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodEffect: {fileID: 109352, guid: 883175aa756420140980b225c2839ad9, type: 2}
 --- !u!135 &13552926
 SphereCollider:
   m_ObjectHideFlags: 1
