@@ -70,6 +70,9 @@ public class Car : MonoBehaviour
         //Debug.Log(mDistToGround);
 
         mRigidBody = this.GetComponent<Rigidbody>();
+		Vector3 newCoM = mRigidBody.centerOfMass;
+		newCoM.y -= 1.5f;
+		mRigidBody.centerOfMass = newCoM;
 
 		mScoreManager = gameObject.AddComponent<ScoreManager>();
 
@@ -157,6 +160,7 @@ public class Car : MonoBehaviour
 	{
 		if ( Input.GetKeyDown( KeyCode.Return ) || Input.GetButtonDown("Start_1") )
 		{
+			Resources.UnloadUnusedAssets(); // Probably important...
 			Application.LoadLevel( Application.loadedLevelName );
 		}
 	}

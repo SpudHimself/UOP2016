@@ -22,23 +22,31 @@ public class ScoreItem : MonoBehaviour
 
 	private float mSpeed;
 	private float mSuckPower;
+
+	private Rigidbody mRigidbody;
+	private Collider mCollider;
 	#endregion
 
     #region Properties
-    public eItemState State { get; set; }
+    public eItemState mState;
     #endregion
 
     #region Unity Methods
     private void Start()
 	{
+		mRigidbody = GetComponent<Rigidbody>();
+		mCollider = GetComponent<Collider>();
+
 		mTransform = this.transform;
 		mSpeed = 2f;
 		mSuckPower = 4f;
+
+		SetState( eItemState.INACTIVE );
 	}
 
 	private void Update()
 	{
-        switch (State)
+        switch (mState)
         {
             case eItemState.INACTIVE:
                 // TODO: ...Only Cthulhu knows.
@@ -50,36 +58,69 @@ public class ScoreItem : MonoBehaviour
                 break;
         }
 
-        Debug.Log(State);
+//         Debug.Log(mState);
 	}
 
 	private void OnCollisionEnter( Collision col )
 	{
-		if ( col.gameObject.tag.Equals( Tags.PLAYER ) )
+		switch ( col.gameObject.tag )
 		{
-			// Get the score component.
-			ScoreManager sm = col.gameObject.GetComponent<ScoreManager>();
+			case Tags.PLAYER:
+				{
+					// Get the score component.
+					ScoreManager sm = col.gameObject.GetComponent<ScoreManager>();
 
-			// It should have a score manager though...
-			if ( sm )
-			{
-// 				Debug.Log("Incrementing score to ScoreManager.");
-				sm.Increase( points );
+					// It should have a score manager though...
+					if ( sm )
+					{
+// 		 				Debug.Log("Incrementing score to ScoreManager.");
+						sm.Increase( points );
 
-				//Debug.Log(sm.Score);
-			}
+						//Debug.Log(sm.Score);
+					}
 
-			// Temporary step for getting rid of it.
-			Destroy( this.gameObject );
+					// Temporary step for getting rid of it.
+					Destroy( this.gameObject );
+				}
+				break;
+
+			case Tags.PLAYER_WHEEL:
+				Physics.IgnoreCollision( mCollider, col.collider );
+				break;
+
+			case Tags.SHELF:
+				if ( mState == eItemState.ACTIVE )
+				{
+					Physics.IgnoreCollision( mCollider, col.collider );
+				}
+				break;
 		}
 	}
 	#endregion
 
     #region Methods
+	public eItemState GetState()
+	{
+		return mState;
+	}
+
+	public void SetState( eItemState state )
+	{
+		mState = state;
+
+		switch ( state ) {
+			case eItemState.INACTIVE:
+				mRigidbody.isKinematic = true;
+				break;
+
+			case eItemState.ACTIVE:
+				mRigidbody.isKinematic = false;
+				break;
+		}
+	}
+
     private void StateInactive()
     {
-        //TODO: ?
-		// no idea, Jack
     }
 
     private void StateActive()

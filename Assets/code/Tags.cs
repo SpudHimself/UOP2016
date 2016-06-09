@@ -6,6 +6,7 @@ public class Tags {
 
 	public const string PLAYER = "Player";
 	public const string PLAYER_SPAWN = "PlayerSpawn";
+	public const string PLAYER_WHEEL = "PlayerWheel";
 
 	public const string NPC = "NPC";
 	public const string NPC_SPAWN = "NPCSpawn";

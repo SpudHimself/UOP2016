@@ -7,11 +7,16 @@ public class Shelf : MonoBehaviour
     #region Fields
     public List<GameObject> itemTypes;
     private List<ScoreItem> mScoreItems;
+
+	private Rigidbody mRigidbody;
     #endregion
 
     #region Unity Methods
     private void Awake()
     {
+		mRigidbody = GetComponent<Rigidbody>();
+		mRigidbody.constraints = RigidbodyConstraints.FreezePosition;
+
         SpawnItems();
     }
 
@@ -22,15 +27,22 @@ public class Shelf : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag.Equals(Tags.PLAYER))
-        {
-            Debug.Log(mScoreItems.Count);
+        switch ( col.gameObject.tag )
+		{
+			case Tags.PLAYER:
+			case Tags.SHELF:
+				{
+					mRigidbody.constraints = RigidbodyConstraints.None;
 
-            foreach (ScoreItem item in mScoreItems)
-            {
-                item.State = eItemState.ACTIVE;
-            }
-        }
+// 					Debug.Log(mScoreItems.Count);
+
+					foreach ( ScoreItem item in mScoreItems )
+					{
+						item.SetState( eItemState.ACTIVE );
+					}
+				}
+				break;
+		}
     }
     #endregion
 
