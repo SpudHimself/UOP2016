@@ -78,6 +78,14 @@ public class NPC : MonoBehaviour
             SetState(eState.Dead);
 
             EnableRagdoll();
+
+            RaycastHit hit;
+
+            if (Physics.Raycast(transform.position, transform.forward, out hit))
+            {
+                Debug.Log("Point: " + hit.point);
+            }
+
             this.GetComponent<Collider>().enabled = false;
         }
 	}
