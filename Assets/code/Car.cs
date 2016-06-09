@@ -244,8 +244,10 @@ public class Car : MonoBehaviour
 
 	private void UpdateCarNoise()
 	{
-		float vol = mVerticalAxis * Time.deltaTime;
-		mAudioSource.volume = Mathf.Clamp( vol, 0f, 0.5f );
+        float vol = mVerticalAxis * (Time.deltaTime * 2.5f);
+        mAudioSource.volume = Mathf.Lerp(0f, 1f, vol);
+
+        //AudioListener.volume = Mathf.Lerp(0f, 1f, Time.deltaTime);
 	}
 
 	private void DropItems()

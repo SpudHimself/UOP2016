@@ -11,8 +11,19 @@ public class TannoySystem : MonoBehaviour
     public List<AudioClip> announcements;
 
     private AudioSource mAudioSource;
+    public AudioClip cleanup2;
+    public AudioClip cleanup6;
+    public AudioClip horseMeat;
+    public AudioClip danDruff;
+    public AudioClip emmaRoyds;
+    public AudioClip coreyAnder;
+    public AudioClip notPaidEnough;
+    public AudioClip videoGames;
+    public AudioClip foodGo;
+    public AudioClip oldLady;
+    public AudioClip enoughFood;
 
-    private float mMinWaitTime = 7.5f;
+    private float mMinWaitTime = 3.5f;
     private float mMaxWaitTime = 15.0f;
     private float mTimer;
     #endregion
@@ -26,6 +37,18 @@ public class TannoySystem : MonoBehaviour
     private void Start()
     {
         mTimer = Random.Range(mMinWaitTime, mMaxWaitTime);
+
+        announcements.Add(cleanup2);
+        announcements.Add(cleanup6);
+        announcements.Add(horseMeat);
+        announcements.Add(danDruff);
+        announcements.Add(emmaRoyds);
+        announcements.Add(coreyAnder);
+        announcements.Add(notPaidEnough);
+        announcements.Add(videoGames);
+        announcements.Add(foodGo);
+        announcements.Add(oldLady);
+        announcements.Add(enoughFood);
     }
 
     private void Update()
