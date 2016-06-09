@@ -5,12 +5,14 @@ public class WheelTrailRender : MonoBehaviour
 {
     public WheelCollider mCorrespondingCollider;
     public GameObject mSkidmarkTrailRenderer;
+    public GameObject mSmokeParticles;
 
 
     // Use this for initialization
     void Start()
     {
         mSkidmarkTrailRenderer.gameObject.SetActive(false);
+        mSmokeParticles.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,10 +37,12 @@ public class WheelTrailRender : MonoBehaviour
         if (Mathf.Abs(correspondingGroundHit.sidewaysSlip) > 0.6f)
         {
             mSkidmarkTrailRenderer.gameObject.SetActive(true);
+            mSmokeParticles.gameObject.SetActive(true);
         }
         else if (Mathf.Abs(correspondingGroundHit.sidewaysSlip) <= 0.55f)
         {
             mSkidmarkTrailRenderer.gameObject.SetActive(false);
+            mSmokeParticles.gameObject.SetActive(false);
         }
             
     }
