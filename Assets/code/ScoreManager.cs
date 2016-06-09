@@ -25,8 +25,6 @@ public class ScoreManager : MonoBehaviour
     {
         Score += amount;
 
-		mScorePlumPrefab = (GameObject) Resources.Load( "prefabs/ScorePlum" );
-
 		Quaternion rotation = Quaternion.LookRotation( transform.position - mCar.GetCameraPosition().transform.position, Vector3.up );
 		GameObject clone = (GameObject) Instantiate( mScorePlumPrefab, transform.position, rotation );
 		clone.transform.parent = transform;

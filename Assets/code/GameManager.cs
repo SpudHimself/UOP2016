@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
 
 	private GameObject mNPCPrefab;
 
+	public GameObject mBurlo;
+	public GameObject mNan;
+
     public Canvas mPauseMenu;
 
 	// Singleton.
@@ -66,8 +69,42 @@ public class GameManager : MonoBehaviour
 		mPauseMenu.enabled = false;
 // 		Debug.Log( mPauseMenu.enabled );
 
+		SpawnPlayers();
+
 		// Keep this last.
 		SetState( eState.Countdown );
+	}
+
+	private void SpawnPlayers()
+	{
+		// Wow this solution was garbage...
+		int nanSpawnIndex = 1, burloSpawnIndex = 2;
+		float random = Random.value;
+		if ( random >= 0f && random <= 0.5f ) {
+			nanSpawnIndex = 1;
+		}
+		else if ( random > 5f && random <= 1f )
+		{
+			nanSpawnIndex = 3;
+		}
+
+		random = Random.value;
+		if ( random >= 0f && random <= 0.5f )
+		{
+			burloSpawnIndex = 2;
+		}
+		else if ( random > 5f && random <= 1f )
+		{
+			burloSpawnIndex = 4;
+		}
+
+		Transform burloSpawn = GetPlayerSpawn( nanSpawnIndex );
+		Transform nanSpawn = GetPlayerSpawn( burloSpawnIndex );
+
+		mBurlo.transform.position = burloSpawn.position;
+		mBurlo.transform.rotation = burloSpawn.rotation;
+		mNan.transform.position = nanSpawn.position;
+		mNan.transform.rotation = nanSpawn.rotation;
 	}
 
 	void Update()
@@ -302,4 +339,9 @@ public class GameManager : MonoBehaviour
     {
         mPauseMenu.enabled = set;
     }
+
+	public Transform GetRandomPlayerSpawn()
+	{
+		return mPlayerSpawns[Random.Range( 0, mPlayerSpawns.Count )];
+	}
 }

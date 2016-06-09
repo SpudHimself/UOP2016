@@ -32,7 +32,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &101960
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -651,7 +651,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &162462
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -985,6 +985,8 @@ Transform:
   - {fileID: 474686}
   - {fileID: 477856}
   - {fileID: 486028}
+  - {fileID: 435722}
+  - {fileID: 440954}
   m_Father: {fileID: 473962}
   m_RootOrder: 0
 --- !u!4 &405724
@@ -1033,7 +1035,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: .550000012, z: 1}
+  m_LocalPosition: {x: -.5, y: .270000011, z: .5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 474000}
@@ -1245,12 +1247,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101960}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: -1.62920685e-07}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 473962}
-  m_RootOrder: 1
+  m_Father: {fileID: 402890}
+  m_RootOrder: 5
 --- !u!4 &437332
 Transform:
   m_ObjectHideFlags: 1
@@ -1333,12 +1335,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162462}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: 0, y: 7, z: -12}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 7, z: 12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 473962}
-  m_RootOrder: 2
+  m_Father: {fileID: 402890}
+  m_RootOrder: 6
 --- !u!4 &443042
 Transform:
   m_ObjectHideFlags: 1
@@ -1523,7 +1525,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: .550000012, z: 1}
+  m_LocalPosition: {x: .5, y: .270000011, z: .5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 474000}
@@ -1535,12 +1537,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162534}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.1899996, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 23.3158436, y: -1.85991871e-06, z: -6.39787292}
+  m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 402890}
-  - {fileID: 435722}
-  - {fileID: 440954}
   - {fileID: 474000}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1559,7 +1559,7 @@ Transform:
   - {fileID: 471976}
   - {fileID: 408146}
   m_Father: {fileID: 473962}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!4 &474686
 Transform:
   m_ObjectHideFlags: 1
@@ -1732,7 +1732,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: .550000012, z: -1.33000004}
+  m_LocalPosition: {x: -.5, y: .270000011, z: -.670000017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 474000}
@@ -1744,7 +1744,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: .550000012, z: -1.33000004}
+  m_LocalPosition: {x: .5, y: .270000011, z: -.670000017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 474000}
@@ -2004,7 +2004,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.79999995, y: 5, z: 4.5}
+  m_Size: {x: 2.0999999, y: 5, z: 4.5}
   m_Center: {x: 0, y: 2.71000004, z: 0}
 --- !u!82 &8281572
 AudioSource:
@@ -2121,6 +2121,7 @@ MonoBehaviour:
   mMotor: {fileID: 8300000, guid: 4a636645b672b0c4cac37b8dc1d6adea, type: 3}
   mAudioSource: {fileID: 8281572}
   mBoxCollider: {fileID: 6549474}
+  mWheels: {fileID: 128186}
 --- !u!137 &13737384
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
