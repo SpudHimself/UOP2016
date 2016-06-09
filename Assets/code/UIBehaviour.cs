@@ -6,7 +6,9 @@ public class UIBehaviour : MonoBehaviour
 {
     public static int score;        // The player's score.
 
-    public ScoreManager sm;
+    public GameObject player;
+
+	private ScoreManager sm;
 
     Text text;                      // Reference to the Text component.
 
@@ -15,7 +17,7 @@ public class UIBehaviour : MonoBehaviour
     {
         // Set up the reference.
         text = GetComponent<Text>();
-        sm = gameObject.AddComponent<ScoreManager>();
+		sm = player.GetComponent<ScoreManager>();
 
         // Reset the score.
         score = 0;

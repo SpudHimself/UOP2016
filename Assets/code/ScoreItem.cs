@@ -79,6 +79,7 @@ public class ScoreItem : MonoBehaviour
     private void StateInactive()
     {
         //TODO: ?
+		// no idea, Jack
     }
 
     private void StateActive()

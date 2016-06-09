@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9cf603edea7ba94388aabad819a32ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 10
+  points: 100
   absorbDistance: 30
 --- !u!1001 &100100000
 Prefab:
@@ -117,6 +117,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: points
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

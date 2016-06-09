@@ -35,7 +35,7 @@ public class Car : MonoBehaviour
 
     public float Motor { get; set; }
 
-	private int mNumItems = 10;
+	private int mNumItems = 0;
 
 	private GameObject mItemPrefab;
 
@@ -46,6 +46,8 @@ public class Car : MonoBehaviour
 		gameObject.SetTagRecursively( Tags.PLAYER );
 
 		mItemPrefab = (GameObject) Resources.Load( "prefabs/Item" );
+
+		mScoreManager = gameObject.AddComponent<ScoreManager>();
 	}
 
     void OnLevelWasLoaded()
@@ -58,8 +60,6 @@ public class Car : MonoBehaviour
     {
 		// Leave this first.
 		GameManager.Singleton().GetPlayers().Add(this);
-
-		mScoreManager = gameObject.AddComponent<ScoreManager>();
 
 		mAudioSource.playOnAwake = false;
 		mAudioSource.loop = true;
