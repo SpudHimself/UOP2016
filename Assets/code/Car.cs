@@ -26,6 +26,9 @@ public class Car : MonoBehaviour
 	private GameObject mScorePlumPrefab;
 
     private float mDistToGround;
+    public BoxCollider mBoxCollider;
+    private Rigidbody mRigidBody;
+    private List<WheelCollider> mWheelsColliders;
 
     public float Motor { get; set; }
 	void Awake()
@@ -47,6 +50,12 @@ public class Car : MonoBehaviour
 		GameManager.Singleton().GetPlayers().Add(this);
 
 		mScoreManager = gameObject.AddComponent<ScoreManager>();
+
+        mBoxCollider = this.GetComponent<BoxCollider>();
+        mDistToGround = mBoxCollider.bounds.extents.y;
+        //Debug.Log(mDistToGround);
+
+        mRigidBody = this.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -57,9 +66,7 @@ public class Car : MonoBehaviour
         //    GameManager.Singleton().TogglePause();
         //}
 
-        mDistToGround = GetComponentInChildren<BoxCollider>().bounds.extents.y;
-        Debug.DrawLine(this.transform.position, -this.transform.up, Color.black);
-        Debug.Log(mDistToGround);
+        Debug.Log("player " + mPlayerNumber + " grounded is " + isGrounded());
 
         //input testing
         if (Input.GetButtonDown("Powerup_" + mPlayerNumber))
@@ -74,7 +81,7 @@ public class Car : MonoBehaviour
             GameManager.Singleton().TogglePause();
         }
 
-        if (Input.GetButtonDown("Reset_" + mPlayerNumber) && isGrounded())
+        if (Input.GetButtonDown("Reset_" + mPlayerNumber) && !this.isGrounded())
         {
             Debug.Log("Player " + mPlayerNumber + ": Reset pressed");
             ResetPosition();
@@ -202,15 +209,20 @@ public class Car : MonoBehaviour
 
         //set y pos to +2
         //set z rot to 0
-        currentRotation = new Quaternion(currentRotation.x, currentRotation.y, 0.0f, 1.0f);
-        currentPosition.y += 2.0f;
+        currentRotation = new Quaternion(0.0f, currentRotation.y, 0.0f, 1.0f);
+        currentPosition.y += 1.0f;
 
         this.transform.rotation = currentRotation;
         this.transform.position = currentPosition;
+
+        mRigidBody.velocity = Vector3.zero;
     }
 
     bool isGrounded()
     {
-        return Physics.Raycast(this.transform.position, -this.transform.up, mDistToGround + 0.1f);
+        Debug.DrawRay(transform.position, -Vector3.up, Color.red);
+        Ray ray = new Ray(transform.position, -Vector3.up);
+
+        return Physics.Raycast(ray, 1.0f);
     }
 }
