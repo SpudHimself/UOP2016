@@ -1,0 +1,342 @@
+fileFormatVersion: 2
+guid: fccf2b48f683b374e923d5fc1dbc71b3
+timeCreated: 1465482202
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: ankle.l
+    100002: ankle.r
+    100004: chest
+    100006: fingers.l
+    100008: fingers.r
+    100010: fingertips.l
+    100012: fingertips.r
+    100014: foot.l
+    100016: foot.r
+    100018: hand.l
+    100020: hand.r
+    100022: head
+    100024: left_elbow
+    100026: left_foot
+    100028: left_hand
+    100030: left_knee
+    100032: leg.l
+    100034: leg.r
+    100036: lower_arm.l
+    100038: lower_arm.r
+    100040: //RootNode
+    100042: nan_body
+    100044: nan_cane
+    100046: nan_head
+    100048: nan_kart
+    100050: nan_scarf
+    100052: nan_skeleton
+    100054: nan_totalcontroller
+    100056: nan_wheel_fr
+    100058: nan_wheel_fr.001
+    100060: nan_wheel_fr.002
+    100062: nan_wheel_fr.003
+    100064: nan_wig
+    100066: neck
+    100068: pelvis
+    100070: pelvis.l
+    100072: pelvis.r
+    100074: right_elbow
+    100076: right_foot
+    100078: right_hand
+    100080: right_knee
+    100082: shin.l
+    100084: shin.r
+    100086: shoulder.l
+    100088: shoulder.r
+    100090: thumb.l
+    100092: thumb.r
+    100094: thumb_tip.l
+    100096: thumb_tip.r
+    100098: upper_arm.l
+    100100: upper_arm.r
+    100102: waist
+    100104: wrist.l
+    100106: wrist.r
+    400000: ankle.l
+    400002: ankle.r
+    400004: chest
+    400006: fingers.l
+    400008: fingers.r
+    400010: fingertips.l
+    400012: fingertips.r
+    400014: foot.l
+    400016: foot.r
+    400018: hand.l
+    400020: hand.r
+    400022: head
+    400024: left_elbow
+    400026: left_foot
+    400028: left_hand
+    400030: left_knee
+    400032: leg.l
+    400034: leg.r
+    400036: lower_arm.l
+    400038: lower_arm.r
+    400040: //RootNode
+    400042: nan_body
+    400044: nan_cane
+    400046: nan_head
+    400048: nan_kart
+    400050: nan_scarf
+    400052: nan_skeleton
+    400054: nan_totalcontroller
+    400056: nan_wheel_fr
+    400058: nan_wheel_fr.001
+    400060: nan_wheel_fr.002
+    400062: nan_wheel_fr.003
+    400064: nan_wig
+    400066: neck
+    400068: pelvis
+    400070: pelvis.l
+    400072: pelvis.r
+    400074: right_elbow
+    400076: right_foot
+    400078: right_hand
+    400080: right_knee
+    400082: shin.l
+    400084: shin.r
+    400086: shoulder.l
+    400088: shoulder.r
+    400090: thumb.l
+    400092: thumb.r
+    400094: thumb_tip.l
+    400096: thumb_tip.r
+    400098: upper_arm.l
+    400100: upper_arm.r
+    400102: waist
+    400104: wrist.l
+    400106: wrist.r
+    2300000: nan_cane
+    2300002: nan_kart
+    2300004: nan_totalcontroller
+    2300006: nan_wheel_fr
+    2300008: nan_wheel_fr.001
+    2300010: nan_wheel_fr.002
+    2300012: nan_wheel_fr.003
+    3300000: nan_cane
+    3300002: nan_kart
+    3300004: nan_totalcontroller
+    3300006: nan_wheel_fr
+    3300008: nan_wheel_fr.001
+    3300010: nan_wheel_fr.002
+    3300012: nan_wheel_fr.003
+    4300000: nan_totalcontroller
+    4300002: nan_wheel_fr.003
+    4300004: nan_wheel_fr.002
+    4300006: nan_wheel_fr.001
+    4300008: nan_wheel_fr
+    4300010: nan_cane
+    4300012: nan_kart
+    4300014: nan_scarf
+    4300016: nan_wig
+    4300018: nan_head
+    4300020: nan_body
+    7400000: Turn Left
+    9500000: //RootNode
+    13700000: nan_body
+    13700002: nan_head
+    13700004: nan_scarf
+    13700006: nan_wig
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Turn Left
+      takeName: Scene
+      firstFrame: 1
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: nan_body
+        weight: 1
+      - path: nan_head
+        weight: 1
+      - path: nan_scarf
+        weight: 1
+      - path: nan_totalcontroller
+        weight: 1
+      - path: nan_totalcontroller/left_elbow
+        weight: 1
+      - path: nan_totalcontroller/left_foot
+        weight: 1
+      - path: nan_totalcontroller/left_hand
+        weight: 1
+      - path: nan_totalcontroller/left_knee
+        weight: 1
+      - path: nan_totalcontroller/nan_kart
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/pelvis.l
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/pelvis.l/leg.l
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/pelvis.l/leg.l/shin.l
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/pelvis.l/leg.l/shin.l/ankle.l
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/pelvis.l/leg.l/shin.l/ankle.l/foot.l
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/pelvis.r
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/pelvis.r/leg.r
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/pelvis.r/leg.r/shin.r
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/pelvis.r/leg.r/shin.r/ankle.r
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/pelvis.r/leg.r/shin.r/ankle.r/foot.r
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/neck
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/neck/head
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.l
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l/hand.l
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l/hand.l/fingers.r
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l/hand.l/fingers.r/fingertips.r
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l/hand.l/thumb.r
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.l/upper_arm.l/lower_arm.l/wrist.l/hand.l/thumb.r/thumb_tip.r
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.r
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r/hand.r
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r/hand.r/fingers.l
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r/hand.r/fingers.l/fingertips.l
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r/hand.r/thumb.l
+        weight: 1
+      - path: nan_totalcontroller/nan_skeleton/pelvis/waist/chest/shoulder.r/upper_arm.r/lower_arm.r/wrist.r/hand.r/thumb.l/thumb_tip.l
+        weight: 1
+      - path: nan_totalcontroller/nan_wheel_fr
+        weight: 1
+      - path: nan_totalcontroller/nan_wheel_fr.001
+        weight: 1
+      - path: nan_totalcontroller/nan_wheel_fr.002
+        weight: 1
+      - path: nan_totalcontroller/nan_wheel_fr.003
+        weight: 1
+      - path: nan_totalcontroller/right_elbow
+        weight: 1
+      - path: nan_totalcontroller/right_foot
+        weight: 1
+      - path: nan_totalcontroller/right_hand
+        weight: 1
+      - path: nan_totalcontroller/right_hand/nan_cane
+        weight: 1
+      - path: nan_totalcontroller/right_knee
+        weight: 1
+      - path: nan_wig
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

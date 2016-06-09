@@ -1,0 +1,164 @@
+fileFormatVersion: 2
+guid: 7280b3cf6044d8e42aeb3946973dcdc6
+timeCreated: 1465474521
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: ankle.l
+    100002: ankle.r
+    100004: //RootNode
+    100006: burlo_body
+    100008: burlo_head
+    100010: burlo_skeleton
+    100012: chest
+    100014: fingers.l
+    100016: fingers.r
+    100018: fingertips.l
+    100020: fingertips.r
+    100022: foot.l
+    100024: foot.r
+    100026: hand.l
+    100028: hand.r
+    100030: head
+    100032: left_elbow
+    100034: left_foot
+    100036: left_hand
+    100038: left_knee
+    100040: lower_arm.l
+    100042: lower_arm.r
+    100044: neck
+    100046: pelvis
+    100048: pelvis.l
+    100050: pelvis.r
+    100052: right_elbow
+    100054: right_foot
+    100056: right_hand
+    100058: right_knee
+    100060: shin.l
+    100062: shin.r
+    100064: shoulder.l
+    100066: shoulder.r
+    100068: thigh.l
+    100070: thigh.r
+    100072: thumb.l
+    100074: thumb.r
+    100076: thumb_tip.l
+    100078: thumb_tip.r
+    100080: upper_arm.l
+    100082: upper_arm.r
+    100084: waist
+    100086: wrist.l
+    100088: wrist.r
+    400000: ankle.l
+    400002: ankle.r
+    400004: //RootNode
+    400006: burlo_body
+    400008: burlo_head
+    400010: burlo_skeleton
+    400012: chest
+    400014: fingers.l
+    400016: fingers.r
+    400018: fingertips.l
+    400020: fingertips.r
+    400022: foot.l
+    400024: foot.r
+    400026: hand.l
+    400028: hand.r
+    400030: head
+    400032: left_elbow
+    400034: left_foot
+    400036: left_hand
+    400038: left_knee
+    400040: lower_arm.l
+    400042: lower_arm.r
+    400044: neck
+    400046: pelvis
+    400048: pelvis.l
+    400050: pelvis.r
+    400052: right_elbow
+    400054: right_foot
+    400056: right_hand
+    400058: right_knee
+    400060: shin.l
+    400062: shin.r
+    400064: shoulder.l
+    400066: shoulder.r
+    400068: thigh.l
+    400070: thigh.r
+    400072: thumb.l
+    400074: thumb.r
+    400076: thumb_tip.l
+    400078: thumb_tip.r
+    400080: upper_arm.l
+    400082: upper_arm.r
+    400084: waist
+    400086: wrist.l
+    400088: wrist.r
+    4300000: burlo_head
+    4300002: burlo_body
+    9500000: //RootNode
+    13700000: burlo_body
+    13700002: burlo_head
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
