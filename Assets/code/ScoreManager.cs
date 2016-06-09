@@ -28,6 +28,8 @@ public class ScoreManager : MonoBehaviour
 		GameObject clone = (GameObject) Instantiate( mScorePlumPrefab, transform.position, rotation );
 		clone.transform.parent = transform;
 		clone.GetComponent<TextMesh>().text = "" + amount;
+
+		GetComponent<Car>().AddItems( 1 );
     }
 
     public void Decrease(int amount)
