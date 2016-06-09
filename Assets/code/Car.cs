@@ -46,6 +46,8 @@ public class Car : MonoBehaviour
 	private GameObject mCameraPosition;
 	public GameObject mWheels;
 
+	private Transform mSpawn;
+
 	void Awake()
 	{
 		tag = Tags.PLAYER;
@@ -63,6 +65,11 @@ public class Car : MonoBehaviour
 	public GameObject GetCameraPosition()
 	{
 		return mCameraPosition;
+	}
+
+	public void SetSpawn( Transform spawn )
+	{
+		mSpawn = spawn;
 	}
 
     void OnLevelWasLoaded()
@@ -258,16 +265,19 @@ public class Car : MonoBehaviour
     //wouldnt mind cleaning this one up
     void ResetPosition()
     {
-        Vector3 currentPosition = this.transform.position;
-        Quaternion currentRotation = this.transform.rotation;
+//         Vector3 currentPosition = this.transform.position;
+//         Quaternion currentRotation = this.transform.rotation;
+// 
+//         //set y pos to +2
+//         //set z rot to 0
+//         currentRotation = new Quaternion(0.0f, currentRotation.y, 0.0f, 1.0f);
+//         currentPosition.y += 0.5f;
+// 
+//         this.transform.rotation = currentRotation;
+//         this.transform.position = currentPosition;
 
-        //set y pos to +2
-        //set z rot to 0
-        currentRotation = new Quaternion(0.0f, currentRotation.y, 0.0f, 1.0f);
-        currentPosition.y += 0.5f;
-
-        this.transform.rotation = currentRotation;
-        this.transform.position = currentPosition;
+		transform.position = mSpawn.position;
+		transform.rotation = mSpawn.rotation;
 
         mRigidBody.velocity = Vector3.zero;
     }

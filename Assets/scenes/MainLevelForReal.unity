@@ -4740,11 +4740,11 @@ Prefab:
     - target: {fileID: 11447292, guid: e35faee7493cebe4bae7cac37f8ca480, type: 2}
       propertyPath: mBurlo
       value: 
-      objectReference: {fileID: 951606324}
+      objectReference: {fileID: 951606328}
     - target: {fileID: 11447292, guid: e35faee7493cebe4bae7cac37f8ca480, type: 2}
       propertyPath: mNan
       value: 
-      objectReference: {fileID: 626882350}
+      objectReference: {fileID: 626882354}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e35faee7493cebe4bae7cac37f8ca480, type: 2}
   m_IsPrefabParent: 0
@@ -6735,6 +6735,12 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 162534, guid: f5a9dc49e549d6d4692865760953d7ec, type: 2}
   m_PrefabInternal: {fileID: 826250784}
+--- !u!114 &626882354 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11419688, guid: f5a9dc49e549d6d4692865760953d7ec,
+    type: 2}
+  m_PrefabInternal: {fileID: 826250784}
+  m_Script: {fileID: 11500000, guid: a2c597ffb1615cb498cf5c4f260ebc2c, type: 3}
 --- !u!1001 &627154789
 Prefab:
   m_ObjectHideFlags: 0
@@ -10258,6 +10264,12 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 117560, guid: 230c59a24d5bc1e40981df2f1208be63, type: 2}
   m_PrefabInternal: {fileID: 951606322}
+--- !u!114 &951606328 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11422214, guid: 230c59a24d5bc1e40981df2f1208be63,
+    type: 2}
+  m_PrefabInternal: {fileID: 951606322}
+  m_Script: {fileID: 11500000, guid: a2c597ffb1615cb498cf5c4f260ebc2c, type: 3}
 --- !u!1001 &956262599
 Prefab:
   m_ObjectHideFlags: 0

@@ -24,8 +24,8 @@ public class GameManager : MonoBehaviour
 
 	private GameObject mNPCPrefab;
 
-	public GameObject mBurlo;
-	public GameObject mNan;
+	public Car mBurlo;
+	public Car mNan;
 
     public Canvas mPauseMenu;
 
@@ -103,8 +103,11 @@ public class GameManager : MonoBehaviour
 
 		mBurlo.transform.position = burloSpawn.position;
 		mBurlo.transform.rotation = burloSpawn.rotation;
+		mBurlo.SetSpawn( burloSpawn );
+
 		mNan.transform.position = nanSpawn.position;
 		mNan.transform.rotation = nanSpawn.rotation;
+		mNan.SetSpawn( nanSpawn );
 	}
 
 	void Update()
