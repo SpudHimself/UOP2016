@@ -71,25 +71,15 @@ public class NPC : MonoBehaviour
 		}
 	}
 
-	void OnCollisionEnter( Collision col )
+	void OnTriggerEnter ( Collider col )
 	{
-		float value = 50.0f;
-
-		if ( col.gameObject.CompareTag( Tags.PLAYER ) )
-		{
+        if ( col.gameObject.CompareTag( Tags.PLAYER ) )
+        {
             SetState(eState.Dead);
 
-			Car car = col.gameObject.GetComponent<Car>();
-
-			Vector3 dir = col.contacts[0].point;
-			dir.y = 5.0f;
-
-			Debug.Log( dir );
-
             EnableRagdoll();
-
-			//this.GetComponent<Rigidbody>().AddForce( dir * ( car.Motor / value ) );
-		}
+            this.GetComponent<Collider>().enabled = false;
+        }
 	}
 
 	void OnDestroy()
@@ -117,7 +107,6 @@ public class NPC : MonoBehaviour
 				break;
 
 			case eState.Dead:
-                mAnimator.enabled = false;
                 Agent.Stop();
 				break;
 		}
@@ -181,6 +170,8 @@ public class NPC : MonoBehaviour
 
     private void EnableRagdoll()
     {
+        mAnimator.enabled = false;
+
         foreach (Rigidbody rb in mRigidbodies)
         {
             rb.detectCollisions = true;
@@ -195,8 +186,5 @@ public class NPC : MonoBehaviour
             rb.detectCollisions = false;
             rb.isKinematic = true;
         }
-
-        // This is pure filth...
-        mRigidbodies[0].detectCollisions = true;
     }
 }

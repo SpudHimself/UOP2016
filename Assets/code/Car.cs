@@ -68,7 +68,7 @@ public class Car : MonoBehaviour
 
         mDistToGround = GetComponentInChildren<BoxCollider>().bounds.extents.y;
         Debug.DrawLine(this.transform.position, -this.transform.up, Color.black);
-        Debug.Log(mDistToGround);
+        //Debug.Log(mDistToGround);
 
         //input testing
         if (Input.GetButtonDown("Powerup_" + mPlayerNumber))
