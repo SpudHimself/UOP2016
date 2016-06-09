@@ -304,7 +304,9 @@ public class Car : MonoBehaviour
 					}
 					else if ( thisVel.magnitude < otherVel.magnitude )
 					{
+                        animator.SetBool("Collided", true);
 						DropItems();
+                        animator.SetBool("Collider", false);
 					}
 				}
 				break;

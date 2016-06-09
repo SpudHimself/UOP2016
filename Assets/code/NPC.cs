@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class NPC : MonoBehaviour
 {
@@ -11,7 +12,12 @@ public class NPC : MonoBehaviour
 	}
 	private eState mState;
 
+    public List<AudioClip> clips;
+    // PURE FILTH CODE.
+    public List<Material> materials;
+
     public GameObject bloodEffect;
+
 	// These 2 will have to be changed.
 	private float mRoamRadius = 15f;
 	private float mMoveTimer;
@@ -20,6 +26,7 @@ public class NPC : MonoBehaviour
 	private SkinnedMeshRenderer[] mRenderers;
     private Rigidbody[]  mRigidbodies;
     private Animator mAnimator;
+    private AudioSource mAudioSource;
 
     public NavMeshAgent Agent { get; private set; }
 
@@ -30,8 +37,9 @@ public class NPC : MonoBehaviour
         Agent = this.GetComponent<NavMeshAgent>();
 		mRenderers = this.GetComponentsInChildren<SkinnedMeshRenderer>();
         mRigidbodies = this.GetComponentsInChildren<Rigidbody>();
-        
+
         mAnimator = this.GetComponent<Animator>();
+        mAudioSource = this.GetComponent<AudioSource>();
 	}
 
 	void Start()
@@ -41,6 +49,11 @@ public class NPC : MonoBehaviour
 
 		// Leave this first.
 		GameManager.Singleton().GetNPCs().Add( this );
+
+        foreach (SkinnedMeshRenderer renderer in mRenderers)
+        {
+            renderer.material = materials[Random.Range(0, materials.Count)];
+        }
 
 		mMoveTimer = 0f;
 
@@ -80,6 +93,9 @@ public class NPC : MonoBehaviour
 
             Collider c = this.GetComponent<Collider>();
             Vector2 spawnPoint = transform.position;
+
+            mAudioSource.clip = clips[Random.Range(0, clips.Count)];
+            mAudioSource.Play();
 
             spawnPoint.y += 2.0f;
 

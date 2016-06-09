@@ -458,6 +458,7 @@ GameObject:
   - 195: {fileID: 19585556}
   - 136: {fileID: 13648232}
   - 114: {fileID: 11480554}
+  - 82: {fileID: 8252616}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -1491,6 +1492,75 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.01958847, y: .955096781, z: .70915091}
   m_Center: {x: .0027025342, y: .477547824, z: .164621919}
+--- !u!82 &8252616
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165382}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9520914
 Animator:
   serializedVersion: 3
@@ -1519,6 +1589,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb9f426796026847a5ee67e69f4a29b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: db73d6a40e1827a4aafbedbc2750ca43, type: 3}
+  - {fileID: 8300000, guid: 15c5e5dc9ceb6f04789d2e8b64738fc6, type: 3}
+  - {fileID: 8300000, guid: 1fda929a0908e0c478e7cfd5742710cf, type: 3}
+  - {fileID: 8300000, guid: 825ec2bfb7ccb2f4dadadf84b874093f, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 241ab151619e97e46b10f23fe4ec197b, type: 2}
+  - {fileID: 2100000, guid: 4648f282564a33043b2e46f08fbd17b8, type: 2}
+  - {fileID: 2100000, guid: 27e241a41e4b0404597351aebf4b5a93, type: 2}
   bloodEffect: {fileID: 109352, guid: 883175aa756420140980b225c2839ad9, type: 2}
 --- !u!135 &13552926
 SphereCollider:
@@ -1659,7 +1738,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 2a7dc8a60b707cc42a1404f8b806c2c3, type: 2}
+  - {fileID: 2100000, guid: 241ab151619e97e46b10f23fe4ec197b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1727,7 +1806,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 2a7dc8a60b707cc42a1404f8b806c2c3, type: 2}
+  - {fileID: 2100000, guid: 241ab151619e97e46b10f23fe4ec197b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
