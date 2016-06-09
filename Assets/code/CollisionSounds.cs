@@ -18,6 +18,8 @@ public class CollisionSounds : MonoBehaviour
     public AudioClip wallCollision;
     public AudioClip wallCollision1;
     public AudioClip wallCollision2;
+	public AudioClip tillCollision;
+    public AudioClip tillCollision1;
 
     private bool hasCollided;
 
@@ -99,6 +101,16 @@ public class CollisionSounds : MonoBehaviour
 
                 else
                     audioSource.PlayOneShot(wallCollision2);
+                hasCollided = true;
+            }
+
+			if (col.tag == Tags.TILL)
+            {
+                if (random == 1)
+                    audioSource.PlayOneShot(wallCollision);
+
+                else
+                    audioSource.PlayOneShot(wallCollision1);
                 hasCollided = true;
             }
         }

@@ -2611,6 +2611,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e8e4f84a20fcec948a8ffb20ff1346a9, type: 2}
+    - target: {fileID: 100000, guid: f6844446ef990ee4bba20332d33e52fd, type: 3}
+      propertyPath: m_TagString
+      value: Till
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6844446ef990ee4bba20332d33e52fd, type: 3}
   m_IsPrefabParent: 0
@@ -4417,6 +4421,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e8e4f84a20fcec948a8ffb20ff1346a9, type: 2}
+    - target: {fileID: 100000, guid: f6844446ef990ee4bba20332d33e52fd, type: 3}
+      propertyPath: m_TagString
+      value: Till
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6844446ef990ee4bba20332d33e52fd, type: 3}
   m_IsPrefabParent: 0
@@ -6819,6 +6827,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e8e4f84a20fcec948a8ffb20ff1346a9, type: 2}
+    - target: {fileID: 100000, guid: f6844446ef990ee4bba20332d33e52fd, type: 3}
+      propertyPath: m_TagString
+      value: Till
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6844446ef990ee4bba20332d33e52fd, type: 3}
   m_IsPrefabParent: 0
@@ -9980,6 +9992,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e8e4f84a20fcec948a8ffb20ff1346a9, type: 2}
+    - target: {fileID: 100000, guid: f6844446ef990ee4bba20332d33e52fd, type: 3}
+      propertyPath: m_TagString
+      value: Till
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6844446ef990ee4bba20332d33e52fd, type: 3}
   m_IsPrefabParent: 0
@@ -12134,6 +12150,14 @@ Prefab:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1754706952}
+    - target: {fileID: 11406712, guid: b3cd59be50e44a94d94d1313f8459fee, type: 2}
+      propertyPath: tillCollision
+      value: 
+      objectReference: {fileID: 8300000, guid: 9aa0cf6ec195cb148b3aedb052448f71, type: 3}
+    - target: {fileID: 11406712, guid: b3cd59be50e44a94d94d1313f8459fee, type: 2}
+      propertyPath: tillCollision1
+      value: 
+      objectReference: {fileID: 8300000, guid: 8fcd07159fca0b743a483224e0b0a1cd, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3cd59be50e44a94d94d1313f8459fee, type: 2}
   m_IsPrefabParent: 0
@@ -17903,6 +17927,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e8e4f84a20fcec948a8ffb20ff1346a9, type: 2}
+    - target: {fileID: 100000, guid: f6844446ef990ee4bba20332d33e52fd, type: 3}
+      propertyPath: m_TagString
+      value: Till
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6844446ef990ee4bba20332d33e52fd, type: 3}
   m_IsPrefabParent: 0
@@ -18472,6 +18500,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e8e4f84a20fcec948a8ffb20ff1346a9, type: 2}
+    - target: {fileID: 100000, guid: f6844446ef990ee4bba20332d33e52fd, type: 3}
+      propertyPath: m_TagString
+      value: Till
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6844446ef990ee4bba20332d33e52fd, type: 3}
   m_IsPrefabParent: 0
