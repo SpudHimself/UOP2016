@@ -37,11 +37,17 @@ public class Car : MonoBehaviour
 
     public float Motor { get; set; }
 
+	private int mNumItems = 10;
+
+	private GameObject mItemPrefab;
+
 	void Awake()
 	{
 		tag = Tags.PLAYER;
 
 		gameObject.SetTagRecursively( Tags.PLAYER );
+
+		mItemPrefab = (GameObject) Resources.Load( "prefabs/Item" );
 	}
 
     void OnLevelWasLoaded()
@@ -80,7 +86,6 @@ public class Car : MonoBehaviour
         mDistToGround = GetComponentInChildren<BoxCollider>().bounds.extents.y;
         Debug.DrawLine(this.transform.position, -this.transform.up, Color.black);
         //Debug.Log(mDistToGround);
-        Debug.Log("player " + mPlayerNumber + " grounded is " + isGrounded());
 
         //input testing
         if (Input.GetButtonDown("Powerup_" + mPlayerNumber))
@@ -250,8 +255,60 @@ public class Car : MonoBehaviour
 
 	private void UpdateCarNoise()
 	{
-		float vol = mVerticalAxis * Time.deltaTime;
-		mAudioSource.volume = Mathf.Clamp( vol, 0f, 0.5f );
+        float vol = mVerticalAxis * (Time.deltaTime * 2.5f);
+        mAudioSource.volume = Mathf.Lerp(0f, 1f, vol);
+
+        //AudioListener.volume = Mathf.Lerp(0f, 1f, Time.deltaTime);
+	}
+
+	private void DropItems()
+	{
+		for ( int i = 0; i < mNumItems; i++ )
+		{
+			Vector3 randomCircle = Random.insideUnitCircle;
+			randomCircle += transform.position;
+
+			Instantiate( mItemPrefab, new Vector3( randomCircle.x, transform.position.y + 3f, randomCircle.y ), Quaternion.identity );
+		}
+
+		mNumItems = 0;
+	}
+
+	public int GetItems()
+	{
+		return mNumItems;
+	}
+
+	public void SetItems( int items )
+	{
+		mNumItems = items;
+	}
+
+	public void AddItems( int items )
+	{
+		mNumItems += items;
+	}
+
+	private void OnCollisionEnter( Collision col )
+	{
+		switch ( col.gameObject.tag )
+		{
+			case Tags.PLAYER:
+				{
+					Vector3 thisVel = GetComponent<Rigidbody>().velocity;
+					Vector3 otherVel = col.gameObject.GetComponent<Rigidbody>().velocity;
+
+					if ( thisVel.magnitude > otherVel.magnitude )
+					{
+						col.gameObject.GetComponent<Car>().DropItems();
+					}
+					else if ( thisVel.magnitude < otherVel.magnitude )
+					{
+						DropItems();
+					}
+				}
+				break;
+		}
 	}
 
     bool isGrounded()

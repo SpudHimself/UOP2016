@@ -35,7 +35,7 @@
 			float4 frag( v2f_img i ) : COLOR {
 				float4 texel = tex2D( _MainTex, i.uv );
 
-				float grey = ( texel.r + texel.g + texel.b ) * 0.3;
+				float grey = ( texel.r * 0.299 + texel.g * 0.587 + texel.b * 0.114 );
 				float3 greyScale = float3( grey, grey, grey );
 
 				float4 lum = texel;
