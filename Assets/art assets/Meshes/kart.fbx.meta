@@ -1,0 +1,96 @@
+fileFormatVersion: 2
+guid: 5b8ee5624abd60a419a5a4032b83cdb0
+timeCreated: 1465474576
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: burlo_kart
+    100002: burlo_wheel_fl
+    100004: burlo_wheel_fr
+    100006: burlo_wheel_rl
+    100008: burlo_wheel_rr
+    100010: //RootNode
+    400000: burlo_kart
+    400002: burlo_wheel_fl
+    400004: burlo_wheel_fr
+    400006: burlo_wheel_rl
+    400008: burlo_wheel_rr
+    400010: //RootNode
+    2300000: burlo_kart
+    2300002: burlo_wheel_fl
+    2300004: burlo_wheel_fr
+    2300006: burlo_wheel_rl
+    2300008: burlo_wheel_rr
+    3300000: burlo_kart
+    3300002: burlo_wheel_fl
+    3300004: burlo_wheel_fr
+    3300006: burlo_wheel_rl
+    3300008: burlo_wheel_rr
+    4300000: burlo_kart
+    4300002: burlo_wheel_fr
+    4300004: burlo_wheel_rr
+    4300006: burlo_wheel_rl
+    4300008: burlo_wheel_fl
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
