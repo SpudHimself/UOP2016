@@ -1,15 +1,15 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &135914
+--- !u!1 &159602
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 402522}
-  - 82: {fileID: 8212328}
-  - 114: {fileID: 11463818}
+  - 4: {fileID: 452776}
+  - 82: {fileID: 8297014}
+  - 114: {fileID: 11424080}
   m_Layer: 0
   m_Name: Tannoy
   m_TagString: Untagged
@@ -17,24 +17,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &402522
+--- !u!4 &452776
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135914}
+  m_GameObject: {fileID: 159602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .24338007, y: 8.85999966, z: 6.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!82 &8212328
+--- !u!82 &8297014
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135914}
+  m_GameObject: {fileID: 159602}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -98,12 +98,12 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &11463818
+--- !u!114 &11424080
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135914}
+  m_GameObject: {fileID: 159602}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9494340e2c81063409989beb04dbcb26, type: 3}
@@ -116,6 +116,11 @@ MonoBehaviour:
   danDruff: {fileID: 8300000, guid: 077c7ad6373d0104792b28b6091bc7e6, type: 3}
   emmaRoyds: {fileID: 8300000, guid: ab892805cf19af84aa87d684dd2106a8, type: 3}
   coreyAnder: {fileID: 8300000, guid: 61abfdaa3de980b448f04d20dbd69dd4, type: 3}
+  notPaidEnough: {fileID: 8300000, guid: 107e0bd5712630e4699c29d014a9f978, type: 3}
+  videoGames: {fileID: 8300000, guid: c5f2268d2ad72284d9e9dbcff773ce58, type: 3}
+  foodGo: {fileID: 8300000, guid: 20c2eb1a46eb69e4088ead544a822286, type: 3}
+  oldLady: {fileID: 8300000, guid: 56474fdbdcdd35941ae068d4c361da8b, type: 3}
+  enoughFood: {fileID: 8300000, guid: 65b7bf8d3998f404f872747c4e6fdd37, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -125,5 +130,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 135914}
+  m_RootGameObject: {fileID: 159602}
   m_IsPrefabParent: 1

@@ -17,6 +17,11 @@ public class TannoySystem : MonoBehaviour
     public AudioClip danDruff;
     public AudioClip emmaRoyds;
     public AudioClip coreyAnder;
+    public AudioClip notPaidEnough;
+    public AudioClip videoGames;
+    public AudioClip foodGo;
+    public AudioClip oldLady;
+    public AudioClip enoughFood;
 
     private float mMinWaitTime = 3.5f;
     private float mMaxWaitTime = 15.0f;
@@ -39,6 +44,11 @@ public class TannoySystem : MonoBehaviour
         announcements.Add(danDruff);
         announcements.Add(emmaRoyds);
         announcements.Add(coreyAnder);
+        announcements.Add(notPaidEnough);
+        announcements.Add(videoGames);
+        announcements.Add(foodGo);
+        announcements.Add(oldLady);
+        announcements.Add(enoughFood);
     }
 
     private void Update()
