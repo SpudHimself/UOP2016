@@ -21,5 +21,8 @@ public class Timer : MonoBehaviour
 
 		timer = GameManager.Singleton().GetGameTime();
 		text.text = state == GameManager.eState.Playing ? "Time Remaining: " + timer.ToString( "F2" ) : timer.ToString( "F0" );
+
+
+        
     }
 }
