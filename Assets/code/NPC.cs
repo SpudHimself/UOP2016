@@ -44,7 +44,7 @@ public class NPC : MonoBehaviour
         mAnimator = this.GetComponent<Animator>();
         mAudioSource = this.GetComponent<AudioSource>();
 
-		mItemPrefab = (GameObject) Resources.Load( "prefabs/Item" );
+		mItemPrefab = (GameObject) Resources.Load( "prefabs/canpickup" );
 		mPickupPrefab = (GameObject) Resources.Load( "prefabs/SpeedomitorPickup" );
 	}
 
