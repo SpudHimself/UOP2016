@@ -259,7 +259,7 @@ public class GameManager : MonoBehaviour
 		return mPlayerSpawns[index - 1];
 	}
 
-	private Car GetWinningPlayer()
+	public Car GetWinningPlayer()
 	{
 		Car winning = null;
 		int highestScore = 0;

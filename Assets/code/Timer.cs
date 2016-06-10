@@ -20,6 +20,18 @@ public class Timer : MonoBehaviour
 		GameManager.eState state = GameManager.Singleton().GetState();
 
 		timer = GameManager.Singleton().GetGameTime();
-		text.text = state == GameManager.eState.Playing ? "Time Remaining: " + timer.ToString( "F2" ) : timer.ToString( "F0" );
+		if ( state == GameManager.eState.Playing )
+		{
+			text.text = "Time Remaining: " + timer.ToString( "F2" );
+		}
+		else if ( state == GameManager.eState.GameOver )
+		{
+			Car car = GameManager.Singleton().GetWinningPlayer();
+			text.text = car.GetPlayerNumber() + " wins.";
+		}
+		else if ( state == GameManager.eState.Countdown )
+		{
+			text.text = timer.ToString( "F0" );
+		}
     }
 }
