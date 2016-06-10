@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 	}
 	private eState mState;
 
-	public const float GAME_TIME_PLAYING = 45f; // This will probably get tweaked all the time. 15 for testing. Maybe 45 for real thing?
+	public const float GAME_TIME_PLAYING = 5f; // This will probably get tweaked all the time. 15 for testing. Maybe 45 for real thing?
 	public const float GAME_TIME_COUNTDOWN = 3f;
 	private float mGameTimer;
 
@@ -196,6 +196,7 @@ public class GameManager : MonoBehaviour
 					Car winner = GetWinningPlayer();
 					print( winner.name + " wins!" );
 					print( "Game over! Press Enter (temporary) to restart game." );
+                    mPauseMenu.gameObject.SetActive(true);
 				}
 				break;
 
