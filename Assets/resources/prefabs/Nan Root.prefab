@@ -2106,12 +2106,12 @@ MonoBehaviour:
   mPlayerNumber: 2
   mKeyboardUser: 1
   mAxleInfos:
-  - leftWheel: {fileID: 0}
-    rightWheel: {fileID: 0}
+  - leftWheel: {fileID: 14632530}
+    rightWheel: {fileID: 14693442}
     motor: 1
     steering: 1
-  - leftWheel: {fileID: 0}
-    rightWheel: {fileID: 0}
+  - leftWheel: {fileID: 14631218}
+    rightWheel: {fileID: 14610408}
     motor: 0
     steering: 0
   mMaxMotorTorque: 1600

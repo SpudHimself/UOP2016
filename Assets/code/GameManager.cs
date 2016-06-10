@@ -288,7 +288,7 @@ public class GameManager : MonoBehaviour
 		//GameObject npc = (GameObject) Instantiate( mNPCPrefab, npcSpawn.position, npcSpawn.rotation );
 
 		// New impl.
-		float radius = 500f; // ARBITRARY!
+		float radius = 15f; // ARBITRARY!
 		Vector2 unitCircle = Random.insideUnitCircle;
 		Vector3 circle = new Vector3( unitCircle.x, 0f, unitCircle.y ) * radius;
 

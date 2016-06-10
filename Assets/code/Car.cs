@@ -369,6 +369,7 @@ public class Car : MonoBehaviour
 		{
 			case Tags.PICKUP:
 				mScoreManager.Increase( 200 );
+				mRigidBody.AddRelativeForce( Vector3.forward * 10f, ForceMode.VelocityChange );
 				Destroy( col.gameObject );
 				break;
 		}
