@@ -103,6 +103,8 @@ public class Car : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+        print( name + " " + mPlayerNumber );
+
 		//if ( Input.GetButtonDown( "Start_1" ) )
 		//{
 		//    GameManager.Singleton().TogglePause();
@@ -194,16 +196,16 @@ public class Car : MonoBehaviour
 
 
 		//fuckery for testing, wont be needed end game
-		if ( mKeyboardUser )
-		{
-			Motor = mMaxMotorTorque * Input.GetAxis( "Vertical" );
-			steering = mMaxSteeringAngle * Input.GetAxis( "Horizontal" );
+        //if ( mKeyboardUser )
+        //{
+        //    Motor = mMaxMotorTorque * Input.GetAxis( "Vertical" );
+        //    steering = mMaxSteeringAngle * Input.GetAxis( "Horizontal" );
 
-			mVerticalAxis = Input.GetAxis( "Vertical" );
+        //    mVerticalAxis = Input.GetAxis( "Vertical" );
 
-			//SoundManager.Singleton().SetPitch( "motor_fatman", Input.GetAxis("Vertical") );			
-		}
-		else
+        //    //SoundManager.Singleton().SetPitch( "motor_fatman", Input.GetAxis("Vertical") );			
+        //}
+        //else
 		{
 			Motor = mMaxMotorTorque * Input.GetAxis( "Acceleration_" + mPlayerNumber );
 			steering = mMaxSteeringAngle * Input.GetAxis( "Steering_" + mPlayerNumber );

@@ -1952,7 +1952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mPlayerNumber: 1
-  mKeyboardUser: 1
+  mKeyboardUser: 0
   mAxleInfos:
   - leftWheel: {fileID: 14621248}
     rightWheel: {fileID: 14671606}

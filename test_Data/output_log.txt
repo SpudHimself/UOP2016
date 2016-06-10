@@ -16,7 +16,7 @@ Platform assembly: N:\UOP2016\test_Data\Managed\UnityEngine.Networking.dll (this
 Loading N:\UOP2016\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: N:\UOP2016\test_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading N:\UOP2016\test_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  1.487 seconds
+- Completed reload, in  2.623 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -24,613 +24,1137 @@ desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 Platform assembly: N:\UOP2016\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: N:\UOP2016\test_Data\Managed\System.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1c78 -> priority: 1 
-  Thread -> id: 167c -> priority: 1 
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.531819 ms
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 222.
-Total: 0.149616 ms (FindLiveObjects: 0.008248 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.127145 ms  DeleteObjects: 0.005973 ms)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.361821 ms
-Get ready!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 316.
-Total: 0.207073 ms (FindLiveObjects: 0.044372 ms CreateObjectMapping: 0.009955 ms MarkObjects: 0.146487 ms  DeleteObjects: 0.005119 ms)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at PostProcessor.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Player 2: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-GO!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Brake applied
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 2: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Player 1: Start pressed
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.814926 ms
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 246.
-Total: 0.219304 ms (FindLiveObjects: 0.032426 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.168674 ms  DeleteObjects: 0.009671 ms)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
+  Thread -> id: 1d68 -> priority: 1 
+  Thread -> id: 1f20 -> priority: 1 
 False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.478923 ms
 NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.AudioSource:PlayOneShot (UnityEngine.AudioClip,single)
-  at ButtonBehaviour.OnDeselect (UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
-  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDeselectHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
-  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDeselectHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
-UnityEngine.Debug:Internal_LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
-UnityEngine.EventSystems.EventSystem:SetSelectedGameObject(GameObject, BaseEventData)
-UnityEngine.EventSystems.PointerInputModule:ClearSelection()
-UnityEngine.EventSystems.StandaloneInputModule:DeactivateModule()
-UnityEngine.EventSystems.EventSystem:OnDisable()
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at PostProcessor.Awake () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
-
-UnloadTime: 1346.468506 ms
-Get ready!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 318.
-Total: 0.220727 ms (FindLiveObjects: 0.043519 ms CreateObjectMapping: 0.011093 ms MarkObjects: 0.152460 ms  DeleteObjects: 0.012799 ms)
 
 NullReferenceException
   at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
   at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at PostProcessor.Start () [0x00000] in <filename unknown>:0 
+  at PostProcessor.Awake () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
-GO!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-(2.2, 5.0, 13.8)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at NPC.OnCollisionEnter (UnityEngine.Collision col) [0x00000] in <filename unknown>:0 
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at PostProcessor.Awake () [0x00000] in <filename unknown>:0 
+UnityEngine.GameObject:Internal_AddComponentWithType(Type)
+UnityEngine.GameObject:AddComponent(Type)
+UnityEngine.GameObject:AddComponent()
+GameManager:Awake()
  
 (Filename:  Line: -1)
 
-Player 2: Reset pressed
+Failed to create agent because there is no valid NavMesh
+ 
+(Filename:  Line: 497)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Failed to create agent because there is no valid NavMesh
+ 
+(Filename:  Line: 497)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Failed to create agent because there is no valid NavMesh
+ 
+(Filename:  Line: 497)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Failed to create agent because there is no valid NavMesh
+ 
+(Filename:  Line: 497)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Failed to create agent because there is no valid NavMesh
+ 
+(Filename:  Line: 497)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Get ready!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Player 1: Reset pressed
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 4940.
+Total: 0.813504 ms (FindLiveObjects: 0.215891 ms CreateObjectMapping: 0.057457 ms MarkObjects: 0.526786 ms  DeleteObjects: 0.011946 ms)
+
+Start called.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Player 2: Start pressed
+"Resume" can only be called on an active agent that has been placed on a NavMesh.
+ 
+(Filename:  Line: 766)
+
+"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+ 
+(Filename:  Line: 149)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Start called.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-True
+"Resume" can only be called on an active agent that has been placed on a NavMesh.
+ 
+(Filename:  Line: 766)
+
+"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+ 
+(Filename:  Line: 149)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Start called.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Player 1: Start pressed
+"Resume" can only be called on an active agent that has been placed on a NavMesh.
+ 
+(Filename:  Line: 766)
+
+"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+ 
+(Filename:  Line: 149)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Start called.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-False
+"Resume" can only be called on an active agent that has been placed on a NavMesh.
+ 
+(Filename:  Line: 766)
+
+"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+ 
+(Filename:  Line: 149)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Start called.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-True
+"Resume" can only be called on an active agent that has been placed on a NavMesh.
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+(Filename:  Line: 766)
 
-True
+"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+(Filename:  Line: 149)
 
-True
+Infinity or nan floating point numbers appear when calculating matrices for collider.
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+(Filename:  Line: 160)
 
-True
+Infinity or nan floating point numbers appear when calculating matrices for collider.
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+(Filename:  Line: 160)
 
-False
+Infinity or nan floating point numbers appear when calculating matrices for collider.
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+(Filename:  Line: 160)
 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.460227 ms
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 246.
-Total: 0.212193 ms (FindLiveObjects: 0.025315 ms CreateObjectMapping: 0.020764 ms MarkObjects: 0.153598 ms  DeleteObjects: 0.011377 ms)
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
 
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for collider.
+ 
+(Filename:  Line: 160)
+
+Infinity or nan floating point numbers appear when calculating matrices for c
