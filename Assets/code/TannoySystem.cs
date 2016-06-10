@@ -23,8 +23,8 @@ public class TannoySystem : MonoBehaviour
     public AudioClip oldLady;
     public AudioClip enoughFood;
 
-    private float mMinWaitTime = 3.5f;
-    private float mMaxWaitTime = 15.0f;
+    private float mMinWaitTime = 15.0f;
+    private float mMaxWaitTime = 30.0f;
     private float mTimer;
     #endregion
 

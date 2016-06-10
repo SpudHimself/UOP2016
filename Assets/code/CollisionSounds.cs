@@ -21,7 +21,7 @@ public class CollisionSounds : MonoBehaviour
 	public AudioClip tillCollision;
     public AudioClip tillCollision1;
 
-    private bool hasCollided;
+    public bool hasCollided;
 
     public float timer;
 
@@ -37,15 +37,16 @@ public class CollisionSounds : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+        audioSource.transform.position = transform.position;
     }
 
-    void OnTriggerEnter(Collider col)
+    void OnCollisionEnter(Collision col)
     {
         float random = Random.Range(1, 3);
 
         if (!hasCollided)
         {
-            if (col.tag == Tags.PLANT)
+            if (col.collider.tag == Tags.PLANT)
             {
                 if (random == 1)
                     audioSource.PlayOneShot(bushCollision);
@@ -58,7 +59,7 @@ public class CollisionSounds : MonoBehaviour
                 hasCollided = true;
             }
 
-            if (col.tag == Tags.SHELF)
+            if (col.collider.tag == Tags.SHELF)
             {
                 if (random == 1)
                     audioSource.PlayOneShot(shelfCollision);
@@ -71,7 +72,7 @@ public class CollisionSounds : MonoBehaviour
                 hasCollided = true;
             }
 
-            if (col.tag == Tags.CART)
+            if (col.collider.tag == Tags.CART)
             {
                 if (random == 1)
                     audioSource.PlayOneShot(cartCollision);
@@ -84,14 +85,14 @@ public class CollisionSounds : MonoBehaviour
                 hasCollided = true;
             }
 
-            if (col.tag == Tags.BOX)
+            if (col.collider.tag == Tags.BOX)
             {
                 audioSource.clip = boxCollision;
                 audioSource.Play();
                 hasCollided = true;
             }
 
-            if (col.tag == Tags.WALL)
+            if (col.collider.tag == Tags.WALL)
             {
                 if (random == 1)
                     audioSource.PlayOneShot(wallCollision);
@@ -104,7 +105,7 @@ public class CollisionSounds : MonoBehaviour
                 hasCollided = true;
             }
 
-			if (col.tag == Tags.TILL)
+			if (col.collider.tag == Tags.TILL)
             {
                 if (random == 1)
                     audioSource.PlayOneShot(wallCollision);
@@ -116,9 +117,9 @@ public class CollisionSounds : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider col)
+    void OnCollisionExit(Collision col)
     {
-        if (col.gameObject && timer > 1.0f)
+        if (col.gameObject && timer > 0.5f)
         {
             hasCollided = false;
             timer = 0.0f;
