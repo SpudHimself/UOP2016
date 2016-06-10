@@ -86,7 +86,7 @@ NavMeshSettings:
     minRegionArea: 2
     cellSize: .166666672
     manualCellSize: 0
-  m_NavMeshData: {fileID: 23800000, guid: 75bf4c55e270c1141a9dc5ee0ce9fee3, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: bf1abba46c39f6540bb4e2e50a9882ca, type: 2}
 --- !u!1 &122377
 GameObject:
   m_ObjectHideFlags: 0
@@ -9431,10 +9431,6 @@ Prefab:
     - target: {fileID: 473962, guid: f5a9dc49e549d6d4692865760953d7ec, type: 2}
       propertyPath: m_RootOrder
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 11419688, guid: f5a9dc49e549d6d4692865760953d7ec, type: 2}
-      propertyPath: mPlayerNumber
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5a9dc49e549d6d4692865760953d7ec, type: 2}

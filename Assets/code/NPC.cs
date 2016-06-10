@@ -135,7 +135,8 @@ public class NPC : MonoBehaviour
 			Instantiate( mItemPrefab, new Vector3( randomCircle.x, transform.position.y + 3f, randomCircle.y ), Quaternion.identity );
 		}
 
-		if ( Random.value == 0f )
+		float chanceToDrop = Random.value;
+		if ( chanceToDrop >= 0f && chanceToDrop <= 0.5f )
 		{
 			Instantiate( mPickupPrefab, transform.position, Quaternion.identity );
 		}

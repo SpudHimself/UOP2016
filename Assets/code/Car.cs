@@ -103,8 +103,6 @@ public class Car : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-        print( name + " " + mPlayerNumber );
-
 		//if ( Input.GetButtonDown( "Start_1" ) )
 		//{
 		//    GameManager.Singleton().TogglePause();
