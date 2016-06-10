@@ -30,9 +30,12 @@ public class NPC : MonoBehaviour
 
     public NavMeshAgent Agent { get; private set; }
 
+	private GameObject mItemPrefab;
+	private GameObject mPickupPrefab;
+
 	void Awake()
 	{
-		tag = Tags.NPC;
+		gameObject.SetTagRecursively( Tags.NPC );
 
         Agent = this.GetComponent<NavMeshAgent>();
 		mRenderers = this.GetComponentsInChildren<SkinnedMeshRenderer>();
@@ -40,6 +43,9 @@ public class NPC : MonoBehaviour
 
         mAnimator = this.GetComponent<Animator>();
         mAudioSource = this.GetComponent<AudioSource>();
+
+		mItemPrefab = (GameObject) Resources.Load( "prefabs/Item" );
+		mPickupPrefab = (GameObject) Resources.Load( "prefabs/SpeedomitorPickup" );
 	}
 
 	void Start()
@@ -111,7 +117,28 @@ public class NPC : MonoBehaviour
             }
 
             this.GetComponent<Collider>().enabled = false;
+
+			col.gameObject.GetComponent<Car>().GetScoreManager().Increase( 50 );
+
+			DropItems();
         }
+	}
+
+	private void DropItems()
+	{
+		int numItems = 5;
+		for ( int i = 0; i < numItems; i++ )
+		{
+			Vector3 randomCircle = Random.insideUnitCircle;
+			randomCircle += transform.position;
+
+			Instantiate( mItemPrefab, new Vector3( randomCircle.x, transform.position.y + 3f, randomCircle.y ), Quaternion.identity );
+		}
+
+		if ( Random.value == 0f )
+		{
+			Instantiate( mPickupPrefab, transform.position, Quaternion.identity );
+		}
 	}
 
 	void OnDestroy()

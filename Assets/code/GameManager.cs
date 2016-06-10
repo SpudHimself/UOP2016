@@ -61,9 +61,9 @@ public class GameManager : MonoBehaviour
 			mNPCSpawns.Add( go.transform );
 		}
 
-		//for ( int i = 0; i < 3; i++ ) {
-		//	SpawnNPC();
-		//}
+		for ( int i = 0; i < 5; i++ ) {
+			SpawnNPC();
+		}
 
 		mPauseMenu = GameObject.FindGameObjectWithTag( "PauseMenu" ).GetComponentInChildren<Canvas>();
 		mPauseMenu.enabled = false;
@@ -288,7 +288,7 @@ public class GameManager : MonoBehaviour
 		//GameObject npc = (GameObject) Instantiate( mNPCPrefab, npcSpawn.position, npcSpawn.rotation );
 
 		// New impl.
-		float radius = 15f; // ARBITRARY!
+		float radius = 500f; // ARBITRARY!
 		Vector2 unitCircle = Random.insideUnitCircle;
 		Vector3 circle = new Vector3( unitCircle.x, 0f, unitCircle.y ) * radius;
 
@@ -297,7 +297,7 @@ public class GameManager : MonoBehaviour
 		Vector3 euler = new Vector3( 0f, Random.Range( -180f, 180f ), 0f );
 
 		GameObject npc = Instantiate( mNPCPrefab, hit.position, Quaternion.Euler( euler ) ) as GameObject;
-        npc.GetComponent<NPC>().SetState(NPC.eState.Alive);
+        npc.GetComponent<NPC>().SetState( NPC.eState.Alive );
 	}
 
 	private Transform GetRandomNPCSpawn()
