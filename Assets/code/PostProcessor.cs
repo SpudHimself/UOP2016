@@ -6,16 +6,8 @@ public class PostProcessor : MonoBehaviour {
 
 	private float mGreyPhase = 0f;
 
-	private static PostProcessor sSingleton;
-	public static PostProcessor Singleton()
-	{
-		return sSingleton;
-	}
-
 	void Awake()
 	{
-		sSingleton = this;
-
 		mMat = new Material( Shader.Find( "Custom/PostProcess" ) );
 	}
 

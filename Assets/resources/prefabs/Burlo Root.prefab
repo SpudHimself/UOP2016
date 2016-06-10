@@ -1998,6 +1998,7 @@ MonoBehaviour:
   wallCollision2: {fileID: 8300000, guid: effe2c894f2642c4392205c9fa570b87, type: 3}
   tillCollision: {fileID: 8300000, guid: 9aa0cf6ec195cb148b3aedb052448f71, type: 3}
   tillCollision1: {fileID: 8300000, guid: 8fcd07159fca0b743a483224e0b0a1cd, type: 3}
+  hasCollided: 0
   timer: 0
 --- !u!137 &13741770
 SkinnedMeshRenderer:

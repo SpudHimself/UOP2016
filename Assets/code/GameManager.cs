@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 	}
 	private eState mState;
 
-	public const float GAME_TIME_PLAYING = 45f; // This will probably get tweaked all the time. 15 for testing. Maybe 45 for real thing?
+	public const float GAME_TIME_PLAYING = 50f; // This will probably get tweaked all the time. 15 for testing. Maybe 45 for real thing?
 	public const float GAME_TIME_COUNTDOWN = 3f;
 	private float mGameTimer;
 
@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
 	public Car mNan;
 
     public Canvas mPauseMenu;
+
+    public GameObject mBurloCamera, mNanCamera;
 
 	// Singleton.
 	private static GameManager sSingleton;
@@ -207,7 +209,8 @@ public class GameManager : MonoBehaviour
 	private void StateCountdown()
 	{
 		mGameTimer = Mathf.Max( mGameTimer - Time.deltaTime, 0f );
-		PostProcessor.Singleton().SetGreyScale( mGameTimer / 3f );
+		mBurloCamera.GetComponent<PostProcessor>().SetGreyScale( mGameTimer / 3f );
+        mNanCamera.GetComponent<PostProcessor>().SetGreyScale(mGameTimer / 3f);
 
 // 		print( mGameTimer );
 		if ( mGameTimer <= 0f )
