@@ -9,6 +9,7 @@ public class Shelf : MonoBehaviour
     private List<ScoreItem> mScoreItems;
 
 	private Rigidbody mRigidbody;
+	private Collider mCollider;
     #endregion
 
     #region Unity Methods
@@ -16,6 +17,8 @@ public class Shelf : MonoBehaviour
     {
 		mRigidbody = GetComponent<Rigidbody>();
 		mRigidbody.constraints = RigidbodyConstraints.FreezePosition;
+
+		mCollider = GetComponent<Collider>();
 
         SpawnItems();
     }
@@ -30,7 +33,7 @@ public class Shelf : MonoBehaviour
         switch ( col.gameObject.tag )
 		{
 			case Tags.PLAYER:
-			case Tags.ITEM:
+			case Tags.SHELF:
 				{
 					mRigidbody.constraints = RigidbodyConstraints.None;
 
@@ -41,6 +44,10 @@ public class Shelf : MonoBehaviour
 						item.SetState( eItemState.ACTIVE );
 					}
 				}
+				break;
+
+			case Tags.ITEM:
+				Physics.IgnoreCollision( mCollider, col.collider );
 				break;
 		}
     }
