@@ -16,6 +16,7 @@ TagManager:
   - Wall
   - Till
   - PlayerWheel
+  - Pickup
   layers:
   - Default
   - TransparentFX

@@ -21,4 +21,6 @@ public class Tags {
     public const string BOX = "Box";
     public const string WALL = "Wall";
 	public const string TILL = "Till";
+
+	public const string PICKUP = "Pickup";
 }
